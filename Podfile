@@ -1,12 +1,12 @@
 platform :ios, '13.0'
 use_frameworks!
 
-target 'GoalsApp' do
+target 'Goals' do
 
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
 
-  target 'GoalsAppTests' do
+  target 'GoalsTests' do
     inherit! :search_paths
 
     pod 'RxBlocking', '~> 5'

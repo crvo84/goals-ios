@@ -10,6 +10,10 @@
 		7363C21C24A5591500D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C21224A5591500D3DEA6 /* VillouNetworking.framework */; };
 		7363C22124A5591500D3DEA6 /* VillouNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */; };
 		7363C22324A5591500D3DEA6 /* VillouNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7363C21524A5591500D3DEA6 /* VillouNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7363C24424A55F9600D3DEA6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24324A55F9600D3DEA6 /* ApiRequest.swift */; };
+		7363C24F24A5606800D3DEA6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */; };
+		7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */; };
+		7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		7363C21B24A5591500D3DEA6 /* VillouNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VillouNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouNetworkingTests.swift; sourceTree = "<group>"; };
 		7363C22224A5591500D3DEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7363C24324A55F9600D3DEA6 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
+		7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +79,8 @@
 		7363C21424A5591500D3DEA6 /* VillouNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				7363C21524A5591500D3DEA6 /* VillouNetworking.h */,
-				7363C21624A5591500D3DEA6 /* Info.plist */,
+				7363C25124A5606F00D3DEA6 /* Manager */,
+				7363C25524A560EA00D3DEA6 /* Other resources */,
 			);
 			path = VillouNetworking;
 			sourceTree = "<group>";
@@ -84,6 +92,34 @@
 				7363C22224A5591500D3DEA6 /* Info.plist */,
 			);
 			path = VillouNetworkingTests;
+			sourceTree = "<group>";
+		};
+		7363C25124A5606F00D3DEA6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7363C24324A55F9600D3DEA6 /* ApiRequest.swift */,
+				7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */,
+				7363C25224A5607C00D3DEA6 /* Implementations */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7363C25224A5607C00D3DEA6 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */,
+				7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		7363C25524A560EA00D3DEA6 /* Other resources */ = {
+			isa = PBXGroup;
+			children = (
+				7363C21524A5591500D3DEA6 /* VillouNetworking.h */,
+				7363C21624A5591500D3DEA6 /* Info.plist */,
+			);
+			path = "Other resources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +184,7 @@
 				TargetAttributes = {
 					7363C21124A5591500D3DEA6 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					7363C21A24A5591500D3DEA6 = {
 						CreatedOnToolsVersion = 11.5;
@@ -195,6 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7363C24F24A5606800D3DEA6 /* NetworkingManager.swift in Sources */,
+				7363C24424A55F9600D3DEA6 /* ApiRequest.swift in Sources */,
+				7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */,
+				7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +381,7 @@
 		7363C22724A5591500D3DEA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
@@ -357,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.villou.VillouNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +408,7 @@
 		7363C22824A5591500D3DEA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
@@ -390,6 +434,7 @@
 		7363C22A24A5591500D3DEA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouNetworkingTests/Info.plist;
@@ -408,6 +453,7 @@
 		7363C22B24A5591500D3DEA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouNetworkingTests/Info.plist;

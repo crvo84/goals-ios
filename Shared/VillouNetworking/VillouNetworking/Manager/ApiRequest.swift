@@ -1,6 +1,6 @@
 //
 //  ApiRequest.swift
-//  Goals
+//  VillouNetworking
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
 //  Copyright © 2020 Villou. All rights reserved.

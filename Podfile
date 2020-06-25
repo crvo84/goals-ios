@@ -1,16 +1,32 @@
 platform :ios, '13.0'
 use_frameworks!
+workspace 'Goals'
 
-target 'Goals' do
-
+def rxPods
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+end
+
+def rxTestPods
+  pod 'RxBlocking', '~> 5'
+  pod 'RxTest', '~> 5'
+end
+
+# App project
+target 'Goals' do
+  rxPods
 
   target 'GoalsTests' do
-    inherit! :search_paths
-
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
+    rxTestPods
   end
+end
 
+# Shared projects
+target 'VillouNetworking' do
+  project 'Shared/VillouNetworking/VillouNetworking'
+  rxPods
+
+  target 'VillouNetworkingTests' do
+    rxTestPods
+  end
 end

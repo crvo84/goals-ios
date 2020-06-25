@@ -8,33 +8,33 @@
 
 import Foundation
 
-enum ApiError: Error {
+public enum ApiError: Error {
     case invalidRequest(Error?)
     case invalidResponse(Error?)
     case response(Error?, statusCode: Int, data: Data?)
     case decoding(Error?)
 }
 
-enum URIScheme: String {
+public enum URIScheme: String {
     case https = "https"
 }
 
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
     case delete = "DELETE"
 }
 
-enum HTTPContentType: String {
+public enum HTTPContentType: String {
     case json = "application/json"
 }
 
-typealias HTTPHeaders = [String: String]
+public typealias HTTPHeaders = [String: String]
 
-typealias HTTPMockResponse = (statusCode: Int, data: Data?, error: Error?)
+public typealias HTTPMockResponse = (statusCode: Int, data: Data?, error: Error?)
 
-protocol ApiRequest {
+public protocol ApiRequest {
 
     var scheme: URIScheme { get }
     var method: HTTPMethod { get }
@@ -49,7 +49,7 @@ protocol ApiRequest {
     func asURLRequest() throws -> URLRequest
 }
 
-extension ApiRequest {
+public extension ApiRequest {
 
     func asURLRequest() throws -> URLRequest {
         var components = URLComponents()
@@ -82,7 +82,7 @@ extension ApiRequest {
 }
 
 // Default values
-extension ApiRequest {
+public extension ApiRequest {
 
     var scheme: URIScheme { .https }
 

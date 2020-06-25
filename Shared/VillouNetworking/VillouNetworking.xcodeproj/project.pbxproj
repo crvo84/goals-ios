@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073A331D3FB114EAADE738A5 /* Pods_VillouNetworking_VillouNetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D0E59DFCCDACBFE1D5840F /* Pods_VillouNetworking_VillouNetworkingTests.framework */; };
 		7363C21C24A5591500D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C21224A5591500D3DEA6 /* VillouNetworking.framework */; };
 		7363C22124A5591500D3DEA6 /* VillouNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */; };
 		7363C22324A5591500D3DEA6 /* VillouNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7363C21524A5591500D3DEA6 /* VillouNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -14,6 +15,7 @@
 		7363C24F24A5606800D3DEA6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */; };
 		7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */; };
 		7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */; };
+		7F63898EBEDAA079998203F1 /* Pods_VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F145812C5BBF7C5710E5D272 /* Pods_VillouNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F7E3B5F40DC184E15DF37B2 /* Pods-VillouNetworking-VillouNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking-VillouNetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		7363C21224A5591500D3DEA6 /* VillouNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VillouNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363C21524A5591500D3DEA6 /* VillouNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VillouNetworking.h; sourceTree = "<group>"; };
 		7363C21624A5591500D3DEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +40,13 @@
 		7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
 		7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManager.swift; sourceTree = "<group>"; };
+		7AD8B1AE8AF1F09031AF9F5A /* Pods-VillouNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking/Pods-VillouNetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		87D408499D84526CB23B4D7D /* Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D49D15F0C1C3E0247492C30 /* Pods-VillouNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-VillouNetworkingTests/Pods-VillouNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
+		95D0E59DFCCDACBFE1D5840F /* Pods_VillouNetworking_VillouNetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouNetworking_VillouNetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF82DC5A369E3FEDFABD55B /* Pods-VillouNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworkingTests/Pods-VillouNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7CCA82FEF5DDF89CBE32239 /* Pods-VillouNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking.release.xcconfig"; path = "Target Support Files/Pods-VillouNetworking/Pods-VillouNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		F145812C5BBF7C5710E5D272 /* Pods_VillouNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F63898EBEDAA079998203F1 /* Pods_VillouNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +63,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				7363C21C24A5591500D3DEA6 /* VillouNetworking.framework in Frameworks */,
+				073A331D3FB114EAADE738A5 /* Pods_VillouNetworking_VillouNetworkingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C29F0BE34CCB5555A09FC1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8B1AE8AF1F09031AF9F5A /* Pods-VillouNetworking.debug.xcconfig */,
+				E7CCA82FEF5DDF89CBE32239 /* Pods-VillouNetworking.release.xcconfig */,
+				87D408499D84526CB23B4D7D /* Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig */,
+				5F7E3B5F40DC184E15DF37B2 /* Pods-VillouNetworking-VillouNetworkingTests.release.xcconfig */,
+				DAF82DC5A369E3FEDFABD55B /* Pods-VillouNetworkingTests.debug.xcconfig */,
+				8D49D15F0C1C3E0247492C30 /* Pods-VillouNetworkingTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 		7363C20824A5591500D3DEA6 = {
 			isa = PBXGroup;
 			children = (
 				7363C21424A5591500D3DEA6 /* VillouNetworking */,
 				7363C21F24A5591500D3DEA6 /* VillouNetworkingTests */,
 				7363C21324A5591500D3DEA6 /* Products */,
+				5C29F0BE34CCB5555A09FC1A /* Pods */,
+				889762044899BC8B3C209ACA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7363C25124A5606F00D3DEA6 /* Manager */,
-				7363C25524A560EA00D3DEA6 /* Other resources */,
+				7363C25524A560EA00D3DEA6 /* Others */,
 			);
 			path = VillouNetworking;
 			sourceTree = "<group>";
@@ -113,13 +141,22 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
-		7363C25524A560EA00D3DEA6 /* Other resources */ = {
+		7363C25524A560EA00D3DEA6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
 				7363C21524A5591500D3DEA6 /* VillouNetworking.h */,
 				7363C21624A5591500D3DEA6 /* Info.plist */,
 			);
-			path = "Other resources";
+			path = Others;
+			sourceTree = "<group>";
+		};
+		889762044899BC8B3C209ACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F145812C5BBF7C5710E5D272 /* Pods_VillouNetworking.framework */,
+				95D0E59DFCCDACBFE1D5840F /* Pods_VillouNetworking_VillouNetworkingTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7363C22624A5591500D3DEA6 /* Build configuration list for PBXNativeTarget "VillouNetworking" */;
 			buildPhases = (
+				50954D5F0C8D162E36517A45 /* [CP] Check Pods Manifest.lock */,
 				7363C20D24A5591500D3DEA6 /* Headers */,
 				7363C20E24A5591500D3DEA6 /* Sources */,
 				7363C20F24A5591500D3DEA6 /* Frameworks */,
@@ -158,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7363C22924A5591500D3DEA6 /* Build configuration list for PBXNativeTarget "VillouNetworkingTests" */;
 			buildPhases = (
+				1EA8A3C08D0CD596EB7A5458 /* [CP] Check Pods Manifest.lock */,
 				7363C21724A5591500D3DEA6 /* Sources */,
 				7363C21824A5591500D3DEA6 /* Frameworks */,
 				7363C21924A5591500D3DEA6 /* Resources */,
+				45247FE06DDB0EB3DA7A9073 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +266,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EA8A3C08D0CD596EB7A5458 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VillouNetworking-VillouNetworkingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45247FE06DDB0EB3DA7A9073 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50954D5F0C8D162E36517A45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VillouNetworking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7363C20E24A5591500D3DEA6 /* Sources */ = {
@@ -380,6 +484,7 @@
 		};
 		7363C22724A5591500D3DEA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AD8B1AE8AF1F09031AF9F5A /* Pods-VillouNetworking.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,7 +493,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = VillouNetworking/Info.plist;
+				INFOPLIST_FILE = VillouNetworking/Others/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -407,6 +512,7 @@
 		};
 		7363C22824A5591500D3DEA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7CCA82FEF5DDF89CBE32239 /* Pods-VillouNetworking.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -415,7 +521,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = VillouNetworking/Info.plist;
+				INFOPLIST_FILE = VillouNetworking/Others/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,8 +539,8 @@
 		};
 		7363C22A24A5591500D3DEA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D408499D84526CB23B4D7D /* Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouNetworkingTests/Info.plist;
@@ -452,8 +558,8 @@
 		};
 		7363C22B24A5591500D3DEA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F7E3B5F40DC184E15DF37B2 /* Pods-VillouNetworking-VillouNetworkingTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouNetworkingTests/Info.plist;

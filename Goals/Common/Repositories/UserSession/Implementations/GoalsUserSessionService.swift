@@ -9,18 +9,18 @@
 import Foundation
 import RxSwift
 
-struct GoalsUserSessionService: UserSessionService {
-
-    let manager: NetworkingManager
-
-    func signIn(dto: SignInDTO) -> Single<UserSession> {
-
-    }
-
-    func signUp(dto: SignUpDTO) -> Single<UserSession> {
-        <#code#>
-    }
-
-
-
-}
+//struct GoalsUserSessionService: UserSessionService {
+//
+//    let manager: NetworkingManager
+//
+//    func signIn(dto: SignInDTO) -> Single<UserSession> {
+//
+//    }
+//
+//    func signUp(dto: SignUpDTO) -> Single<UserSession> {
+//        
+//    }
+//
+//
+//
+//}

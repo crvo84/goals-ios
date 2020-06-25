@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import VillouNetworking
 
 enum UserSessionApi {
     case signIn(body: Data)
@@ -23,16 +23,13 @@ extension UserSessionApi: ApiRequest {
         }
     }
 
-    var host: String {
-        Constants.GoalsApi.host
-    }
-
-    var basePath: String {
-        Constants.GoalsApi.basePath
-    }
-
     var path: String {
-        Constants.GoalsApi.basePath
+        switch self {
+        case .signIn:
+            return "/users/login"
+        case .signUp:
+            return "/users/"
+        }
     }
 
     var body: Data? {
@@ -45,4 +42,16 @@ extension UserSessionApi: ApiRequest {
     var mockResponse: HTTPMockResponse? {
         return nil
     }
+
+    // MARK: Constant values
+
+    var host: String { Constants.GoalsApi.host }
+
+    var basePath: String { Constants.GoalsApi.basePath }
+
+    var scheme: URIScheme { return .https }
+
+    var headers: HTTPHeaders? { nil }
+
+    var contentType: HTTPContentType? { .json }
 }

@@ -1,5 +1,5 @@
 //
-//  NetworkingManager.swift
+//  Codable+Util.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -7,8 +7,10 @@
 //
 
 import Foundation
-import RxSwift
 
-protocol NetworkingManager {
-    func callApi(endpoint: ApiEndpoint) -> Single<Data?>
+extension Encodable {
+
+    func asData() throws -> Data {
+        return try JSONEncoder().encode(self)
+    }
 }

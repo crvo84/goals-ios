@@ -30,18 +30,16 @@ enum HTTPContentType: String {
     case json = "application/json"
 }
 
+typealias HTTPHeaders = [String: String]
+
 protocol ApiEndpoint {
 
-    typealias Params = [String: Any]
-    typealias Headers = [String: String]
-
     var scheme: URIScheme { get }
+    var method: HTTPMethod { get }
+    var headers: HTTPHeaders? { get }
     var host: String { get }
     var path: String { get }
-    var method: HTTPMethod { get }
-    var headers: Headers? { get }
-    var urlParams: Params? { get }
-    var bodyParams: Params? { get }
+    var body: Data? { get }
     var contentType: HTTPContentType? { get }
     var mockResponseData: Data? { get }
 
@@ -56,11 +54,6 @@ extension ApiEndpoint {
         components.scheme = scheme.rawValue
         components.host = host
         components.path = path
-
-        // url params
-        components.queryItems = urlParams?.map {
-            URLQueryItem(name: $0.key, value: "\($0.value)")
-        }
 
         guard let url = components.url else {
             throw ApiError.invalidRequest(nil)
@@ -77,15 +70,9 @@ extension ApiEndpoint {
         }
 
         // body
-        if let bodyParams = bodyParams {
-            do {
-                req.httpBody = try JSONSerialization.data(withJSONObject: bodyParams)
-                if let contentTypeStr = contentType?.rawValue {
-                    req.setValue(contentTypeStr, forHTTPHeaderField: "Content-Type")
-                }
-            } catch {
-                throw ApiError.invalidRequest(error)
-            }
+        req.httpBody = body
+        if let contentTypeStr = contentType?.rawValue {
+            req.setValue(contentTypeStr, forHTTPHeaderField: "Content-Type")
         }
 
         return req

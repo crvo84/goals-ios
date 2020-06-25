@@ -12,7 +12,7 @@ import RxSwift
 protocol UserSessionRepository {
 
     func readUserSession() -> Single<UserSession?>
-    func signUp(info: NewUserInfo) -> Single<UserSession>
-    func signIn(email: String, password: String) -> Single<UserSession>
+    func signUp(dto: SignUpDTO) -> Single<UserSession>
+    func signIn(dto: SignInDTO) -> Single<UserSession>
     func signOut(userSession: UserSession) -> Single<UserSession>
 }

@@ -1,5 +1,5 @@
 //
-//  GlobalNetworkingManager.swift
+//  GoalsRemoteApi.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-class GlobalNetworkingManager: NetworkingManager {
+class GoalsRemoteApi: RemoteApi {
 
-    func callApi(endpoint: ApiEndpoint) -> Single<Data?> {
+    func call(endpoint: ApiEndpoint) -> Single<Data?> {
         do {
             return execute(request: try endpoint.asURLRequest())
         } catch {

@@ -21,18 +21,20 @@
 		7346DB8C24A31F0D00AF75BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7346DB8E24A31F0D00AF75BB /* Localizable.strings */; };
 		7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9124A321AB00AF75BB /* String+Localized.swift */; };
 		7346DB9424A3328600AF75BB /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9324A3328600AF75BB /* UserSessionRepository.swift */; };
-		7346DB9824A3D2A400AF75BB /* NewUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9724A3D2A400AF75BB /* NewUserInfo.swift */; };
+		7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9724A3D2A400AF75BB /* SignUpDTO.swift */; };
 		7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */; };
 		7346DB9E24A3D42600AF75BB /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9D24A3D42600AF75BB /* UserSessionDataStore.swift */; };
 		7346DBA024A3D4BF00AF75BB /* RealmUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */; };
 		7346DBA324A3D58A00AF75BB /* UserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA224A3D58A00AF75BB /* UserSessionService.swift */; };
 		7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */; };
 		7346DBA924A3DB3000AF75BB /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA824A3DB3000AF75BB /* ApiEndpoint.swift */; };
+		7363C1D324A4575300D3DEA6 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D224A4575300D3DEA6 /* SignInDTO.swift */; };
 		73A89D8024A41E8B00D12A40 /* GoalsUserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */; };
 		73A89D8524A4212B00D12A40 /* MockUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */; };
-		73C43C1524A4271A009EDA38 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1424A4271A009EDA38 /* NetworkingManager.swift */; };
-		73C43C1824A42A7E009EDA38 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1724A42A7E009EDA38 /* MockNetworkingManager.swift */; };
-		73C43C1B24A42D27009EDA38 /* GlobalNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1A24A42D27009EDA38 /* GlobalNetworkingManager.swift */; };
+		73C43C1524A4271A009EDA38 /* RemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1424A4271A009EDA38 /* RemoteApi.swift */; };
+		73C43C1824A42A7E009EDA38 /* MockRemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1724A42A7E009EDA38 /* MockRemoteApi.swift */; };
+		73C43C1B24A42D27009EDA38 /* GoalsRemoteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1A24A42D27009EDA38 /* GoalsRemoteApi.swift */; };
+		73C43C1E24A453DD009EDA38 /* Codable+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C43C1D24A453DD009EDA38 /* Codable+Util.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 		BEA856A82643CB2D4104A839 /* Pods_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FB99B2ED5F55AEC4E8C439 /* Pods_GoalsTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,18 +73,20 @@
 		7346DB8F24A31F6600AF75BB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7346DB9124A321AB00AF75BB /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		7346DB9324A3328600AF75BB /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
-		7346DB9724A3D2A400AF75BB /* NewUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserInfo.swift; sourceTree = "<group>"; };
+		7346DB9724A3D2A400AF75BB /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
 		7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRepository.swift; sourceTree = "<group>"; };
 		7346DB9D24A3D42600AF75BB /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
 		7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserSessionDataStore.swift; sourceTree = "<group>"; };
 		7346DBA224A3D58A00AF75BB /* UserSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionService.swift; sourceTree = "<group>"; };
 		7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionApi.swift; sourceTree = "<group>"; };
 		7346DBA824A3DB3000AF75BB /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		7363C1D224A4575300D3DEA6 /* SignInDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionService.swift; sourceTree = "<group>"; };
 		73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserSessionDataStore.swift; sourceTree = "<group>"; };
-		73C43C1424A4271A009EDA38 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
-		73C43C1724A42A7E009EDA38 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
-		73C43C1A24A42D27009EDA38 /* GlobalNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNetworkingManager.swift; sourceTree = "<group>"; };
+		73C43C1424A4271A009EDA38 /* RemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApi.swift; sourceTree = "<group>"; };
+		73C43C1724A42A7E009EDA38 /* MockRemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteApi.swift; sourceTree = "<group>"; };
+		73C43C1A24A42D27009EDA38 /* GoalsRemoteApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsRemoteApi.swift; sourceTree = "<group>"; };
+		73C43C1D24A453DD009EDA38 /* Codable+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Util.swift"; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5FB99B2ED5F55AEC4E8C439 /* Pods_GoalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				7346DADC24A1C2F700AF75BB /* AppDelegate.swift */,
-				7346DBA124A3D4D800AF75BB /* Extensions */,
 				7346DB7424A1D52200AF75BB /* Common */,
 				7346DB7324A1D4C300AF75BB /* App */,
 				7346DB7024A1D0BF00AF75BB /* Other resources */,
@@ -176,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DBA424A3D6F400AF75BB /* Networking */,
+				7346DBA124A3D4D800AF75BB /* Extensions */,
 				7346DB9524A3D24100AF75BB /* Model */,
 				7346DB8024A1D86B00AF75BB /* Repositories */,
 			);
@@ -203,6 +207,7 @@
 		7346DB9524A3D24100AF75BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7363C1D124A4572500D3DEA6 /* DTOs */,
 				7346DB9624A3D26200AF75BB /* UserSession */,
 			);
 			path = Model;
@@ -214,7 +219,6 @@
 				7346DB8124A1D87700AF75BB /* UserSession.swift */,
 				7346DB8324A1D8BC00AF75BB /* UserProfile.swift */,
 				7346DB8524A1D9AA00AF75BB /* RemoteSession.swift */,
-				7346DB9724A3D2A400AF75BB /* NewUserInfo.swift */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DB9124A321AB00AF75BB /* String+Localized.swift */,
+				73C43C1D24A453DD009EDA38 /* Codable+Util.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,20 +256,29 @@
 		7346DBA424A3D6F400AF75BB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				7346DBA724A3D8B400AF75BB /* ApiEndpoints */,
-				73C43C1624A42A51009EDA38 /* Manager */,
-				73C43C1924A42AEA009EDA38 /* Mocks */,
+				7346DBA824A3DB3000AF75BB /* ApiEndpoint.swift */,
+				73C43C1624A42A51009EDA38 /* RemoteApi */,
+				7346DBA724A3D8B400AF75BB /* Apis */,
+				73C43C1924A42AEA009EDA38 /* Json Mocks */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		7346DBA724A3D8B400AF75BB /* ApiEndpoints */ = {
+		7346DBA724A3D8B400AF75BB /* Apis */ = {
 			isa = PBXGroup;
 			children = (
-				7346DBA824A3DB3000AF75BB /* ApiEndpoint.swift */,
 				7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */,
 			);
-			path = ApiEndpoints;
+			path = Apis;
+			sourceTree = "<group>";
+		};
+		7363C1D124A4572500D3DEA6 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				7346DB9724A3D2A400AF75BB /* SignUpDTO.swift */,
+				7363C1D224A4575300D3DEA6 /* SignInDTO.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 		73A89D8624A4212F00D12A40 /* DataStore */ = {
@@ -276,21 +290,29 @@
 			path = DataStore;
 			sourceTree = "<group>";
 		};
-		73C43C1624A42A51009EDA38 /* Manager */ = {
+		73C43C1624A42A51009EDA38 /* RemoteApi */ = {
 			isa = PBXGroup;
 			children = (
-				73C43C1424A4271A009EDA38 /* NetworkingManager.swift */,
-				73C43C1724A42A7E009EDA38 /* MockNetworkingManager.swift */,
-				73C43C1A24A42D27009EDA38 /* GlobalNetworkingManager.swift */,
+				73C43C1424A4271A009EDA38 /* RemoteApi.swift */,
+				73C43C1C24A4503E009EDA38 /* Implementations */,
 			);
-			path = Manager;
+			path = RemoteApi;
 			sourceTree = "<group>";
 		};
-		73C43C1924A42AEA009EDA38 /* Mocks */ = {
+		73C43C1924A42AEA009EDA38 /* Json Mocks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Mocks;
+			path = "Json Mocks";
+			sourceTree = "<group>";
+		};
+		73C43C1C24A4503E009EDA38 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				73C43C1724A42A7E009EDA38 /* MockRemoteApi.swift */,
+				73C43C1A24A42D27009EDA38 /* GoalsRemoteApi.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
@@ -512,20 +534,22 @@
 				7346DB8624A1D9AA00AF75BB /* RemoteSession.swift in Sources */,
 				7346DB7A24A1D60A00AF75BB /* AppDependencyContainer.swift in Sources */,
 				7346DB8224A1D87700AF75BB /* UserSession.swift in Sources */,
+				73C43C1E24A453DD009EDA38 /* Codable+Util.swift in Sources */,
 				7346DB7724A1D58900AF75BB /* MainViewController.swift in Sources */,
+				7363C1D324A4575300D3DEA6 /* SignInDTO.swift in Sources */,
 				7346DB8424A1D8BC00AF75BB /* UserProfile.swift in Sources */,
 				7346DB7C24A1D78900AF75BB /* MainViewModel.swift in Sources */,
 				73A89D8024A41E8B00D12A40 /* GoalsUserSessionService.swift in Sources */,
 				7346DBA024A3D4BF00AF75BB /* RealmUserSessionDataStore.swift in Sources */,
 				7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */,
-				73C43C1524A4271A009EDA38 /* NetworkingManager.swift in Sources */,
+				73C43C1524A4271A009EDA38 /* RemoteApi.swift in Sources */,
 				7346DB9E24A3D42600AF75BB /* UserSessionDataStore.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,
 				7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */,
-				73C43C1824A42A7E009EDA38 /* MockNetworkingManager.swift in Sources */,
+				73C43C1824A42A7E009EDA38 /* MockRemoteApi.swift in Sources */,
 				7346DB9424A3328600AF75BB /* UserSessionRepository.swift in Sources */,
-				7346DB9824A3D2A400AF75BB /* NewUserInfo.swift in Sources */,
-				73C43C1B24A42D27009EDA38 /* GlobalNetworkingManager.swift in Sources */,
+				7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */,
+				73C43C1B24A42D27009EDA38 /* GoalsRemoteApi.swift in Sources */,
 				73A89D8524A4212B00D12A40 /* MockUserSessionDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

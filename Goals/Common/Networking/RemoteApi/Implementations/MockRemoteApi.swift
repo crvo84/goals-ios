@@ -1,5 +1,5 @@
 //
-//  MockNetworkingManager.swift
+//  MockRemoteApi.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-class MockNetworkingManager: NetworkingManager {
+class MockRemoteApi: RemoteApi {
 
-    func callApi(endpoint: ApiEndpoint) -> Single<Data?> {
+    func call(endpoint: ApiEndpoint) -> Single<Data?> {
         let waitDuration = 1.5
 
         return Observable.create { observer in

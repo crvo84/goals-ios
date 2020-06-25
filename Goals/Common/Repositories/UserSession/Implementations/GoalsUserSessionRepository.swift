@@ -23,13 +23,13 @@ class GoalsUserSessionRepository: UserSessionRepository {
         return dataStore.readUserSession()
     }
 
-    func signUp(info: NewUserInfo) -> Single<UserSession> {
-        return service.signUp(info: info)
+    func signUp(dto: SignUpDTO) -> Single<UserSession> {
+        return service.signUp(dto: dto)
             .flatMap(dataStore.save(userSession:))
     }
 
-    func signIn(email: String, password: String) -> Single<UserSession> {
-        return service.signIn(email: email, password: password)
+    func signIn(dto: SignInDTO) -> Single<UserSession> {
+        return service.signIn(dto: dto)
             .flatMap(dataStore.save(userSession:))
     }
 

@@ -9,7 +9,7 @@
 import Foundation
 
 
-
 enum UserSessionApi {
-
+    case signIn(body: Encodable)
+    case signUp(body: Encodable)
 }

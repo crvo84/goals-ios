@@ -1,5 +1,5 @@
 //
-//  RemoteApi.swift
+//  NetworkingManager.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol RemoteApi {
-    func call(endpoint: ApiEndpoint) -> Single<Data?>
+protocol NetworkingManager {
+    func execute(request: ApiRequest) -> Single<Data?>
 }

@@ -1,5 +1,5 @@
 //
-//  ApiEndpoint.swift
+//  ApiRequest.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -32,33 +32,35 @@ enum HTTPContentType: String {
 
 typealias HTTPHeaders = [String: String]
 
-protocol ApiEndpoint {
+typealias HTTPMockResponse = (statusCode: Int, data: Data?, error: Error?)
+
+protocol ApiRequest {
 
     var scheme: URIScheme { get }
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var host: String { get }
+    var basePath: String { get }
     var path: String { get }
     var body: Data? { get }
     var contentType: HTTPContentType? { get }
-    var mockResponseData: Data? { get }
+    var mockResponse: HTTPMockResponse? { get }
 
     func asURLRequest() throws -> URLRequest
 }
 
-extension ApiEndpoint {
+extension ApiRequest {
 
     func asURLRequest() throws -> URLRequest {
         var components = URLComponents()
         // url
         components.scheme = scheme.rawValue
         components.host = host
-        components.path = path
+        components.path = basePath + path
 
         guard let url = components.url else {
             throw ApiError.invalidRequest(nil)
         }
-
         var req = URLRequest(url: url)
 
         // method
@@ -77,4 +79,14 @@ extension ApiEndpoint {
 
         return req
     }
+}
+
+// Default values
+extension ApiRequest {
+
+    var scheme: URIScheme { .https }
+
+    var contentType: HTTPContentType { .json }
+
+    var headers: HTTPHeaders? { nil }
 }

@@ -1,5 +1,5 @@
 //
-//  GoalsRemoteApi.swift
+//  GoalsNetworkingManager.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -9,17 +9,17 @@
 import Foundation
 import RxSwift
 
-class GoalsRemoteApi: RemoteApi {
+class GoalsNetworkingManager: NetworkingManager {
 
-    func call(endpoint: ApiEndpoint) -> Single<Data?> {
+    func execute(request: ApiRequest) -> Single<Data?> {
         do {
-            return execute(request: try endpoint.asURLRequest())
+            return executeDataTask(with: try request.asURLRequest())
         } catch {
             return .error(error)
         }
     }
 
-    private func execute(request: URLRequest) -> Single<Data?> {
+    private func executeDataTask(with request: URLRequest) -> Single<Data?> {
         return Single<Data?>.create { single in
 
             URLSession.shared.dataTask(with: request) { data, urlResponse, error in
@@ -36,18 +36,11 @@ class GoalsRemoteApi: RemoteApi {
 
                 single(.success(data))
 
-                // TODO: for debugging
-                if let data = data {
-                    print(String(data: data, encoding: .utf8) ?? "")
-                } else {
-                    print("Response without body data")
-                }
-                // ------------
+                // TODO: print response to console for debugging
             }
 
             return Disposables.create()
         }
     }
-
 
 }

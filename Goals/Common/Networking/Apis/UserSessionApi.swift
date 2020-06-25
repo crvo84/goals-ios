@@ -10,6 +10,39 @@ import Foundation
 
 
 enum UserSessionApi {
-    case signIn(body: Encodable)
-    case signUp(body: Encodable)
+    case signIn(body: Data)
+    case signUp(body: Data)
+}
+
+extension UserSessionApi: ApiRequest {
+
+    var method: HTTPMethod {
+        switch self {
+        case .signIn, .signUp:
+            return .post
+        }
+    }
+
+    var host: String {
+        Constants.GoalsApi.host
+    }
+
+    var basePath: String {
+        Constants.GoalsApi.basePath
+    }
+
+    var path: String {
+        Constants.GoalsApi.basePath
+    }
+
+    var body: Data? {
+        switch self {
+        case let .signIn(data), let .signUp(data):
+            return data
+        }
+    }
+
+    var mockResponse: HTTPMockResponse? {
+        return nil
+    }
 }

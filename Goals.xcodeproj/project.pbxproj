@@ -272,7 +272,6 @@
 			isa = PBXGroup;
 			children = (
 				7346DBA724A3D8B400AF75BB /* Apis */,
-				73C43C1924A42AEA009EDA38 /* Json Mocks */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -301,13 +300,6 @@
 				7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */,
 			);
 			path = DataStore;
-			sourceTree = "<group>";
-		};
-		73C43C1924A42AEA009EDA38 /* Json Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Json Mocks";
 			sourceTree = "<group>";
 		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {

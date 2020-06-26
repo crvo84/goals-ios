@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol NetworkingManager {
+public protocol NetworkingManager {
     func execute(request: ApiRequest) -> Single<Data?>
 }

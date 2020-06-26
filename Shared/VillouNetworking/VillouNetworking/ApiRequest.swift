@@ -8,14 +8,8 @@
 
 import Foundation
 
-public enum ApiError: Error {
-    case invalidRequest(Error?)
-    case invalidResponse(Error?)
-    case response(Error?, statusCode: Int, data: Data?)
-    case decoding(Error?)
-}
-
 public enum URIScheme: String {
+    case http = "http"
     case https = "https"
 }
 
@@ -40,12 +34,12 @@ public protocol ApiRequest {
     var method: HTTPMethod { get }
     var headers: HTTPHeaders? { get }
     var host: String { get }
-    var basePath: String { get }
+    var basePath: String? { get }
     var path: String { get }
     var body: Data? { get }
     var contentType: HTTPContentType? { get }
     var mockResponse: HTTPMockResponse? { get }
-
+    
     func asURLRequest() throws -> URLRequest
 }
 
@@ -56,7 +50,7 @@ public extension ApiRequest {
         // url
         components.scheme = scheme.rawValue
         components.host = host
-        components.path = basePath + path
+        components.path = (basePath ?? "") + path
 
         guard let url = components.url else {
             throw ApiError.invalidRequest(nil)
@@ -79,14 +73,5 @@ public extension ApiRequest {
 
         return req
     }
-}
 
-// Default values
-public extension ApiRequest {
-
-    var scheme: URIScheme { .https }
-
-    var contentType: HTTPContentType { .json }
-
-    var headers: HTTPHeaders? { nil }
 }

@@ -9,13 +9,13 @@
 import Foundation
 import RxSwift
 
-class MockNetworkingManager: NetworkingManager {
+public class MockNetworkingManager: NetworkingManager {
 
     private struct Config {
         static let waitDuration = 1.5
     }
 
-    func execute(request: ApiRequest) -> Single<Data?> {
+    public func execute(request: ApiRequest) -> Single<Data?> {
         return Single<Data?>.create { single in
             DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + Config.waitDuration) {
                 

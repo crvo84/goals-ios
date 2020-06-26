@@ -28,7 +28,7 @@ extension UserSessionApi: ApiRequest {
         case .signIn:
             return "/users/login"
         case .signUp:
-            return "/users/"
+            return "/users"
         }
     }
 

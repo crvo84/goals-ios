@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		073A331D3FB114EAADE738A5 /* Pods_VillouNetworking_VillouNetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D0E59DFCCDACBFE1D5840F /* Pods_VillouNetworking_VillouNetworkingTests.framework */; };
 		7363C21C24A5591500D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C21224A5591500D3DEA6 /* VillouNetworking.framework */; };
-		7363C22124A5591500D3DEA6 /* VillouNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */; };
 		7363C22324A5591500D3DEA6 /* VillouNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 7363C21524A5591500D3DEA6 /* VillouNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7363C24424A55F9600D3DEA6 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24324A55F9600D3DEA6 /* ApiRequest.swift */; };
 		7363C24F24A5606800D3DEA6 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */; };
 		7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */; };
 		7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */; };
+		7363C25B24A569C800D3DEA6 /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */; };
+		7363C25E24A56BB900D3DEA6 /* ApiRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */; };
+		7363C26024A58CB600D3DEA6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25F24A58CB600D3DEA6 /* ApiError.swift */; };
+		7363C26324A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */; };
+		7363C26524A5A68100D3DEA6 /* URLRequestHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */; };
 		7F63898EBEDAA079998203F1 /* Pods_VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F145812C5BBF7C5710E5D272 /* Pods_VillouNetworking.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,12 +38,16 @@
 		7363C21524A5591500D3DEA6 /* VillouNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VillouNetworking.h; sourceTree = "<group>"; };
 		7363C21624A5591500D3DEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7363C21B24A5591500D3DEA6 /* VillouNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VillouNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouNetworkingTests.swift; sourceTree = "<group>"; };
 		7363C22224A5591500D3DEA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7363C24324A55F9600D3DEA6 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
 		7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManager.swift; sourceTree = "<group>"; };
+		7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
+		7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestMock.swift; sourceTree = "<group>"; };
+		7363C25F24A58CB600D3DEA6 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManagerTests.swift; sourceTree = "<group>"; };
+		7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHandlerMock.swift; sourceTree = "<group>"; };
 		7AD8B1AE8AF1F09031AF9F5A /* Pods-VillouNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking/Pods-VillouNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		87D408499D84526CB23B4D7D /* Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D49D15F0C1C3E0247492C30 /* Pods-VillouNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-VillouNetworkingTests/Pods-VillouNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 		7363C21424A5591500D3DEA6 /* VillouNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				7363C25F24A58CB600D3DEA6 /* ApiError.swift */,
+				7363C24324A55F9600D3DEA6 /* ApiRequest.swift */,
 				7363C25124A5606F00D3DEA6 /* Manager */,
 				7363C25524A560EA00D3DEA6 /* Others */,
 			);
@@ -116,7 +126,10 @@
 		7363C21F24A5591500D3DEA6 /* VillouNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				7363C22024A5591500D3DEA6 /* VillouNetworkingTests.swift */,
+				7363C26124A5A5C700D3DEA6 /* Manager */,
+				7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */,
+				7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */,
+				7363C25C24A56B6000D3DEA6 /* Mocks */,
 				7363C22224A5591500D3DEA6 /* Info.plist */,
 			);
 			path = VillouNetworkingTests;
@@ -125,20 +138,11 @@
 		7363C25124A5606F00D3DEA6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				7363C24324A55F9600D3DEA6 /* ApiRequest.swift */,
 				7363C24D24A5606800D3DEA6 /* NetworkingManager.swift */,
-				7363C25224A5607C00D3DEA6 /* Implementations */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		7363C25224A5607C00D3DEA6 /* Implementations */ = {
-			isa = PBXGroup;
-			children = (
 				7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */,
 				7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */,
 			);
-			path = Implementations;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		7363C25524A560EA00D3DEA6 /* Others */ = {
@@ -148,6 +152,22 @@
 				7363C21624A5591500D3DEA6 /* Info.plist */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		7363C25C24A56B6000D3DEA6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */,
+				7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7363C26124A5A5C700D3DEA6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		889762044899BC8B3C209ACA /* Frameworks */ = {
@@ -339,6 +359,7 @@
 				7363C24F24A5606800D3DEA6 /* NetworkingManager.swift in Sources */,
 				7363C24424A55F9600D3DEA6 /* ApiRequest.swift in Sources */,
 				7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */,
+				7363C26024A58CB600D3DEA6 /* ApiError.swift in Sources */,
 				7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7363C22124A5591500D3DEA6 /* VillouNetworkingTests.swift in Sources */,
+				7363C25B24A569C800D3DEA6 /* ApiRequestTests.swift in Sources */,
+				7363C26324A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift in Sources */,
+				7363C26524A5A68100D3DEA6 /* URLRequestHandlerMock.swift in Sources */,
+				7363C25E24A56BB900D3DEA6 /* ApiRequestMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

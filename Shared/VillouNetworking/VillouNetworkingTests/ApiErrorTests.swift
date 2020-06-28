@@ -19,7 +19,7 @@ extension ApiErrorTests {
 
     func testAsApiError_ActualApiError_ShouldNotReturnNil() {
         // given
-        let error = ApiError.decoding(nil) as Error
+        let error = ApiError.invalidRequest(nil) as Error
 
         // then
         XCTAssertNotNil(error.asApiError)
@@ -52,13 +52,6 @@ extension ApiErrorTests {
     func testIsResponse() {
         XCTAssertFalse(ApiError.unknown.isResponse)
         XCTAssertTrue(ApiError.response(nil, statusCode: 200, data: nil).isResponse)
-    }
-
-    // MARK: isDecoding
-
-    func testIsDecoding() {
-        XCTAssertFalse(ApiError.unknown.isDecoding)
-        XCTAssertTrue(ApiError.decoding(nil).isDecoding)
     }
 
     // MARK: isUnknown

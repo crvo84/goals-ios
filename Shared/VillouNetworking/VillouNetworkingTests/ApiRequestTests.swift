@@ -11,16 +11,37 @@ import XCTest
 
 class ApiRequestTests: XCTestCase {
 
-    private var sutA: ApiRequestMock!
-    private var sutB: ApiRequestMock!
+    private struct Mock: ApiRequest {
+        // we use a different mock (instead of 'ApiRequestMock')
+        // so we can test the default (extension) implementation
+        // for 'asURLRequest'.
+        var scheme: URIScheme = .https
+        var method: HTTPMethod = .get
+        var headers: HTTPHeaders?
+        var host: String = "villou.com"
+        var basePath: String? = "/api"
+        var path: String = "/"
+        var body: Data?
+        var contentType: HTTPContentType?
+        var mockResponse: HTTPMockResponse?
+    }
+
+    private var sutA: Mock!
+    private var sutB: Mock!
 
     override func setUp() {
         super.setUp()
 
-        sutA = ApiRequestMock()
-        sutB = ApiRequestMock()
+        sutA = Mock()
+        sutB = Mock()
     }
 
+    override func tearDown() {
+        sutA = nil
+        sutB = nil
+
+        super.tearDown()
+    }
 }
 
 // MARK: - Tests

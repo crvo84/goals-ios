@@ -11,13 +11,16 @@ import RxSwift
 
 public class MockNetworkingManager: NetworkingManager {
 
-    private struct Config {
-        static let waitDuration = 1.5
+    private let waitDuration: TimeInterval
+
+    public init(waitDuration: TimeInterval = 1.5) {
+        self.waitDuration = waitDuration
     }
 
     public func execute(request: ApiRequest) -> Single<Data?> {
+        let waitDuration = self.waitDuration
         return Single<Data?>.create { single in
-            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + Config.waitDuration) {
+            DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + waitDuration) {
                 
                 guard let (statusCode, data, error) = request.mockResponse else {
                     single(.error(ApiError.invalidRequest(nil)))

@@ -15,10 +15,14 @@
 		7363C25024A5606800D3DEA6 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */; };
 		7363C25424A560B000D3DEA6 /* VillouNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */; };
 		7363C25B24A569C800D3DEA6 /* ApiRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */; };
-		7363C25E24A56BB900D3DEA6 /* ApiRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */; };
 		7363C26024A58CB600D3DEA6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C25F24A58CB600D3DEA6 /* ApiError.swift */; };
 		7363C26324A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */; };
 		7363C26524A5A68100D3DEA6 /* URLRequestHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */; };
+		7363C26724A82F7600D3DEA6 /* ApiRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26624A82F7600D3DEA6 /* ApiRequestMock.swift */; };
+		7363C26924A83EA100D3DEA6 /* ApiErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C26824A83EA100D3DEA6 /* ApiErrorTests.swift */; };
+		7365243024A84686004E4B2F /* URLRequest+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365242F24A84686004E4B2F /* URLRequest+Mock.swift */; };
+		7365243224A84E73004E4B2F /* MockNetworkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365243124A84E73004E4B2F /* MockNetworkingManagerTests.swift */; };
+		7365243424A958CC004E4B2F /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365243324A958CC004E4B2F /* TestError.swift */; };
 		7F63898EBEDAA079998203F1 /* Pods_VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F145812C5BBF7C5710E5D272 /* Pods_VillouNetworking.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,10 +48,14 @@
 		7363C24E24A5606800D3DEA6 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
 		7363C25324A560B000D3DEA6 /* VillouNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManager.swift; sourceTree = "<group>"; };
 		7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestTests.swift; sourceTree = "<group>"; };
-		7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestMock.swift; sourceTree = "<group>"; };
 		7363C25F24A58CB600D3DEA6 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouNetworkingManagerTests.swift; sourceTree = "<group>"; };
 		7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHandlerMock.swift; sourceTree = "<group>"; };
+		7363C26624A82F7600D3DEA6 /* ApiRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestMock.swift; sourceTree = "<group>"; };
+		7363C26824A83EA100D3DEA6 /* ApiErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorTests.swift; sourceTree = "<group>"; };
+		7365242F24A84686004E4B2F /* URLRequest+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Mock.swift"; sourceTree = "<group>"; };
+		7365243124A84E73004E4B2F /* MockNetworkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingManagerTests.swift; sourceTree = "<group>"; };
+		7365243324A958CC004E4B2F /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		7AD8B1AE8AF1F09031AF9F5A /* Pods-VillouNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking/Pods-VillouNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		87D408499D84526CB23B4D7D /* Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouNetworking-VillouNetworkingTests/Pods-VillouNetworking-VillouNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D49D15F0C1C3E0247492C30 /* Pods-VillouNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouNetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-VillouNetworkingTests/Pods-VillouNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +134,9 @@
 		7363C21F24A5591500D3DEA6 /* VillouNetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				7363C26124A5A5C700D3DEA6 /* Manager */,
+				7363C26824A83EA100D3DEA6 /* ApiErrorTests.swift */,
 				7363C25A24A569C800D3DEA6 /* ApiRequestTests.swift */,
-				7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */,
+				7363C26124A5A5C700D3DEA6 /* Manager */,
 				7363C25C24A56B6000D3DEA6 /* Mocks */,
 				7363C22224A5591500D3DEA6 /* Info.plist */,
 			);
@@ -157,8 +165,10 @@
 		7363C25C24A56B6000D3DEA6 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				7363C25D24A56BB900D3DEA6 /* ApiRequestMock.swift */,
+				7365243324A958CC004E4B2F /* TestError.swift */,
+				7363C26624A82F7600D3DEA6 /* ApiRequestMock.swift */,
 				7363C26424A5A68100D3DEA6 /* URLRequestHandlerMock.swift */,
+				7365242F24A84686004E4B2F /* URLRequest+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -166,6 +176,8 @@
 		7363C26124A5A5C700D3DEA6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				7363C26224A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift */,
+				7365243124A84E73004E4B2F /* MockNetworkingManagerTests.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -368,10 +380,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7363C26724A82F7600D3DEA6 /* ApiRequestMock.swift in Sources */,
 				7363C25B24A569C800D3DEA6 /* ApiRequestTests.swift in Sources */,
+				7365243224A84E73004E4B2F /* MockNetworkingManagerTests.swift in Sources */,
 				7363C26324A5A62600D3DEA6 /* VillouNetworkingManagerTests.swift in Sources */,
+				7365243424A958CC004E4B2F /* TestError.swift in Sources */,
 				7363C26524A5A68100D3DEA6 /* URLRequestHandlerMock.swift in Sources */,
-				7363C25E24A56BB900D3DEA6 /* ApiRequestMock.swift in Sources */,
+				7363C26924A83EA100D3DEA6 /* ApiErrorTests.swift in Sources */,
+				7365243024A84686004E4B2F /* URLRequest+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SignUpDTO: Codable {
+struct SignUpDTO: DataModel {
     let fullName: String
     let nickName: String
     let email: String

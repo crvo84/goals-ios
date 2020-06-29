@@ -8,19 +8,21 @@
 
 import Foundation
 import RxSwift
+import VillouNetworking
 
-//struct GoalsUserSessionService: UserSessionService {
-//
-//    let manager: NetworkingManager
-//
-//    func signIn(dto: SignInDTO) -> Single<UserSession> {
-//
-//    }
-//
-//    func signUp(dto: SignUpDTO) -> Single<UserSession> {
-//        
-//    }
-//
-//
-//
-//}
+struct GoalsUserSessionService: UserSessionService {
+
+    let manager: NetworkingManager
+
+    func signIn(dto: SignInDTO) -> Single<UserSession> {
+        let req = UserSessionApi.signIn(body: dto.toData())
+        return manager.execute(request: <#T##ApiRequest#>)
+    }
+
+    func signUp(dto: SignUpDTO) -> Single<UserSession> {
+
+    }
+
+
+
+}

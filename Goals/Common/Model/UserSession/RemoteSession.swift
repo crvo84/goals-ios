@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RemoteSession: Codable {
+struct RemoteSession: DataModel {
     let token: String
 }
 

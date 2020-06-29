@@ -54,6 +54,13 @@ extension ApiErrorTests {
         XCTAssertTrue(ApiError.response(nil, statusCode: 200, data: nil).isResponse)
     }
 
+    // MARK: isDecoding
+
+    func testIsDecoding() {
+        XCTAssertFalse(ApiError.unknown.isDecoding)
+        XCTAssertTrue(ApiError.decoding(nil).isDecoding)
+    }
+
     // MARK: isUnknown
 
     func testIsUnknown() {

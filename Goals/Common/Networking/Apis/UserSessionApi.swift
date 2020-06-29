@@ -47,7 +47,7 @@ extension UserSessionApi: ApiRequest {
 
     var host: String { Constants.GoalsApi.host }
 
-    var basePath: String { Constants.GoalsApi.basePath }
+    var basePath: String? { Constants.GoalsApi.basePath }
 
     var scheme: URIScheme { return .https }
 

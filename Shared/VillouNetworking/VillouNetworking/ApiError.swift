@@ -12,6 +12,7 @@ public enum ApiError: Error {
     case invalidRequest(Error?)
     case invalidResponse(Error?)
     case response(Error?, statusCode: Int, data: Data?)
+    case decoding(Error?)
     case unknown
 }
 
@@ -32,6 +33,11 @@ public extension ApiError {
 
     var isResponse: Bool {
         guard case .response = self else { return false }
+        return true
+    }
+
+    var isDecoding: Bool {
+        guard case .decoding = self else { return false }
         return true
     }
 

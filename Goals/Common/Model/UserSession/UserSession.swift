@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserSession: Codable {
+class UserSession: DataModel {
 
     let profile: UserProfile
     let remoteSession: RemoteSession

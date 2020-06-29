@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SignInDTO: Codable {
+struct SignInDTO: DataModel {
     let email: String
     let password: String
 }

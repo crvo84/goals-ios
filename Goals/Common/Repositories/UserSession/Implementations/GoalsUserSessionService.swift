@@ -16,13 +16,12 @@ struct GoalsUserSessionService: UserSessionService {
 
     func signIn(dto: SignInDTO) -> Single<UserSession> {
         let req = UserSessionApi.signIn(body: dto.toData())
-        return manager.execute(request: <#T##ApiRequest#>)
+        return manager.execute(request: req, decodeType: UserSession.self)
     }
 
     func signUp(dto: SignUpDTO) -> Single<UserSession> {
-
+        let req = UserSessionApi.signUp(body: dto.toData())
+        return manager.execute(request: req, decodeType: UserSession.self)
     }
-
-
 
 }

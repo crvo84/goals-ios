@@ -32,7 +32,6 @@
 		7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D724A4673C00D3DEA6 /* Constants.swift */; };
 		7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C25624A5620900D3DEA6 /* VillouNetworking.framework */; };
 		7363C25824A5620900D3DEA6 /* VillouNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C25624A5620900D3DEA6 /* VillouNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7365243C24A96444004E4B2F /* Observable+Decoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365243B24A96444004E4B2F /* Observable+Decoding.swift */; };
 		7365243E24A971AE004E4B2F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365243D24A971AE004E4B2F /* DataModel.swift */; };
 		73A89D8024A41E8B00D12A40 /* GoalsUserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */; };
 		73A89D8524A4212B00D12A40 /* MockUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */; };
@@ -99,7 +98,6 @@
 		7363C1D224A4575300D3DEA6 /* SignInDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		7363C1D724A4673C00D3DEA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7363C25624A5620900D3DEA6 /* VillouNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7365243B24A96444004E4B2F /* Observable+Decoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Decoding.swift"; sourceTree = "<group>"; };
 		7365243D24A971AE004E4B2F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionService.swift; sourceTree = "<group>"; };
 		73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				7346DB9124A321AB00AF75BB /* String+Localized.swift */,
-				7365243A24A96428004E4B2F /* Rx */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,14 +291,6 @@
 				7363C1D224A4575300D3DEA6 /* SignInDTO.swift */,
 			);
 			path = DTOs;
-			sourceTree = "<group>";
-		};
-		7365243A24A96428004E4B2F /* Rx */ = {
-			isa = PBXGroup;
-			children = (
-				7365243B24A96444004E4B2F /* Observable+Decoding.swift */,
-			);
-			path = Rx;
 			sourceTree = "<group>";
 		};
 		73A89D8624A4212F00D12A40 /* DataStore */ = {
@@ -546,7 +535,6 @@
 				7346DB9E24A3D42600AF75BB /* UserSessionDataStore.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,
 				7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */,
-				7365243C24A96444004E4B2F /* Observable+Decoding.swift in Sources */,
 				7346DB9424A3328600AF75BB /* UserSessionRepository.swift in Sources */,
 				7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */,
 				73A89D8524A4212B00D12A40 /* MockUserSessionDataStore.swift in Sources */,

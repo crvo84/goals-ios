@@ -54,15 +54,17 @@ class NetworkingManagerTests: XCTestCase {
     }
 }
 
-// MARK: execute(request:decodeType:) default implementation tests
+// MARK: - execute(request:decodeType:) default implementation tests
 extension NetworkingManagerTests {
+
+    // MARK: Single<T>
 
     func testExecuteRequestDecodeType_DataIsNil_ReturnDecodingError() {
         // given
         sutMock.expectedExecuteRequestResult = .success(nil)
 
         // when
-        let single = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let single: Single<TestDataModel> = sutMock.execute(request: request, decodeType: TestDataModel.self)
         let singleResult = single.observeOn(scheduler).toBlocking().materialize()
 
         // then
@@ -80,7 +82,7 @@ extension NetworkingManagerTests {
         sutMock.expectedExecuteRequestResult = .success(emptyData)
 
         // when
-        let single = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let single: Single<TestDataModel> = sutMock.execute(request: request, decodeType: TestDataModel.self)
         let singleResult = single.observeOn(scheduler).toBlocking().materialize()
 
         // then
@@ -103,7 +105,7 @@ extension NetworkingManagerTests {
         sutMock.expectedExecuteRequestResult = .success(testData)
 
         // when
-        let single = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let single: Single<TestDataModel> = sutMock.execute(request: request, decodeType: TestDataModel.self)
         let singleResult = single.observeOn(scheduler).toBlocking().materialize()
 
         // then
@@ -112,6 +114,64 @@ extension NetworkingManagerTests {
             XCTFail("Single should complete successfully")
         case let .completed(elements):
             XCTAssertEqual(model.value, elements.first?.value)
+        }
+    }
+
+    // MARK: Single<T?>
+
+    func testExecuteRequestDecodeTypeOptional_DataIsNil_ReturnDecodingError() {
+        // given
+        sutMock.expectedExecuteRequestResult = .success(nil)
+
+        // when
+        let single: Single<TestDataModel?> = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let singleResult = single.observeOn(scheduler).toBlocking().materialize()
+
+        // then
+        switch singleResult {
+        case .failed:
+            XCTFail("Single should complete successfully")
+        case let .completed(elements):
+            XCTAssertEqual(1, elements.count)
+            XCTAssertNil(elements.first??.value)
+        }
+    }
+
+    func testExecuteRequestDecodeTypeOptional_JsonDecodingError_ReturnDecodingError() throws  {
+        // given
+        let emptyData = Data()
+        sutMock.expectedExecuteRequestResult = .success(emptyData)
+
+        // when
+        let single: Single<TestDataModel?> = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let singleResult = single.observeOn(scheduler).toBlocking().materialize()
+
+        // then
+        switch singleResult {
+        case .failed:
+            XCTFail("Single should complete successfully")
+        case let .completed(elements):
+            XCTAssertEqual(1, elements.count)
+            XCTAssertNil(elements.first??.value)
+        }
+    }
+
+    func testExecuteRequestDecodeTypeOptional_ValidData_ReturnDecodedValue() throws  {
+        // given
+        let model = TestDataModel(value: "Testing value 123!")
+        let testData = try JSONEncoder().encode(model)
+        sutMock.expectedExecuteRequestResult = .success(testData)
+
+        // when
+        let single: Single<TestDataModel?> = sutMock.execute(request: request, decodeType: TestDataModel.self)
+        let singleResult = single.observeOn(scheduler).toBlocking().materialize()
+
+        // then
+        switch singleResult {
+        case .failed:
+            XCTFail("Single should complete successfully")
+        case let .completed(elements):
+            XCTAssertEqual(model.value, elements.first??.value)
         }
     }
 

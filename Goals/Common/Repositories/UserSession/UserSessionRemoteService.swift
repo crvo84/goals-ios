@@ -1,5 +1,5 @@
 //
-//  UserSessionService.swift
+//  UserSessionRemoteService.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol UserSessionService {
+protocol UserSessionRemoteService {
 
     func signIn(dto: SignInDTO) -> Single<UserSession>
     func signUp(dto: SignUpDTO) -> Single<UserSession>

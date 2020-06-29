@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4977B132037665716F778C28 /* Pods_Goals_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */; };
+		73215A1324A990720038B9A5 /* UserSessionCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73215A1224A990720038B9A5 /* UserSessionCoding.swift */; };
 		7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DADC24A1C2F700AF75BB /* AppDelegate.swift */; };
 		7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE524A1C2F800AF75BB /* Assets.xcassets */; };
 		7346DAE924A1C2F800AF75BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE724A1C2F800AF75BB /* LaunchScreen.storyboard */; };
@@ -25,15 +26,15 @@
 		7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9724A3D2A400AF75BB /* SignUpDTO.swift */; };
 		7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */; };
 		7346DB9E24A3D42600AF75BB /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9D24A3D42600AF75BB /* UserSessionDataStore.swift */; };
-		7346DBA024A3D4BF00AF75BB /* RealmUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */; };
-		7346DBA324A3D58A00AF75BB /* UserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA224A3D58A00AF75BB /* UserSessionService.swift */; };
+		7346DBA024A3D4BF00AF75BB /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9F24A3D4BF00AF75BB /* KeychainUserSessionDataStore.swift */; };
+		7346DBA324A3D58A00AF75BB /* UserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA224A3D58A00AF75BB /* UserSessionRemoteService.swift */; };
 		7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */; };
 		7363C1D324A4575300D3DEA6 /* SignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D224A4575300D3DEA6 /* SignInDTO.swift */; };
 		7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D724A4673C00D3DEA6 /* Constants.swift */; };
 		7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C25624A5620900D3DEA6 /* VillouNetworking.framework */; };
 		7363C25824A5620900D3DEA6 /* VillouNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C25624A5620900D3DEA6 /* VillouNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7365243E24A971AE004E4B2F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365243D24A971AE004E4B2F /* DataModel.swift */; };
-		73A89D8024A41E8B00D12A40 /* GoalsUserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */; };
+		73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */; };
 		73A89D8524A4212B00D12A40 /* MockUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		6129D4E44643C509FF6A5019 /* Pods-Goals-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-Goals-GoalsTests/Pods-Goals-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_GoalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF2FEC4F09380FDA399798B /* Pods-GoalsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.release.xcconfig"; path = "Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		73215A1224A990720038B9A5 /* UserSessionCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionCoding.swift; sourceTree = "<group>"; };
 		7346DAD924A1C2F700AF75BB /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7346DADC24A1C2F700AF75BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7346DAE524A1C2F800AF75BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,14 +94,14 @@
 		7346DB9724A3D2A400AF75BB /* SignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDTO.swift; sourceTree = "<group>"; };
 		7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRepository.swift; sourceTree = "<group>"; };
 		7346DB9D24A3D42600AF75BB /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
-		7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserSessionDataStore.swift; sourceTree = "<group>"; };
-		7346DBA224A3D58A00AF75BB /* UserSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionService.swift; sourceTree = "<group>"; };
+		7346DB9F24A3D4BF00AF75BB /* KeychainUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainUserSessionDataStore.swift; sourceTree = "<group>"; };
+		7346DBA224A3D58A00AF75BB /* UserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRemoteService.swift; sourceTree = "<group>"; };
 		7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionApi.swift; sourceTree = "<group>"; };
 		7363C1D224A4575300D3DEA6 /* SignInDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDTO.swift; sourceTree = "<group>"; };
 		7363C1D724A4673C00D3DEA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7363C25624A5620900D3DEA6 /* VillouNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7365243D24A971AE004E4B2F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionService.swift; sourceTree = "<group>"; };
+		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRemoteService.swift; sourceTree = "<group>"; };
 		73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserSessionDataStore.swift; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,7 +246,7 @@
 			children = (
 				7346DB9324A3328600AF75BB /* UserSessionRepository.swift */,
 				7346DB9D24A3D42600AF75BB /* UserSessionDataStore.swift */,
-				7346DBA224A3D58A00AF75BB /* UserSessionService.swift */,
+				7346DBA224A3D58A00AF75BB /* UserSessionRemoteService.swift */,
 				7346DB9C24A3D40500AF75BB /* Implementations */,
 			);
 			path = UserSession;
@@ -254,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */,
-				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionService.swift */,
+				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */,
 				73A89D8624A4212F00D12A40 /* DataStore */,
 			);
 			path = Implementations;
@@ -296,8 +298,9 @@
 		73A89D8624A4212F00D12A40 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				73215A1224A990720038B9A5 /* UserSessionCoding.swift */,
 				73A89D8424A4212B00D12A40 /* MockUserSessionDataStore.swift */,
-				7346DB9F24A3D4BF00AF75BB /* RealmUserSessionDataStore.swift */,
+				7346DB9F24A3D4BF00AF75BB /* KeychainUserSessionDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -520,7 +523,7 @@
 			files = (
 				7346DB7F24A1D81700AF75BB /* MainViewType.swift in Sources */,
 				7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */,
-				7346DBA324A3D58A00AF75BB /* UserSessionService.swift in Sources */,
+				7346DBA324A3D58A00AF75BB /* UserSessionRemoteService.swift in Sources */,
 				7346DB8624A1D9AA00AF75BB /* RemoteSession.swift in Sources */,
 				7346DB7A24A1D60A00AF75BB /* AppDependencyContainer.swift in Sources */,
 				7346DB8224A1D87700AF75BB /* UserSession.swift in Sources */,
@@ -529,8 +532,9 @@
 				7346DB8424A1D8BC00AF75BB /* UserProfile.swift in Sources */,
 				7346DB7C24A1D78900AF75BB /* MainViewModel.swift in Sources */,
 				7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */,
-				73A89D8024A41E8B00D12A40 /* GoalsUserSessionService.swift in Sources */,
-				7346DBA024A3D4BF00AF75BB /* RealmUserSessionDataStore.swift in Sources */,
+				73215A1324A990720038B9A5 /* UserSessionCoding.swift in Sources */,
+				73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */,
+				7346DBA024A3D4BF00AF75BB /* KeychainUserSessionDataStore.swift in Sources */,
 				7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */,
 				7346DB9E24A3D42600AF75BB /* UserSessionDataStore.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,

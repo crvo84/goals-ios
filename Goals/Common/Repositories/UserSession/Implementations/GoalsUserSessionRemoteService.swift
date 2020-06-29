@@ -1,5 +1,5 @@
 //
-//  GoalsUserSessionService.swift
+//  GoalsUserSessionRemoteService.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import VillouNetworking
 
-struct GoalsUserSessionService: UserSessionService {
+struct GoalsUserSessionRemoteService: UserSessionRemoteService {
 
     let manager: NetworkingManager
 

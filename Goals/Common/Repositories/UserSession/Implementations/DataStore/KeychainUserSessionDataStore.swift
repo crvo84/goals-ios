@@ -1,5 +1,5 @@
 //
-//  RealmUserSessionDataStore.swift
+//  KeychainUserSessionDataStore.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.

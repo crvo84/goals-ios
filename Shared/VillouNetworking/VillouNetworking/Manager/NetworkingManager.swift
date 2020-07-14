@@ -12,7 +12,6 @@ import RxSwift
 public protocol NetworkingManager {
     func execute(request: ApiRequest) -> Single<Data?>
     func execute<T: Decodable>(request: ApiRequest, decodeType: T.Type) -> Single<T>
-    func execute<T: Decodable>(request: ApiRequest, decodeType: T.Type) -> Single<T?>
 }
 
 // MARK: Decoding
@@ -21,12 +20,6 @@ public extension NetworkingManager {
     func execute<T: Decodable>(request: ApiRequest, decodeType: T.Type) -> Single<T> {
         return execute(request: request).map {
             try Self.decode(decodeType, from: $0)
-        }
-    }
-
-    func execute<T: Decodable>(request: ApiRequest, decodeType: T.Type) -> Single<T?> {
-        return execute(request: request).map {
-            try? Self.decode(decodeType, from: $0)
         }
     }
 

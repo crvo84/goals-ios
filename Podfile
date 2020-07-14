@@ -2,6 +2,7 @@ platform :ios, '13.0'
 use_frameworks!
 workspace 'Goals'
 
+# Dependencies
 def rxPods
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
@@ -15,18 +16,22 @@ end
 # App project
 target 'Goals' do
   rxPods
-
   target 'GoalsTests' do
     rxTestPods
   end
 end
 
 # Shared projects
-target 'VillouNetworking' do
-  project 'Shared/VillouNetworking/VillouNetworking'
-  rxPods
-
-  target 'VillouNetworkingTests' do
-    rxTestPods
+sharedProjects = [
+  'VillouNetworking',
+  'VillouUserSession'
+]
+sharedProjects.each do |proj|
+  target "#{proj}" do
+    project "Shared/#{proj}/#{proj}"
+    rxPods
+    target "#{proj}Tests" do
+      rxTestPods
+    end
   end
 end

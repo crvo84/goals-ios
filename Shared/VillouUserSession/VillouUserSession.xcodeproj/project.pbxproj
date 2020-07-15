@@ -21,6 +21,8 @@
 		7352481C24BECEFE0028D089 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481B24BECEFE0028D089 /* UserProfile.swift */; };
 		7352481E24BECF070028D089 /* RemoteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481D24BECF070028D089 /* RemoteSession.swift */; };
 		7352482024BECF110028D089 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481F24BECF110028D089 /* UserSession.swift */; };
+		7352482124BF80300028D089 /* MockUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735247D524BD78CE0028D089 /* MockUserSessionDataStore.swift */; };
+		7352482224BF80340028D089 /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735247D624BD78CE0028D089 /* KeychainUserSessionDataStore.swift */; };
 		C66481986BCCFBC3A6E4E45C /* Pods_VillouUserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA3934C65690DB466560A09 /* Pods_VillouUserSession.framework */; };
 /* End PBXBuildFile section */
 
@@ -339,6 +341,7 @@
 			files = (
 				735247D124BD76930028D089 /* UserSessionRepository.swift in Sources */,
 				7352482024BECF110028D089 /* UserSession.swift in Sources */,
+				7352482124BF80300028D089 /* MockUserSessionDataStore.swift in Sources */,
 				7352481824BECE050028D089 /* SignInDTO.swift in Sources */,
 				735247D824BD78E90028D089 /* UserSessionCoding.swift in Sources */,
 				735247D224BD76930028D089 /* UserSessionDataStore.swift in Sources */,
@@ -347,6 +350,7 @@
 				7352481E24BECF070028D089 /* RemoteSession.swift in Sources */,
 				735247D324BD76930028D089 /* UserSessionRemoteService.swift in Sources */,
 				7352480C24BE86DE0028D089 /* JsonUserSessionCoding.swift in Sources */,
+				7352482224BF80340028D089 /* KeychainUserSessionDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

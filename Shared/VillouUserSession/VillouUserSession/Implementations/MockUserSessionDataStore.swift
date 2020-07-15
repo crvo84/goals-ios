@@ -6,39 +6,34 @@
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
-public class MockUserSessionDataStore<T: UserSession>: UserSessionDataStore {
+public class MockUserSessionDataStore<UserSessionType: UserSession>: UserSessionDataStore {
 
-    private var mockUserSession: T?
+    private var mockUserSession: UserSessionType?
 
-    init(mockUserSession: T?) {
+    init(mockUserSession: UserSessionType?) {
         self.mockUserSession = mockUserSession
     }
 
     // MARK: Mock
 
-    func setMock(userSession: T) {
+    func setMock(userSession: UserSessionType?) {
         self.mockUserSession = userSession
     }
 
     // MARK: UserSession
-    
 
-//    func readUserSession() -> Single<MockUserSession?> {
-//        return .just(userSession)
-//    }
-//
-//    func save(userSession: MockUserSession) -> Single<MockUserSession> {
-//        self.userSession = userSession
-//
-//        return .just(userSession)
-//    }
-//
-//    func delete(userSession: MockUserSession) -> Single<MockUserSession> {
-//        self.userSession = nil
-//
-//        return .just(userSession)
-//    }
+    public func readUserSession<U>() -> Single<U?> where U : UserSession {
+        <#code#>
+    }
+
+    public func save<U>(userSession: U) -> Single<U> where U : UserSession {
+        <#code#>
+    }
+
+    public func delete<U>(userSession: U) -> Single<U> where U : UserSession {
+        <#code#>
+    }
+
 }

@@ -10,7 +10,7 @@ import VillouUserSession
 
 struct GoalsUserProfile: UserProfile {
     let email: String
-    let fullName: String
-    let nickName: String
+    let firstName: String
+    let lastName: String
     let avatar: URL?
 }

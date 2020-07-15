@@ -9,8 +9,11 @@
 import VillouUserSession
 
 struct GoalsSignUpDTO: SignUpDTO {
-    let email: String
-    let fullName: String
-    let nickName: String
+    let firstName: String
+    let lastName: String
     let password: String
+    let email: String
+    let gender: String?
+    let country: String?
+    let age: Int?
 }

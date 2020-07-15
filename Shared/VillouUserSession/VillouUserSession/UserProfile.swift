@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol UserProfile: Codable, Equatable {
-    var email: String { get }
+
 }

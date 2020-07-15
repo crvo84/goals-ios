@@ -10,7 +10,9 @@ import Foundation
 import RxSwift
 
 public protocol UserSessionDataStore {
-    func readUserSession() -> Single<UserSession?>
-    func save(userSession: UserSession) -> Single<UserSession>
-    func delete(userSession: UserSession) -> Single<UserSession>
+    associatedtype UserSessionType: Codable
+
+    func readUserSession() -> Single<UserSessionType?>
+    func save(userSession: UserSessionType) -> Single<UserSessionType>
+    func delete(userSession: UserSessionType) -> Single<UserSessionType>
 }

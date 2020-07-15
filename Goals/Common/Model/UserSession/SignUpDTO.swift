@@ -1,5 +1,5 @@
 //
-//  GoalsSignInDTO.swift
+//  SignUpDTO.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import VillouUserSession
 
-struct GoalsSignInDTO: SignInDTO {
+struct SignUpDTO: Codable {
     let email: String
+    let fullName: String
+    let nickName: String
     let password: String
 }

@@ -9,32 +9,35 @@
 import Foundation
 import RxSwift
 
-public class MockUserSessionDataStore: UserSessionDataStore {
+public class MockUserSessionDataStore<MockUserSession>: UserSessionDataStore {
 
-    private let mockSession: UserSession
+    private var userSession: MockUserSession?
 
-    init(hasSession: Bool) {
-        self.hasSession = hasSession
+    init(userSession: MockUserSession?) {
+        self.userSession = userSession
     }
 
-    func readUserSession() -> Single<UserSession?> {
-        var session: UserSession?
-        if hasSession {
-            UserProfile
-            let mockProfile = UserProfile(fullName: "Carlos Villanueva", nickName: "crvo84", email: "crvo84@gmail.com", avatar: nil)
-            let mockRemoteSession = RemoteSession(token: "123456789")
-            session = UserSession(profile: mockProfile, remoteSession: mockRemoteSession)
-        }
+    // MARK: Mock
 
-        return .just(session)
+    func setMock(userSession: MockUserSession) {
+        self.userSession = userSession
     }
 
-    func save(userSession: UserSession) -> Single<UserSession> {
+    // MARK: UserSession
+
+    func readUserSession() -> Single<MockUserSession?> {
         return .just(userSession)
     }
 
-    func delete(userSession: UserSession) -> Single<UserSession> {
+    func save(userSession: MockUserSession) -> Single<MockUserSession> {
+        self.userSession = userSession
+
         return .just(userSession)
     }
 
+    func delete(userSession: MockUserSession) -> Single<MockUserSession> {
+        self.userSession = nil
+
+        return .just(userSession)
+    }
 }

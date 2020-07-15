@@ -6,12 +6,15 @@
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
 public protocol UserSessionRepository {
-    func readUserSession() -> Single<UserSession?>
-    func signUp(dto: SignUpDTO) -> Single<UserSession>
-    func signIn(dto: SignInDTO) -> Single<UserSession>
-    func signOut(userSession: UserSession) -> Single<UserSession>
+    associatedtype SignInDTOType: Codable
+    associatedtype SignUpDTOType: Codable
+    associatedtype UserSessionType: Codable
+
+    func readUserSession() -> Single<UserSessionType?>
+    func signUp(dto: SignUpDTOType) -> Single<UserSessionType>
+    func signIn(dto: SignInDTOType) -> Single<UserSessionType>
+    func signOut(userSession: UserSessionType) -> Single<UserSessionType>
 }

@@ -10,6 +10,10 @@ import Foundation
 import RxSwift
 
 public protocol UserSessionRemoteService {
-    func signIn(dto: SignInDTO) -> Single<UserSession>
-    func signUp(dto: SignUpDTO) -> Single<UserSession>
+    associatedtype SignInDTOType: Codable
+    associatedtype SignUpDTOType: Codable
+    associatedtype UserSessionType: Codable
+
+    func signIn(dto: SignInDTOType) -> Single<UserSessionType>
+    func signUp(dto: SignUpDTOType) -> Single<UserSessionType>
 }

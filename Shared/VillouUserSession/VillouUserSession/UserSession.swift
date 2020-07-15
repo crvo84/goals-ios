@@ -8,18 +8,12 @@
 
 import Foundation
 
-class UserSession: DataModel {
-
-    let profile: UserProfile
-    let remoteSession: RemoteSession
-
-    init(profile: UserProfile, remoteSession: RemoteSession) {
-        self.profile = profile
-        self.remoteSession = remoteSession
-    }
+public protocol UserSession: class, Codable {
+    var profile: UserProfile { get }
+    var remoteSession: RemoteSession { get }
 }
 
-extension UserSession {
+public extension UserSession {
     static func ==(lhs: UserSession, rhs: UserSession) -> Bool {
         return lhs.remoteSession == rhs.remoteSession &&
                 lhs.profile == rhs.profile

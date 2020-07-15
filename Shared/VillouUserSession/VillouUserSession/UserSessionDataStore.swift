@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol UserSessionDataStore {
+public protocol UserSessionDataStore {
     func readUserSession() -> Single<UserSession?>
     func save(userSession: UserSession) -> Single<UserSession>
     func delete(userSession: UserSession) -> Single<UserSession>

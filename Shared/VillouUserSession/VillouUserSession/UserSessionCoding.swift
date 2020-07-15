@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UserSessionCoding {
+public protocol UserSessionCoding {
     func encode(userSession: UserSession) -> Data
     func decode(data: Data) -> UserSession
 }

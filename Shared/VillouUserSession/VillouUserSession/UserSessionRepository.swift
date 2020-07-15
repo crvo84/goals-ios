@@ -9,8 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol UserSessionRepository {
-
+public protocol UserSessionRepository {
     func readUserSession() -> Single<UserSession?>
     func signUp(dto: SignUpDTO) -> Single<UserSession>
     func signIn(dto: SignInDTO) -> Single<UserSession>

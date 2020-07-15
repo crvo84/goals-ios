@@ -9,8 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol UserSessionRemoteService {
-
+public protocol UserSessionRemoteService {
     func signIn(dto: SignInDTO) -> Single<UserSession>
     func signUp(dto: SignUpDTO) -> Single<UserSession>
 }

@@ -1,5 +1,5 @@
 //
-//  SignUpDTO.swift
+//  GoalsSignInDTO.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
+import VillouUserSession
 
-struct SignUpDTO: DataModel {
-    let fullName: String
-    let nickName: String
+struct GoalsSignInDTO: SignInDTO {
     let email: String
     let password: String
 }

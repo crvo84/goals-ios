@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-class MockUserSessionDataStore: UserSessionDataStore {
+public class MockUserSessionDataStore: UserSessionDataStore {
 
-    private let hasSession: Bool
+    private let mockSession: UserSession
 
     init(hasSession: Bool) {
         self.hasSession = hasSession
@@ -20,6 +20,7 @@ class MockUserSessionDataStore: UserSessionDataStore {
     func readUserSession() -> Single<UserSession?> {
         var session: UserSession?
         if hasSession {
+            UserProfile
             let mockProfile = UserProfile(fullName: "Carlos Villanueva", nickName: "crvo84", email: "crvo84@gmail.com", avatar: nil)
             let mockRemoteSession = RemoteSession(token: "123456789")
             session = UserSession(profile: mockProfile, remoteSession: mockRemoteSession)

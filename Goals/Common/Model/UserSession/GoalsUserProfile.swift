@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import VillouUserSession
 
-struct UserProfile: DataModel, Equatable {
+struct GoalsUserProfile: DataModel {
+    let email: String
     let fullName: String
     let nickName: String
-    let email: String
     let avatar: URL?
 }
+
+extension GoalsUserProfile: UserProfile { }

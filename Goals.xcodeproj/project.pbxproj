@@ -20,7 +20,6 @@
 		7346DB8C24A31F0D00AF75BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7346DB8E24A31F0D00AF75BB /* Localizable.strings */; };
 		7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9124A321AB00AF75BB /* String+Localized.swift */; };
 		7346DB9824A3D2A400AF75BB /* GoalsSignUpDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9724A3D2A400AF75BB /* GoalsSignUpDTO.swift */; };
-		7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */; };
 		7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */; };
 		7352480224BE7E920028D089 /* VillouUserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480124BE7E920028D089 /* VillouUserSession.framework */; };
 		7352480324BE7E920028D089 /* VillouUserSession.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480124BE7E920028D089 /* VillouUserSession.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -88,7 +87,6 @@
 		7346DB8F24A31F6600AF75BB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7346DB9124A321AB00AF75BB /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		7346DB9724A3D2A400AF75BB /* GoalsSignUpDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSignUpDTO.swift; sourceTree = "<group>"; };
-		7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRepository.swift; sourceTree = "<group>"; };
 		7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionApi.swift; sourceTree = "<group>"; };
 		7352480124BE7E920028D089 /* VillouUserSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouUserSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7352480424BE7E9B0028D089 /* VillouSecureStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouSecureStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,7 +212,6 @@
 		7346DB8024A1D86B00AF75BB /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				7346DB9924A3D3B000AF75BB /* UserSession */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -239,15 +236,6 @@
 			path = UserSession;
 			sourceTree = "<group>";
 		};
-		7346DB9924A3D3B000AF75BB /* UserSession */ = {
-			isa = PBXGroup;
-			children = (
-				7346DB9A24A3D3D200AF75BB /* GoalsUserSessionRepository.swift */,
-				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */,
-			);
-			path = UserSession;
-			sourceTree = "<group>";
-		};
 		7346DBA124A3D4D800AF75BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DBA724A3D8B400AF75BB /* Apis */,
+				7352482724BFCE1F0028D089 /* Services */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -271,6 +260,14 @@
 				7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */,
 			);
 			path = Apis;
+			sourceTree = "<group>";
+		};
+		7352482724BFCE1F0028D089 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
@@ -502,7 +499,6 @@
 				73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */,
 				7352480A24BE80430028D089 /* GoalsRemoteSession.swift in Sources */,
 				7352481424BEB44F0028D089 /* GoalsUserSession.swift in Sources */,
-				7346DB9B24A3D3D200AF75BB /* GoalsUserSessionRepository.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,
 				7352481224BE885E0028D089 /* Codable+Json.swift in Sources */,
 				7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */,

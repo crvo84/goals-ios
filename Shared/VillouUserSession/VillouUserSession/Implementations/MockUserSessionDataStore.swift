@@ -8,33 +8,33 @@
 
 import RxSwift
 
-public class MockUserSessionDataStore<T: UserSession>: UserSessionDataStore {
-    public typealias UserSessionType = T
+public class MockUserSessionDataStore<U: UserSession>: UserSessionDataStore {
+    public typealias UserSessionType = U
 
-    private var mockUserSession: T?
+    private var mockUserSession: U?
 
-    init(mockUserSession: T?) {
+    public init(mockUserSession: UserSessionType?) {
         self.mockUserSession = mockUserSession
     }
 
     // MARK: Mock
 
-    func setMock(userSession: T?) {
+    public func setMock(userSession: UserSessionType?) {
         self.mockUserSession = userSession
     }
 
     // MARK: UserSession
 
-    public func readUserSession() -> Single<T?> {
+    public func readUserSession() -> Single<U?> {
         .just(mockUserSession)
     }
 
-    public func save(userSession: T) -> Single<T> {
+    public func save(userSession: U) -> Single<U> {
         self.mockUserSession = userSession
         return .just(userSession)
     }
 
-    public func delete(userSession: T) -> Single<T> {
+    public func delete(userSession: U) -> Single<U> {
         self.mockUserSession = nil
         return .just(userSession)
     }

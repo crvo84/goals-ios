@@ -14,13 +14,13 @@ struct GoalsUserSessionRemoteService: UserSessionRemoteService {
 
     let manager: NetworkingManager
 
-    func signUp<T: SignUpDTO, U: UserSession>(dto: T) -> Single<U> {
+    func signUp(dto: GoalsSignUpDTO) -> Single<GoalsUserSession> {
         let req = UserSessionApi.signUp(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: U.self)
+        return manager.execute(request: req, decodeType: GoalsUserSession.self)
     }
 
-    func signIn<T: SignInDTO, U: UserSession>(dto: T) -> Single<U> {
+    func signIn(dto: GoalsSignInDTO) -> Single<GoalsUserSession> {
         let req = UserSessionApi.signIn(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: U.self)
+        return manager.execute(request: req, decodeType: GoalsUserSession.self)
     }
 }

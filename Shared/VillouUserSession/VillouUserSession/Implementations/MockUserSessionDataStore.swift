@@ -9,35 +9,36 @@
 import Foundation
 import RxSwift
 
-public class MockUserSessionDataStore<MockUserSession>: UserSessionDataStore {
+public class MockUserSessionDataStore<T: UserSession>: UserSessionDataStore {
 
-    private var userSession: MockUserSession?
+    private var mockUserSession: T?
 
-    init(userSession: MockUserSession?) {
-        self.userSession = userSession
+    init(mockUserSession: T?) {
+        self.mockUserSession = mockUserSession
     }
 
     // MARK: Mock
 
-    func setMock(userSession: MockUserSession) {
-        self.userSession = userSession
+    func setMock(userSession: T) {
+        self.mockUserSession = userSession
     }
 
     // MARK: UserSession
+    
 
-    func readUserSession() -> Single<MockUserSession?> {
-        return .just(userSession)
-    }
-
-    func save(userSession: MockUserSession) -> Single<MockUserSession> {
-        self.userSession = userSession
-
-        return .just(userSession)
-    }
-
-    func delete(userSession: MockUserSession) -> Single<MockUserSession> {
-        self.userSession = nil
-
-        return .just(userSession)
-    }
+//    func readUserSession() -> Single<MockUserSession?> {
+//        return .just(userSession)
+//    }
+//
+//    func save(userSession: MockUserSession) -> Single<MockUserSession> {
+//        self.userSession = userSession
+//
+//        return .just(userSession)
+//    }
+//
+//    func delete(userSession: MockUserSession) -> Single<MockUserSession> {
+//        self.userSession = nil
+//
+//        return .just(userSession)
+//    }
 }

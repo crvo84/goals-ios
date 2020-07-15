@@ -6,10 +6,9 @@
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 
 public protocol UserSessionRemoteService {
-    func signUp<SignUpDTOType: Codable, UserSessionType: Codable>(dto: SignUpDTOType) -> Single<UserSessionType>
-    func signIn<SignInDTOType: Codable, UserSessionType: Codable>(dto: SignInDTOType) -> Single<UserSessionType>
+    func signUp<T: SignUpDTO, U: UserSession>(dto: T) -> Single<U>
+    func signIn<T: SignInDTO, U: UserSession>(dto: T) -> Single<U>
 }

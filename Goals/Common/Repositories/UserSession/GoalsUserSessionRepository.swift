@@ -9,49 +9,13 @@
 import RxSwift
 import VillouUserSession
 
-class GoalsUserSessionRepository<DataStore: UserSessionDataStore, Service: UserSessionRemoteService>: UserSessionRepository {
-    typealias UserSessionType = GoalsUserSession
+class GoalsUserSessionRepository: UserSessionRepository {
+    
+    let dataStore: UserSessionDataStore
+    let remoteService: UserSessionRemoteService
 
-    let dataStore: DataStore
-    let service: Service
-
-    init(dataStore: DataStore, service: Service) {
+    init(dataStore: UserSessionDataStore, remoteService: UserSessionRemoteService) {
         self.dataStore = dataStore
-        self.service = service
+        self.remoteService = remoteService
     }
-
-    func readUserSession() -> Single<GoalsUserSession?> {
-        return dataStore.readUserSession()
-    }
-
-    func signUp(dto: SignUpDTO) -> Single<GoalsUserSession> {
-        <#code#>
-    }
-
-    func signIn(dto: SignInDTO) -> Single<GoalsUserSession> {
-        <#code#>
-    }
-
-    func signOut(userSession: GoalsUserSession) -> Single<GoalsUserSession> {
-        <#code#>
-    }
-
-
-//    func readUserSession() -> Single<UserSession?> {
-//        return dataStore.readUserSession()
-//    }
-//
-//    func signUp(dto: SignUpDTO) -> Single<UserSession> {
-//        return service.signUp(dto: dto)
-//            .flatMap(dataStore.save(userSession:))
-//    }
-//
-//    func signIn(dto: SignInDTO) -> Single<UserSession> {
-//        return service.signIn(dto: dto)
-//            .flatMap(dataStore.save(userSession:))
-//    }
-//
-//    func signOut(userSession: UserSession) -> Single<UserSession> {
-//        return dataStore.delete(userSession: userSession)
-//    }
 }

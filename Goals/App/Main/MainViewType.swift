@@ -11,5 +11,5 @@ import Foundation
 enum MainViewType {
     case launching
     case onboarding
-    case signedIn(userSession: UserSession)
+    case signedIn(userSession: GoalsUserSession)
 }

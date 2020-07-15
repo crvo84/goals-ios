@@ -9,32 +9,42 @@
 import RxSwift
 
 public protocol UserSessionRepository {
-    var dataStore: UserSessionDataStore { get }
-    var remoteService: UserSessionRemoteService { get }
+    associatedtype SignUpDTOType: SignUpDTO
+    associatedtype SignInDTOType: SignInDTO
+    associatedtype UserSessionType: UserSession
+    associatedtype DataStoreType: UserSessionDataStore
+    associatedtype RemoteServiceType: UserSessionRemoteService
 
-    func readUserSession<U: UserSession>() -> Single<U?>
-    func signUp<T: SignUpDTO, U: UserSession>(dto: T) -> Single<U>
-    func signIn<T: SignInDTO, U: UserSession>(dto: T) -> Single<U>
-    func signOut<U: UserSession>(userSession: U) -> Single<U>
+    var dataStore: DataStoreType { get }
+    var remoteService: RemoteServiceType { get }
+
+    func readUserSession() -> Single<UserSessionType?>
+    func signUp(dto: SignUpDTOType) -> Single<UserSessionType>
+    func signIn(dto: SignInDTOType) -> Single<UserSessionType>
+    func signOut(userSession: UserSessionType) -> Single<UserSessionType>
 }
 
-public extension UserSessionRepository {
+public extension UserSessionRepository where
+        UserSessionType == DataStoreType.UserSessionType,
+        UserSessionType == RemoteServiceType.UserSessionType,
+        SignUpDTOType == RemoteServiceType.SignUpDTOType,
+        SignInDTOType == RemoteServiceType.SignInDTOType {
 
-    func readUserSession<U: UserSession>() -> Single<U?> {
+    func readUserSession() -> Single<UserSessionType?> {
         dataStore.readUserSession()
     }
 
-    func signUp<T: SignUpDTO, U: UserSession>(dto: T) -> Single<U> {
+    func signUp(dto: SignUpDTOType) -> Single<UserSessionType> {
         remoteService.signUp(dto: dto)
             .flatMap(dataStore.save)
     }
 
-    func signIn<T: SignInDTO, U: UserSession>(dto: T) -> Single<U> {
+    func signIn(dto: SignInDTOType) -> Single<UserSessionType> {
         remoteService.signIn(dto: dto)
             .flatMap(dataStore.save)
     }
 
-    func signOut<U: UserSession>(userSession: U) -> Single<U> {
+    func signOut(userSession: UserSessionType) -> Single<UserSessionType> {
         dataStore.delete(userSession: userSession)
     }
 }

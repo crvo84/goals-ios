@@ -8,12 +8,12 @@
 
 import Foundation
 
-public struct JsonUserSessionCoding<UserSessionType: Codable>: UserSessionCoding {
-    public func encode<UserSessionType: Encodable>(userSession: UserSessionType) -> Data {
-        try! JSONEncoder().encode(userSession)
-    }
-
-    public func decode<UserSessionType: Decodable>(data: Data) -> UserSessionType {
-        try! JSONDecoder().decode(UserSessionType.self, from: data)
-    }
-}
+//public struct JsonUserSessionCoding<UserSessionType: Codable>: UserSessionCoding {
+//    public func encode<UserSessionType: Encodable>(userSession: UserSessionType) -> Data {
+//        try! JSONEncoder().encode(userSession)
+//    }
+//
+//    public func decode<UserSessionType: Decodable>(data: Data) -> UserSessionType {
+//        try! JSONDecoder().decode(UserSessionType.self, from: data)
+//    }
+//}

@@ -9,12 +9,11 @@
 import RxSwift
 
 public protocol UserSessionRepository {
-    associatedtype SignInDTOType: Codable
-    associatedtype SignUpDTOType: Codable
-    associatedtype UserSessionType: Codable
+    var dataStore: UserSessionDataStore { get }
+    var remoteService: UserSessionRemoteService { get }
 
-    func readUserSession() -> Single<UserSessionType?>
-    func signUp(dto: SignUpDTOType) -> Single<UserSessionType>
-    func signIn(dto: SignInDTOType) -> Single<UserSessionType>
-    func signOut(userSession: UserSessionType) -> Single<UserSessionType>
+    func readUserSession<UserSessionType: Codable>() -> Single<UserSessionType?>
+    func signUp<SignUpDTOType: Codable, UserSessionType: Codable>(dto: SignUpDTOType) -> Single<UserSessionType>
+    func signIn<SignInDTOType: Codable, UserSessionType: Codable>(dto: SignInDTOType) -> Single<UserSessionType>
+    func signOut<UserSessionType: Codable>(userSession: UserSessionType) -> Single<UserSessionType>
 }

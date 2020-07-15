@@ -9,8 +9,6 @@
 import Foundation
 
 public protocol UserSessionCoding {
-    associatedtype UserSessionType: Codable
-
-    func encode(userSession: UserSessionType) -> Data
-    func decode(data: Data) -> UserSessionType
+    func encode<UserSessionType: Encodable>(userSession: UserSessionType) -> Data
+    func decode<UserSessionType: Decodable>(data: Data) -> UserSessionType
 }

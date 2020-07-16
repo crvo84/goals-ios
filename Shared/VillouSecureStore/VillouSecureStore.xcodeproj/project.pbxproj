@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7352483C24C023B80028D089 /* VillouSecureStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352483224C023B80028D089 /* VillouSecureStore.framework */; };
-		7352484124C023B80028D089 /* VillouSecureStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352484024C023B80028D089 /* VillouSecureStoreTests.swift */; };
 		7352484324C023B80028D089 /* VillouSecureStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7352483524C023B80028D089 /* VillouSecureStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7352485124C0247C0028D089 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485024C0247C0028D089 /* SecureStore.swift */; };
 		7352485324C028540028D089 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485224C028540028D089 /* SecureStoreError.swift */; };
 		7352485624C028D10028D089 /* KeychainSecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485524C028D10028D089 /* KeychainSecureStore.swift */; };
+		7352485824C0DE3F0028D089 /* KeychainSecureStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485724C0DE3F0028D089 /* KeychainSecureStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +30,11 @@
 		7352483524C023B80028D089 /* VillouSecureStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VillouSecureStore.h; sourceTree = "<group>"; };
 		7352483624C023B80028D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7352483B24C023B80028D089 /* VillouSecureStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VillouSecureStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7352484024C023B80028D089 /* VillouSecureStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouSecureStoreTests.swift; sourceTree = "<group>"; };
 		7352484224C023B80028D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7352485024C0247C0028D089 /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
 		7352485224C028540028D089 /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
 		7352485524C028D10028D089 /* KeychainSecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSecureStore.swift; sourceTree = "<group>"; };
+		7352485724C0DE3F0028D089 /* KeychainSecureStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSecureStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 		7352483F24C023B80028D089 /* VillouSecureStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				7352484024C023B80028D089 /* VillouSecureStoreTests.swift */,
+				7352485724C0DE3F0028D089 /* KeychainSecureStoreTests.swift */,
 				7352484224C023B80028D089 /* Info.plist */,
 			);
 			path = VillouSecureStoreTests;
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7352484124C023B80028D089 /* VillouSecureStoreTests.swift in Sources */,
+				7352485824C0DE3F0028D089 /* KeychainSecureStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

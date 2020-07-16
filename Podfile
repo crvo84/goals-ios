@@ -24,7 +24,8 @@ end
 # Shared projects
 sharedProjects = [
   'VillouNetworking',
-  'VillouUserSession'
+  'VillouUserSession',
+  'VillouSecureStore'
 ]
 sharedProjects.each do |proj|
   target "#{proj}" do

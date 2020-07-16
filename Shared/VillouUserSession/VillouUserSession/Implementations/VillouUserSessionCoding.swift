@@ -21,21 +21,28 @@ public struct VillouUserSessionCoding<T: UserSession>: UserSessionCoding {
     }
 
     public func encode(userSession: T) -> Data {
+        var data: Data?
         switch codingType {
         case .json:
-            return try! JSONEncoder().encode(userSession)
+            data = try? JSONEncoder().encode(userSession)
         case .propertyList:
-            return try! PropertyListEncoder().encode(userSession)
+            data = try? PropertyListEncoder().encode(userSession)
         }
+        guard let validData = data else { fatalError() }
 
+        return validData
     }
 
     public func decode(data: Data) -> T {
+        var session: T?
         switch codingType {
         case .json:
-            return try! JSONDecoder().decode(T.self, from: data)
+            session = try? JSONDecoder().decode(T.self, from: data)
         case .propertyList:
-            return try! PropertyListDecoder().decode(T.self, from: data)
+            session = try? PropertyListDecoder().decode(T.self, from: data)
         }
+        guard let validSession = session else { fatalError() }
+
+        return validSession
     }
 }

@@ -23,11 +23,11 @@
 		7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DBA524A3D8AD00AF75BB /* UserSessionApi.swift */; };
 		7352480224BE7E920028D089 /* VillouUserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480124BE7E920028D089 /* VillouUserSession.framework */; };
 		7352480324BE7E920028D089 /* VillouUserSession.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480124BE7E920028D089 /* VillouUserSession.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7352480524BE7E9B0028D089 /* VillouSecureStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480424BE7E9B0028D089 /* VillouSecureStore.framework */; };
-		7352480624BE7E9B0028D089 /* VillouSecureStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7352480424BE7E9B0028D089 /* VillouSecureStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7352480A24BE80430028D089 /* GoalsRemoteSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352480924BE80430028D089 /* GoalsRemoteSession.swift */; };
 		7352481224BE885E0028D089 /* Codable+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481124BE885E0028D089 /* Codable+Json.swift */; };
 		7352481424BEB44F0028D089 /* GoalsUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481324BEB44F0028D089 /* GoalsUserSession.swift */; };
+		7352484D24C023DE0028D089 /* VillouSecureStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7352484C24C023DE0028D089 /* VillouSecureStore.framework */; };
+		7352484E24C023DE0028D089 /* VillouSecureStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7352484C24C023DE0028D089 /* VillouSecureStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7363C1D324A4575300D3DEA6 /* GoalsSignInDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D224A4575300D3DEA6 /* GoalsSignInDTO.swift */; };
 		7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363C1D724A4673C00D3DEA6 /* Constants.swift */; };
 		7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7363C25624A5620900D3DEA6 /* VillouNetworking.framework */; };
@@ -55,7 +55,7 @@
 			files = (
 				7363C25824A5620900D3DEA6 /* VillouNetworking.framework in Embed Frameworks */,
 				7352480324BE7E920028D089 /* VillouUserSession.framework in Embed Frameworks */,
-				7352480624BE7E9B0028D089 /* VillouSecureStore.framework in Embed Frameworks */,
+				7352484E24C023DE0028D089 /* VillouSecureStore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +93,7 @@
 		7352480924BE80430028D089 /* GoalsRemoteSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsRemoteSession.swift; sourceTree = "<group>"; };
 		7352481124BE885E0028D089 /* Codable+Json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Json.swift"; sourceTree = "<group>"; };
 		7352481324BEB44F0028D089 /* GoalsUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSession.swift; sourceTree = "<group>"; };
+		7352484C24C023DE0028D089 /* VillouSecureStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouSecureStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363C1D224A4575300D3DEA6 /* GoalsSignInDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSignInDTO.swift; sourceTree = "<group>"; };
 		7363C1D724A4673C00D3DEA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7363C25624A5620900D3DEA6 /* VillouNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +112,7 @@
 			files = (
 				99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */,
 				7352480224BE7E920028D089 /* VillouUserSession.framework in Frameworks */,
-				7352480524BE7E9B0028D089 /* VillouSecureStore.framework in Frameworks */,
+				7352484D24C023DE0028D089 /* VillouSecureStore.framework in Frameworks */,
 				7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +274,7 @@
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7352484C24C023DE0028D089 /* VillouSecureStore.framework */,
 				7352480424BE7E9B0028D089 /* VillouSecureStore.framework */,
 				7352480124BE7E920028D089 /* VillouUserSession.framework */,
 				7363C25624A5620900D3DEA6 /* VillouNetworking.framework */,

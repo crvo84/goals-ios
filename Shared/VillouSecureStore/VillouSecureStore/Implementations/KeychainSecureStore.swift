@@ -22,14 +22,18 @@ public struct KeychainSecureStore: SecureStore {
             let attributesToUpdate: [String: Any] = [String(kSecValueData): dataToStore]
             let updateStatus = SecItemUpdate(query as CFDictionary, attributesToUpdate as CFDictionary)
             guard updateStatus == errSecSuccess else {
-                throw SecureStoreError.unknown(nil)
+                throw SecureStoreError.storing(nil)
             }
         case errSecItemNotFound:
             // value with key does not exists in directory, we create it
             query[String(kSecValueData)] = dataToStore
+
+            let createStatus = SecItemAdd(query as CFDictionary, nil)
+            guard createStatus == errSecSuccess else {
+                throw SecureStoreError.storing(nil)
+            }
         default:
-            // 🤷🏻‍♂️
-            throw SecureStoreError.unknown(nil)
+            throw SecureStoreError.retrieving(nil)
         }
     }
 
@@ -49,7 +53,7 @@ public struct KeychainSecureStore: SecureStore {
             guard
                 let validResultAttrs = resultAttrs as? [String: Any],
                 let data = validResultAttrs[String(kSecValueData)] as? Data else {
-                    throw SecureStoreError.unknown(nil)
+                    throw SecureStoreError.retrieving(nil)
             }
 
             return try decode(T.self, from: data)
@@ -58,7 +62,7 @@ public struct KeychainSecureStore: SecureStore {
             // value with key not found in directory
             return nil
         default:
-            throw SecureStoreError.unknown(nil)
+            throw SecureStoreError.retrieving(nil)
         }
     }
 
@@ -71,7 +75,7 @@ public struct KeychainSecureStore: SecureStore {
             // any value with that key in that directory
             break
         default:
-            throw SecureStoreError.unknown(nil)
+            throw SecureStoreError.deleting(nil)
         }
     }
 
@@ -84,7 +88,7 @@ public struct KeychainSecureStore: SecureStore {
             // there were not any values in it.
             break
         default:
-            throw SecureStoreError.unknown(nil)
+            throw SecureStoreError.deleting(nil)
         }
     }
 
@@ -97,7 +101,7 @@ public struct KeychainSecureStore: SecureStore {
             // were deleted, or there were not any values.
             break
         default:
-            throw SecureStoreError.unknown(nil)
+            throw SecureStoreError.deleting(nil)
         }
     }
 
@@ -120,7 +124,7 @@ private extension KeychainSecureStore {
         do {
             return try JSONEncoder().encode(value)
         } catch {
-            throw SecureStoreError.encodingError(error)
+            throw SecureStoreError.encoding(error)
         }
     }
 
@@ -128,7 +132,7 @@ private extension KeychainSecureStore {
         do {
             return try JSONDecoder().decode(type, from: data)
         } catch {
-            throw SecureStoreError.decodingError(error)
+            throw SecureStoreError.decoding(error)
         }
     }
 }

@@ -9,7 +9,10 @@
 import Foundation
 
 enum SecureStoreError: Error {
-    case encodingError(Error?)
-    case decodingError(Error?)
+    case encoding(Error?)
+    case decoding(Error?)
+    case storing(Error?)
+    case retrieving(Error?)
+    case deleting(Error?)
     case unknown(Error?)
 }

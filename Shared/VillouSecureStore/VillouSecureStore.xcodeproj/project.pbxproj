@@ -13,6 +13,12 @@
 		7352485324C028540028D089 /* SecureStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485224C028540028D089 /* SecureStoreError.swift */; };
 		7352485624C028D10028D089 /* KeychainSecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485524C028D10028D089 /* KeychainSecureStore.swift */; };
 		7352485824C0DE3F0028D089 /* KeychainSecureStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352485724C0DE3F0028D089 /* KeychainSecureStoreTests.swift */; };
+		735248B124C0F3980028D089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248B024C0F3980028D089 /* AppDelegate.swift */; };
+		735248B324C0F3980028D089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248B224C0F3980028D089 /* SceneDelegate.swift */; };
+		735248B524C0F3980028D089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248B424C0F3980028D089 /* ViewController.swift */; };
+		735248B824C0F3980028D089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735248B624C0F3980028D089 /* Main.storyboard */; };
+		735248BA24C0F3990028D089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735248B924C0F3990028D089 /* Assets.xcassets */; };
+		735248BD24C0F3990028D089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735248BB24C0F3990028D089 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +28,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 7352483124C023B80028D089;
 			remoteInfo = VillouSecureStore;
+		};
+		735248C324C0F5B10028D089 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7352482924C023B70028D089 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 735248AD24C0F3980028D089;
+			remoteInfo = VillouSecureStoreTestingHost;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -35,6 +48,15 @@
 		7352485224C028540028D089 /* SecureStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreError.swift; sourceTree = "<group>"; };
 		7352485524C028D10028D089 /* KeychainSecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSecureStore.swift; sourceTree = "<group>"; };
 		7352485724C0DE3F0028D089 /* KeychainSecureStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSecureStoreTests.swift; sourceTree = "<group>"; };
+		735248AE24C0F3980028D089 /* VillouSecureStoreTestingHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VillouSecureStoreTestingHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		735248B024C0F3980028D089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		735248B224C0F3980028D089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		735248B424C0F3980028D089 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		735248B724C0F3980028D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		735248B924C0F3990028D089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		735248BC24C0F3990028D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		735248BE24C0F3990028D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		735248C224C0F3EB0028D089 /* VillouSecureStoreTestingHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VillouSecureStoreTestingHost.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		735248AB24C0F3980028D089 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +90,7 @@
 			children = (
 				7352483424C023B80028D089 /* VillouSecureStore */,
 				7352483F24C023B80028D089 /* VillouSecureStoreTests */,
+				735248AF24C0F3980028D089 /* VillouSecureStoreTestingHost */,
 				7352483324C023B80028D089 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +100,7 @@
 			children = (
 				7352483224C023B80028D089 /* VillouSecureStore.framework */,
 				7352483B24C023B80028D089 /* VillouSecureStoreTests.xctest */,
+				735248AE24C0F3980028D089 /* VillouSecureStoreTestingHost.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +140,21 @@
 				7352485524C028D10028D089 /* KeychainSecureStore.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		735248AF24C0F3980028D089 /* VillouSecureStoreTestingHost */ = {
+			isa = PBXGroup;
+			children = (
+				735248C224C0F3EB0028D089 /* VillouSecureStoreTestingHost.entitlements */,
+				735248B024C0F3980028D089 /* AppDelegate.swift */,
+				735248B224C0F3980028D089 /* SceneDelegate.swift */,
+				735248B424C0F3980028D089 /* ViewController.swift */,
+				735248B624C0F3980028D089 /* Main.storyboard */,
+				735248B924C0F3990028D089 /* Assets.xcassets */,
+				735248BB24C0F3990028D089 /* LaunchScreen.storyboard */,
+				735248BE24C0F3990028D089 /* Info.plist */,
+			);
+			path = VillouSecureStoreTestingHost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +201,29 @@
 			);
 			dependencies = (
 				7352483E24C023B80028D089 /* PBXTargetDependency */,
+				735248C424C0F5B10028D089 /* PBXTargetDependency */,
 			);
 			name = VillouSecureStoreTests;
 			productName = VillouSecureStoreTests;
 			productReference = 7352483B24C023B80028D089 /* VillouSecureStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		735248AD24C0F3980028D089 /* VillouSecureStoreTestingHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 735248BF24C0F3990028D089 /* Build configuration list for PBXNativeTarget "VillouSecureStoreTestingHost" */;
+			buildPhases = (
+				735248AA24C0F3980028D089 /* Sources */,
+				735248AB24C0F3980028D089 /* Frameworks */,
+				735248AC24C0F3980028D089 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VillouSecureStoreTestingHost;
+			productName = VillouSecureStoreTestingHost;
+			productReference = 735248AE24C0F3980028D089 /* VillouSecureStoreTestingHost.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,6 +240,10 @@
 						LastSwiftMigration = 1150;
 					};
 					7352483A24C023B80028D089 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 735248AD24C0F3980028D089;
+					};
+					735248AD24C0F3980028D089 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -195,6 +263,7 @@
 			targets = (
 				7352483124C023B80028D089 /* VillouSecureStore */,
 				7352483A24C023B80028D089 /* VillouSecureStoreTests */,
+				735248AD24C0F3980028D089 /* VillouSecureStoreTestingHost */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +280,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		735248AC24C0F3980028D089 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735248BD24C0F3990028D089 /* LaunchScreen.storyboard in Resources */,
+				735248BA24C0F3990028D089 /* Assets.xcassets in Resources */,
+				735248B824C0F3980028D089 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +314,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		735248AA24C0F3980028D089 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				735248B524C0F3980028D089 /* ViewController.swift in Sources */,
+				735248B124C0F3980028D089 /* AppDelegate.swift in Sources */,
+				735248B324C0F3980028D089 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -243,7 +332,31 @@
 			target = 7352483124C023B80028D089 /* VillouSecureStore */;
 			targetProxy = 7352483D24C023B80028D089 /* PBXContainerItemProxy */;
 		};
+		735248C424C0F5B10028D089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 735248AD24C0F3980028D089 /* VillouSecureStoreTestingHost */;
+			targetProxy = 735248C324C0F5B10028D089 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		735248B624C0F3980028D089 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735248B724C0F3980028D089 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		735248BB24C0F3990028D089 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735248BC24C0F3990028D089 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7352484424C023B80028D089 /* Debug */ = {
@@ -422,7 +535,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F26XL4W94;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VillouSecureStoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,6 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VillouSecureStoreTestingHost.app/VillouSecureStoreTestingHost";
 			};
 			name = Debug;
 		};
@@ -441,7 +555,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9F26XL4W94;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VillouSecureStoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +563,45 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.villou.VillouSecureStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VillouSecureStoreTestingHost.app/VillouSecureStoreTestingHost";
+			};
+			name = Release;
+		};
+		735248C024C0F3990028D089 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VillouSecureStoreTestingHost/VillouSecureStoreTestingHost.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VillouSecureStoreTestingHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.villou.VillouSecureStoreTestingHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		735248C124C0F3990028D089 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VillouSecureStoreTestingHost/VillouSecureStoreTestingHost.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = VillouSecureStoreTestingHost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.villou.VillouSecureStoreTestingHost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -481,6 +634,15 @@
 			buildConfigurations = (
 				7352484A24C023B80028D089 /* Debug */,
 				7352484B24C023B80028D089 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		735248BF24C0F3990028D089 /* Build configuration list for PBXNativeTarget "VillouSecureStoreTestingHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				735248C024C0F3990028D089 /* Debug */,
+				735248C124C0F3990028D089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

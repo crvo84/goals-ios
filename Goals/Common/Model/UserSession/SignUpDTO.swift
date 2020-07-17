@@ -1,14 +1,14 @@
 //
-//  GoalsSignUpDTO.swift
+//  SignUpDTO.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
-import VillouUserSession
+import Foundation
 
-struct GoalsSignUpDTO: SignUpDTO {
+struct SignUpDTO: DataModel {
     let firstName: String
     let lastName: String
     let password: String

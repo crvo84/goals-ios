@@ -8,7 +8,7 @@
 
 import RxSwift
 
-//public class MainViewModel: SignedInResponder, NotSignedInResponder {
-//
-//    private let viewSubject = BehaviorSubject<MainViewType>(value: .launching)
-//}
+class MainViewModel {//: SignedInResponder, NotSignedInResponder { TODO:
+
+    private let viewSubject = BehaviorSubject<MainViewType>(value: .launching)
+}

@@ -8,19 +8,18 @@
 
 import RxSwift
 import VillouNetworking
-import VillouUserSession
 
 struct GoalsUserSessionRemoteService: UserSessionRemoteService {
 
     let manager: NetworkingManager
 
-    func signUp(dto: GoalsSignUpDTO) -> Single<GoalsUserSession> {
+    func signUp(dto: SignUpDTO) -> Single<UserSession> {
         let req = UserSessionApi.signUp(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: GoalsUserSession.self)
+        return manager.execute(request: req, decodeType: UserSession.self)
     }
 
-    func signIn(dto: GoalsSignInDTO) -> Single<GoalsUserSession> {
+    func signIn(dto: SignInDTO) -> Single<UserSession> {
         let req = UserSessionApi.signIn(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: GoalsUserSession.self)
+        return manager.execute(request: req, decodeType: UserSession.self)
     }
 }

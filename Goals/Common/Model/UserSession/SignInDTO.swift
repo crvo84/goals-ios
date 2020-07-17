@@ -1,14 +1,14 @@
 //
-//  GoalsSignInDTO.swift
+//  SignInDTO.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 24/06/20.
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
-import VillouUserSession
+import Foundation
 
-struct GoalsSignInDTO: SignInDTO {
+struct SignInDTO: DataModel {
     let email: String
     let password: String
 }

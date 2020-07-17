@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-import VillouSecureStore
+import VillouSecurity
 
 class SecureUserSessionDataStore {
     let secureStore: SecureStore

@@ -11,9 +11,6 @@
          location = "group:Shared/VillouSecurity/VillouSecurity.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Shared/VillouSecureStore/VillouSecureStore.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:Shared/VillouNetworking/VillouNetworking.xcodeproj">
       </FileRef>
    </Group>

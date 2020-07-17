@@ -10,6 +10,9 @@ import Foundation
 import Security
 
 public struct KeychainSecureStore: SecureStore {
+
+    public init() {}
+
     public func save<T: Codable>(_ value: T, directory: String, key: String) throws {
         let dataToStore = try encode(value)
 

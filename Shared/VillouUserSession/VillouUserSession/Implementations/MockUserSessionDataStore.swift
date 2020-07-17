@@ -8,7 +8,8 @@
 
 import RxSwift
 
-public class MockUserSessionDataStore<U: UserSession>: UserSessionDataStore {
+public final class MockUserSessionDataStore<U: UserSession>: UserSessionDataStore {
+
     public typealias UserSessionType = U
 
     private var mockUserSession: U?
@@ -37,5 +38,10 @@ public class MockUserSessionDataStore<U: UserSession>: UserSessionDataStore {
     public func delete(userSession: U) -> Single<U> {
         self.mockUserSession = nil
         return .just(userSession)
+    }
+
+    public func deleteAllSessions() -> Completable {
+        self.mockUserSession = nil
+        return .empty()
     }
 }

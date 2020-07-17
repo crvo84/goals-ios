@@ -24,6 +24,8 @@
 		7352482124BF80300028D089 /* MockUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735247D524BD78CE0028D089 /* MockUserSessionDataStore.swift */; };
 		7352482224BF80340028D089 /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735247D624BD78CE0028D089 /* KeychainUserSessionDataStore.swift */; };
 		7352482624BFC8230028D089 /* VillouUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352482524BFC8230028D089 /* VillouUserSessionRepository.swift */; };
+		735248C924C120F50028D089 /* VillouSecureStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735248C824C120F50028D089 /* VillouSecureStore.framework */; };
+		735248CA24C120F50028D089 /* VillouSecureStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 735248C824C120F50028D089 /* VillouSecureStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C66481986BCCFBC3A6E4E45C /* Pods_VillouUserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA3934C65690DB466560A09 /* Pods_VillouUserSession.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,20 @@
 			remoteInfo = VillouUserSession;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		735248CB24C120F50028D089 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				735248CA24C120F50028D089 /* VillouSecureStore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22D3745813028835234CEBBC /* Pods_VillouUserSession_VillouUserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouUserSession_VillouUserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +75,7 @@
 		7352481D24BECF070028D089 /* RemoteSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSession.swift; sourceTree = "<group>"; };
 		7352481F24BECF110028D089 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		7352482524BFC8230028D089 /* VillouUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouUserSessionRepository.swift; sourceTree = "<group>"; };
+		735248C824C120F50028D089 /* VillouSecureStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouSecureStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C45AB9AB23B35C8C86B3E04 /* Pods-VillouUserSession-VillouUserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouUserSession-VillouUserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-VillouUserSession-VillouUserSessionTests/Pods-VillouUserSession-VillouUserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		930E6CE4E08F2D5FF03981CD /* Pods-VillouUserSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouUserSession.debug.xcconfig"; path = "Target Support Files/Pods-VillouUserSession/Pods-VillouUserSession.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA3934C65690DB466560A09 /* Pods_VillouUserSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouUserSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735248C924C120F50028D089 /* VillouSecureStore.framework in Frameworks */,
 				C66481986BCCFBC3A6E4E45C /* Pods_VillouUserSession.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +107,7 @@
 		6BB287E48F2F61A34F42C42F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				735248C824C120F50028D089 /* VillouSecureStore.framework */,
 				ABA3934C65690DB466560A09 /* Pods_VillouUserSession.framework */,
 				22D3745813028835234CEBBC /* Pods_VillouUserSession_VillouUserSessionTests.framework */,
 			);
@@ -189,6 +208,7 @@
 				735247AA24BD75E00028D089 /* Sources */,
 				735247AB24BD75E00028D089 /* Frameworks */,
 				735247AC24BD75E00028D089 /* Resources */,
+				735248CB24C120F50028D089 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

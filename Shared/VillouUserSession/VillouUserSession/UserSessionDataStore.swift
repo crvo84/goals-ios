@@ -14,4 +14,5 @@ public protocol UserSessionDataStore {
     func readUserSession() -> Single<UserSessionType?>
     func save(userSession: UserSessionType) -> Single<UserSessionType>
     func delete(userSession: UserSessionType) -> Single<UserSessionType>
+    func deleteAllSessions() -> Completable
 }

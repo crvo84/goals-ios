@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import VillouSecureStore
+@testable import VillouSecurity
 
 class KeychainSecureStoreTests: XCTestCase {
 

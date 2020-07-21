@@ -8,7 +8,23 @@
 
 import RxSwift
 
-class MainViewModel {//: SignedInResponder, NotSignedInResponder { TODO:
+protocol MainViewModel: UserSessionStateResponder {
+    var viewState: Observable<MainViewState> { get }
+}
 
-    private let viewSubject = BehaviorSubject<MainViewType>(value: .launching)
+class GoalsMainViewModel: MainViewModel {
+
+    var viewState: Observable<MainViewState> { viewTypeSubject.asObservable() }
+    private let viewTypeSubject = BehaviorSubject<MainViewState>(value: .splash)
+}
+
+extension GoalsMainViewModel {
+
+    func respondToSignedIn(with userSession: UserSession) {
+        viewTypeSubject.onNext(.signedIn(userSession: userSession))
+    }
+
+    func respondToNotSignedIn() {
+        viewTypeSubject.onNext(.onboarding)
+    }
 }

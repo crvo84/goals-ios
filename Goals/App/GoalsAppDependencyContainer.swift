@@ -13,22 +13,22 @@ import VillouSecurity
 
 class GoalsAppDependencyContainer {
 
-    // MARK: Long lived dependencies
+    // MARK: - Long lived dependencies
 
-    let userSessionRepository: UserSessionRepository
-    let networkingManager: NetworkingManager
-    let mainViewModel: MainViewModel
+    let sharedUserSessionRepository: UserSessionRepository
+    let sharedNetworkingManager: NetworkingManager
+    let sharedMainViewModel: MainViewModel
 
-    // MARK: Initialization
+    // MARK: - Initialization
 
     init() {
         let networkingManager = GoalsAppDependencyContainer.makeNetworkingManager()
-        self.networkingManager = networkingManager
-        self.userSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: networkingManager)
-        self.mainViewModel = MainViewModel()
+        self.sharedNetworkingManager = networkingManager
+        self.sharedUserSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: sharedNetworkingManager)
+        self.sharedMainViewModel = GoalsMainViewModel()
     }
 
-    // MARK: UserSession
+    // UserSession
 
     private static func makeUserSessionRepository(with networkingManager: NetworkingManager) -> UserSessionRepository {
         let dataStore = makeUserSessionDataStore()
@@ -50,16 +50,47 @@ class GoalsAppDependencyContainer {
         KeychainSecureStore()
     }
 
-    // MARK: Networking
+    // Networking
 
     private static func makeNetworkingManager() -> NetworkingManager {
 //        VillouNetworkingManager()
         MockNetworkingManager()
     }
+}
 
-    // MARK: Main
-
+// MARK: - Main
+extension GoalsAppDependencyContainer: SplashViewModelFactory {
     func makeMainViewController() -> MainViewController {
-        MainViewController()
+
+        MainViewController(viewModel: sharedMainViewModel,
+                           splashViewController: makeSplashViewController(),
+                           onboardingViewControllerFactory: makeOnboardingViewController,
+                           signedInViewControllerFactory: makeSignedInViewController)
     }
+
+    // Splash
+
+    func makeSplashViewController() -> SplashViewController {
+        SplashViewController(splashViewModelFactory: self)
+    }
+
+    func makeSplashViewModel() -> SplashViewModel {
+        GoalsSplashViewModel(userSessionRepository: sharedUserSessionRepository,
+                             userSessionStateResponder: sharedMainViewModel)
+    }
+
+    // Onboarding
+
+    func makeOnboardingViewController() -> OnboardingViewController {
+        // TODO: create from onboarding dependency container
+        OnboardingViewController()
+    }
+
+    // Signed In
+
+    func makeSignedInViewController(userSession: UserSession) -> SignedInViewController {
+        // TODO: create from signed in dependency container
+        SignedInViewController()
+    }
+
 }

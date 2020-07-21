@@ -32,6 +32,7 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupUI()
         viewModel.loadUserSession()
     }
 

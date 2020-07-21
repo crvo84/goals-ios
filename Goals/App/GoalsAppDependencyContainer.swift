@@ -63,7 +63,9 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     func makeMainViewController() -> MainViewController {
 
         MainViewController(viewModel: sharedMainViewModel,
-                           splashViewController: makeSplashViewController(), onboardingViewControllerFactory: <#() -> OnboardingViewController#>, signedInViewControllerFactory: <#() -> SignedInViewController#>)
+                           splashViewController: makeSplashViewController(),
+                           onboardingViewControllerFactory: makeOnboardingViewController,
+                           signedInViewControllerFactory: makeSignedInViewController)
     }
 
     // Splash
@@ -73,11 +75,22 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     }
 
     func makeSplashViewModel() -> SplashViewModel {
-        SplashViewModel(userSessionRepository: sharedUserSessionRepository, userSessionStateResponder: sharedMainViewModel)
+        GoalsSplashViewModel(userSessionRepository: sharedUserSessionRepository,
+                             userSessionStateResponder: sharedMainViewModel)
     }
 
     // Onboarding
 
     func makeOnboardingViewController() -> OnboardingViewController {
+        // TODO: create from onboarding dependency container
+        OnboardingViewController()
     }
+
+    // Signed In
+
+    func makeSignedInViewController(userSession: UserSession) -> SignedInViewController {
+        // TODO: create from signed in dependency container
+        SignedInViewController()
+    }
+
 }

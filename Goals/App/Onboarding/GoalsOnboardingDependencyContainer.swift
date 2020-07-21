@@ -12,19 +12,19 @@ class GoalsOnboardingDependencyContainer {
 
     // MARK: - Long lived dependencies
 
-    // shared with parent dependency container
     private let sharedUserSessionRepository: UserSessionRepository
-    private let sharedMainViewModel: MainViewModelProtocol
-
-    private let sharedOnboardingViewModel: OnboardingViewModelProtocol
+    private let sharedMainViewModel: MainViewModel
+    private let sharedOnboardingViewModel: OnboardingViewModel
 
     // MARK: - Initialization
 
     init(appDependencyContainer: GoalsAppDependencyContainer) {
-        
+        self.sharedUserSessionRepository = appDependencyContainer.sharedUserSessionRepository
+        self.sharedMainViewModel = appDependencyContainer.sharedMainViewModel
+        self.sharedOnboardingViewModel = GoalsOnboardingDependencyContainer.makeOnboardingViewModel()
     }
 
-    private func makeOnboardingViewModel() -> OnboardingViewModel {
+    private static func makeOnboardingViewModel() -> OnboardingViewModel {
         OnboardingViewModel()
     }
 

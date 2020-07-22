@@ -25,7 +25,6 @@
 		7352481224BE885E0028D089 /* Codable+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481124BE885E0028D089 /* Codable+Json.swift */; };
 		7352481424BEB44F0028D089 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481324BEB44F0028D089 /* UserSession.swift */; };
 		735248CD24C22D450028D089 /* GoalsUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248CC24C22D450028D089 /* GoalsUserSessionRepository.swift */; };
-		735248CF24C236D00028D089 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248CE24C236D00028D089 /* DataModel.swift */; };
 		735248D324C239A60028D089 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D224C239A60028D089 /* UserSessionRepository.swift */; };
 		735248D724C23CB30028D089 /* UserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D624C23CB30028D089 /* UserSessionRemoteService.swift */; };
 		735248D924C23F220028D089 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D824C23F220028D089 /* UserSessionDataStore.swift */; };
@@ -57,6 +56,7 @@
 		73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */; };
 		73D4531524C686AC00B9CBDE /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */; };
 		73D4531724C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */; };
+		73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +118,6 @@
 		7352481324BEB44F0028D089 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		7352484C24C023DE0028D089 /* VillouSecureStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouSecureStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735248CC24C22D450028D089 /* GoalsUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRepository.swift; sourceTree = "<group>"; };
-		735248CE24C236D00028D089 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		735248D224C239A60028D089 /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
 		735248D624C23CB30028D089 /* UserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRemoteService.swift; sourceTree = "<group>"; };
 		735248D824C23F220028D089 /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -148,6 +147,7 @@
 		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRemoteService.swift; sourceTree = "<group>"; };
 		73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
 		73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsOnboardingDependencyContainer.swift; sourceTree = "<group>"; };
+		73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionResponseContents.swift; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,7 +275,6 @@
 		7346DB9524A3D24100AF75BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				735248CE24C236D00028D089 /* DataModel.swift */,
 				7352495A24C2AADD0028D089 /* Errors */,
 				7346DB9624A3D26200AF75BB /* UserSession */,
 			);
@@ -307,7 +306,9 @@
 		7346DBA424A3D6F400AF75BB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				73D4531924C6ACC300B9CBDE /* DTOs */,
 				7346DBA724A3D8B400AF75BB /* Apis */,
+				73D4531824C6AA7C00B9CBDE /* Mocks */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -416,6 +417,21 @@
 				7352495B24C2AB920028D089 /* ErrorMessage.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		73D4531824C6AA7C00B9CBDE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		73D4531924C6ACC300B9CBDE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */,
+			);
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
@@ -657,6 +673,7 @@
 				735248D324C239A60028D089 /* UserSessionRepository.swift in Sources */,
 				73D4531724C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift in Sources */,
 				7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */,
+				73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */,
 				735248CD24C22D450028D089 /* GoalsUserSessionRepository.swift in Sources */,
 				73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */,
 				7352480A24BE80430028D089 /* RemoteSession.swift in Sources */,
@@ -670,7 +687,6 @@
 				7352494424C28B6D0028D089 /* WelcomeViewController.swift in Sources */,
 				7352493024C276700028D089 /* UserSessionStateResponder.swift in Sources */,
 				7352481224BE885E0028D089 /* Codable+Json.swift in Sources */,
-				735248CF24C236D00028D089 /* DataModel.swift in Sources */,
 				7352495324C28F4E0028D089 /* SignInViewController.swift in Sources */,
 				7352493624C27F840028D089 /* BaseViewController.swift in Sources */,
 				735248DB24C2437F0028D089 /* MockUserSessionDataStore.swift in Sources */,

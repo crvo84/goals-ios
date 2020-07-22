@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SignInDTO: DataModel {
+struct SignInDTO: Encodable {
     let email: String
     let password: String
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserSession: DataModel, Equatable {
+class UserSession: Codable, Equatable {
     let userProfile: UserProfile
     let remoteSession: RemoteSession
 

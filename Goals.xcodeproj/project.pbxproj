@@ -57,6 +57,9 @@
 		73D4531524C686AC00B9CBDE /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */; };
 		73D4531724C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */; };
 		73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */; };
+		73D4532124C7DCF600B9CBDE /* ThemeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532024C7DCF600B9CBDE /* ThemeImage.swift */; };
+		73D4532324C7E25800B9CBDE /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532224C7E25800B9CBDE /* ThemeColor.swift */; };
+		73D4532524C7EA6B00B9CBDE /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +151,9 @@
 		73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
 		73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsOnboardingDependencyContainer.swift; sourceTree = "<group>"; };
 		73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionResponseContents.swift; sourceTree = "<group>"; };
+		73D4532024C7DCF600B9CBDE /* ThemeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImage.swift; sourceTree = "<group>"; };
+		73D4532224C7E25800B9CBDE /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				7363C1D724A4673C00D3DEA6 /* Constants.swift */,
+				73D4531F24C7DCE000B9CBDE /* Theme */,
 				7352493424C27E5A0028D089 /* Base */,
 				7346DBA424A3D6F400AF75BB /* Networking */,
 				7346DBA124A3D4D800AF75BB /* Extensions */,
@@ -299,6 +306,7 @@
 				7346DB9124A321AB00AF75BB /* String+Localized.swift */,
 				7352481124BE885E0028D089 /* Codable+Json.swift */,
 				73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */,
+				73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +440,15 @@
 				73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */,
 			);
 			path = DTOs;
+			sourceTree = "<group>";
+		};
+		73D4531F24C7DCE000B9CBDE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				73D4532024C7DCF600B9CBDE /* ThemeImage.swift */,
+				73D4532224C7E25800B9CBDE /* ThemeColor.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
@@ -654,7 +671,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D4532124C7DCF600B9CBDE /* ThemeImage.swift in Sources */,
 				7352494F24C28F3C0028D089 /* SignUpViewController.swift in Sources */,
+				73D4532324C7E25800B9CBDE /* ThemeColor.swift in Sources */,
 				7352494024C282BF0028D089 /* SplashViewController.swift in Sources */,
 				735248D724C23CB30028D089 /* UserSessionRemoteService.swift in Sources */,
 				7346DB7F24A1D81700AF75BB /* MainViewState.swift in Sources */,
@@ -691,6 +710,7 @@
 				7352493624C27F840028D089 /* BaseViewController.swift in Sources */,
 				735248DB24C2437F0028D089 /* MockUserSessionDataStore.swift in Sources */,
 				7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */,
+				73D4532524C7EA6B00B9CBDE /* UIColor+Utils.swift in Sources */,
 				7352495524C28F560028D089 /* SignInViewModel.swift in Sources */,
 				7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */,
 				7352494824C28BF80028D089 /* WelcomeViewModel.swift in Sources */,
@@ -861,6 +881,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = "$(SRCROOT)/Goals/Other resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -881,6 +902,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = "$(SRCROOT)/Goals/Other resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

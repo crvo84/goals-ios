@@ -23,13 +23,8 @@ class SplashViewController: BaseViewController {
     }
 
     private struct Animation {
-        static let key = "logo-beat"
-        static let beatDuration = 0.6
+        static let totalDuration = 1.8
         static let beatScale = 1.12
-        static let beatInitialVelocity: CGFloat = 0.5
-        static let beatDamping: CGFloat = 0.1
-        static let beatCount: Int = 1
-        static let durationBetweenBeats = 0.3
     }
 
     // MARK: - Properties
@@ -54,8 +49,13 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
 
         setupUI()
-        animateLogo()
         viewModel.loadUserSession()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        animateLogo()
     }
 
     // MARK: - Setup
@@ -82,24 +82,24 @@ class SplashViewController: BaseViewController {
     // MARK: - Update
 
     private func animateLogo() {
-        let animation = CAAnimationGroup()
-        animation.duration = Animation.beatDuration * 2 + Animation.durationBetweenBeats
-        animation.repeatCount = Float(Animation.beatCount)
-        animation.animations = [singleBeatAnimation()]
-
-        logoImageView.layer.add(animation, forKey: Animation.key)
+        UIView.animateKeyframes(withDuration: Animation.totalDuration, delay: 0.0, options: [], animations: {
+            self.addBeatKeyFrames(relativeStart: 0.0, relativeDuration: 0.25)
+            self.addBeatKeyFrames(relativeStart: 0.5, relativeDuration: 0.25)
+            self.addBeatKeyFrames(relativeStart: 0.75, relativeDuration: 0.25)
+        }) { _ in
+            // TODO: if user session fetching was completed, go to next screen
+            self.animateLogo()
+        }
     }
 
-    private func singleBeatAnimation() -> CASpringAnimation {
-        let beat = CASpringAnimation(keyPath: "transform.scale")
-        beat.duration = Animation.beatDuration
-        beat.fromValue = 1.0
-        beat.toValue = Animation.beatScale
-        beat.autoreverses = true
-        beat.repeatCount = 1
-        beat.initialVelocity = Animation.beatInitialVelocity
-        beat.damping = Animation.beatDamping
-
-        return beat
+    private func addBeatKeyFrames(relativeStart start: Double, relativeDuration duration: Double) {
+        let frameDuration = duration / 2.0
+        UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: frameDuration) {
+            let beatScale = CGFloat(Animation.beatScale)
+            self.logoImageView.transform = CGAffineTransform(scaleX: beatScale, y: beatScale)
+        }
+        UIView.addKeyframe(withRelativeStartTime: start + frameDuration, relativeDuration: frameDuration) {
+            self.logoImageView.transform = .identity
+        }
     }
 }

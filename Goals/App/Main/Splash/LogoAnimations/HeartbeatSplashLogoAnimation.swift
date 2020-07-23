@@ -34,8 +34,8 @@ class HeartbeatSplashLogoAnimation: SplashLogoAnimation {
             self.addBeatKeyFrames(on: logo, relativeStart: 0.0, relativeDuration: 0.25)
             self.addBeatKeyFrames(on: logo, relativeStart: 0.5, relativeDuration: 0.25)
             self.addBeatKeyFrames(on: logo, relativeStart: 0.75, relativeDuration: 0.25)
-        }) { _ in
-            self.animateLogo()
+        }) { [weak self] _ in
+            self?.animateLogo()
         }
     }
 

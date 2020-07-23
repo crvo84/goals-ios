@@ -27,6 +27,7 @@ class GoalsSplashViewModel: SplashViewModel {
 
     func loadUserSession() {
         userSessionRepository.readUserSession()
+            .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: routeToNextScreen, onError: handleError)
             .disposed(by: bag)
     }

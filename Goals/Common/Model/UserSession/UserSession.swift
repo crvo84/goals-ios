@@ -23,3 +23,13 @@ extension UserSession {
         return lhs.remoteSession == rhs.remoteSession && lhs.userProfile == rhs.userProfile
     }
 }
+
+// TODO: Delete extension. Only for testing purposes
+extension UserSession {
+    static var mock: UserSession {
+        let profile = UserProfile(email: "crvo84@gmail.com", firstName: "Carlos Rogelio", lastName: "Villanueva", avatar: nil)
+        let session = RemoteSession(token: "1234567890")
+        
+        return UserSession(userProfile: profile, remoteSession: session)
+    }
+}

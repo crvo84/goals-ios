@@ -15,7 +15,7 @@ protocol MainViewModel: UserSessionStateResponder {
 class GoalsMainViewModel: MainViewModel {
 
     var viewState: Observable<MainViewState> { viewTypeSubject.asObservable() }
-    private let viewTypeSubject = BehaviorSubject<MainViewState>(value: .splash)
+    private let viewTypeSubject = PublishSubject<MainViewState>()
 }
 
 extension GoalsMainViewModel {

@@ -26,8 +26,6 @@ public enum HTTPContentType: String {
 
 public typealias HTTPHeaders = [String: String]
 
-public typealias HTTPMockResponse = (statusCode: Int, data: Data?, error: Error?)
-
 public protocol ApiRequest {
 
     var scheme: URIScheme { get }

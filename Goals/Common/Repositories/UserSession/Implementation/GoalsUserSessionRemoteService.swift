@@ -15,11 +15,13 @@ struct GoalsUserSessionRemoteService: UserSessionRemoteService {
 
     func signUp(dto: SignUpDTO) -> Single<UserSession> {
         let req = UserSessionApi.signUp(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: UserSession.self)
+        return manager.execute(request: req, decodeType: SignUpResponseContent.self)
+            .map { $0.userSession }
     }
 
     func signIn(dto: SignInDTO) -> Single<UserSession> {
         let req = UserSessionApi.signIn(body: dto.jsonData())
-        return manager.execute(request: req, decodeType: UserSession.self)
+        return manager.execute(request: req, decodeType: SignInResponseContent.self)
+            .map { $0.userSession }
     }
 }

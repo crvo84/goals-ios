@@ -21,12 +21,14 @@ public class MockNetworkingManager: NetworkingManager {
         let waitDuration = self.waitDuration
         return Single<Data?>.create { single in
             DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + waitDuration) {
-                
-                guard let (statusCode, data, error) = request.mockResponse else {
+                guard let mockResponse = request.mockResponse else {
                     single(.error(ApiError.invalidRequest(nil)))
                     return
                 }
 
+                let statusCode = mockResponse.statusCode
+                let error = mockResponse.error
+                let data = mockResponse.data
                 guard 200..<300 ~= statusCode else {
                     single(.error(ApiError.response(error, statusCode: statusCode, data: data)))
                     return

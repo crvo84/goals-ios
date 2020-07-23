@@ -42,8 +42,9 @@ class GoalsAppDependencyContainer {
     }
 
     private static func makeUserSessionDataStore() -> UserSessionDataStore {
-        let secureStore = makeSecureStore()
-        return SecureUserSessionDataStore(secureStore: secureStore)
+//        let secureStore = makeSecureStore()
+//        return SecureUserSessionDataStore(secureStore: secureStore)
+        return MockUserSessionDataStore(userSession: nil)
     }
 
     private static func makeSecureStore() -> SecureStore {
@@ -71,7 +72,8 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     // Splash
 
     func makeSplashViewController() -> SplashViewController {
-        let logoAnimation = HeartbeatSplashLogoAnimation()
+//        let logoAnimation = HeartbeatSplashLogoAnimation()
+        let logoAnimation = FloatSplashLogoAnimation()
         return SplashViewController(splashViewModelFactory: self, logoAnimation: logoAnimation)
     }
 

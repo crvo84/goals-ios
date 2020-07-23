@@ -45,9 +45,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
 
         setupSubscriptions()
-
-        // TODO: remove
-        view.backgroundColor = .orange
+        updateState(.splash)
     }
 
     // MARK: - Setup

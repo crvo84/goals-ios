@@ -8,12 +8,28 @@
 
 import Foundation
 
+// MARK: - SignUp
+
 struct SignUpResponseContent: Decodable {
     let profile: UserProfile
     let token: String
 }
 
+extension SignUpResponseContent {
+    var userSession: UserSession {
+        UserSession(userProfile: profile, remoteSession: RemoteSession(token: token))
+    }
+}
+
+// MARK: - SignIn
+
 struct SignInResponseContent: Decodable {
     let profile: UserProfile
     let token: String
+}
+
+extension SignInResponseContent {
+    var userSession: UserSession {
+        UserSession(userProfile: profile, remoteSession: RemoteSession(token: token))
+    }
 }

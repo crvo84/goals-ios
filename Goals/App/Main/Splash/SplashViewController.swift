@@ -14,6 +14,11 @@ protocol SplashViewModelFactory {
     func makeSplashViewModel() -> SplashViewModel
 }
 
+protocol SplashLogoAnimation {
+    func startAnimating(logo: UIView)
+    func stopAnimating()
+}
+
 class SplashViewController: BaseViewController {
 
     private struct Geometry {
@@ -30,6 +35,7 @@ class SplashViewController: BaseViewController {
     // MARK: - Properties
 
     private let viewModel: SplashViewModel
+    private let logoAnimation: SplashLogoAnimation?
     private let bag =  DisposeBag()
 
     private let logoImageView: UIImageView = {
@@ -38,8 +44,9 @@ class SplashViewController: BaseViewController {
 
     // MARK: - Initialization
 
-    init(splashViewModelFactory: SplashViewModelFactory) {
+    init(splashViewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
         self.viewModel = splashViewModelFactory.makeSplashViewModel()
+        self.logoAnimation = logoAnimation
         super.init()
     }
 
@@ -55,7 +62,13 @@ class SplashViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        animateLogo()
+        logoAnimation?.startAnimating(logo: logoImageView)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        logoAnimation?.stopAnimating()
     }
 
     // MARK: - Setup
@@ -77,29 +90,5 @@ class SplashViewController: BaseViewController {
             logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Geometry.logoRelativeHeight),
             logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: Geometry.logoAspectRatio)
         ])
-    }
-
-    // MARK: - Update
-
-    private func animateLogo() {
-        UIView.animateKeyframes(withDuration: Animation.totalDuration, delay: 0.0, options: [], animations: {
-            self.addBeatKeyFrames(relativeStart: 0.0, relativeDuration: 0.25)
-            self.addBeatKeyFrames(relativeStart: 0.5, relativeDuration: 0.25)
-            self.addBeatKeyFrames(relativeStart: 0.75, relativeDuration: 0.25)
-        }) { _ in
-            // TODO: if user session fetching was completed, go to next screen
-            self.animateLogo()
-        }
-    }
-
-    private func addBeatKeyFrames(relativeStart start: Double, relativeDuration duration: Double) {
-        let frameDuration = duration / 2.0
-        UIView.addKeyframe(withRelativeStartTime: start, relativeDuration: frameDuration) {
-            let beatScale = CGFloat(Animation.beatScale)
-            self.logoImageView.transform = CGAffineTransform(scaleX: beatScale, y: beatScale)
-        }
-        UIView.addKeyframe(withRelativeStartTime: start + frameDuration, relativeDuration: frameDuration) {
-            self.logoImageView.transform = .identity
-        }
     }
 }

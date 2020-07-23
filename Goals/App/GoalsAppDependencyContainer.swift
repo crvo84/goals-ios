@@ -71,7 +71,8 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     // Splash
 
     func makeSplashViewController() -> SplashViewController {
-        SplashViewController(splashViewModelFactory: self)
+        let logoAnimation = HeartbeatSplashLogoAnimation()
+        return SplashViewController(splashViewModelFactory: self, logoAnimation: logoAnimation)
     }
 
     func makeSplashViewModel() -> SplashViewModel {

@@ -65,6 +65,7 @@
 		73E9880A24C941AA007386CA /* UserSessionApi-signIn-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */; };
 		73E9880E24CA3067007386CA /* FloatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */; };
 		73E9881024CA6A2E007386CA /* SplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */; };
+		73E9881224CA6CB6007386CA /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -164,6 +165,7 @@
 		73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UserSessionApi-signIn-mock.json"; sourceTree = "<group>"; };
 		73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatSplashLogoAnimation.swift; sourceTree = "<group>"; };
 		73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLogoAnimation.swift; sourceTree = "<group>"; };
+		73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				7346DB9124A321AB00AF75BB /* String+Localized.swift */,
 				7352481124BE885E0028D089 /* Codable+Json.swift */,
 				73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */,
+				73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */,
 				73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */,
 			);
 			path = Extensions;
@@ -708,6 +711,7 @@
 				7352495C24C2AB920028D089 /* ErrorMessage.swift in Sources */,
 				7352495724C28FBD0028D089 /* OnboardingViewModel.swift in Sources */,
 				7346DB7A24A1D60A00AF75BB /* GoalsAppDependencyContainer.swift in Sources */,
+				73E9881224CA6CB6007386CA /* UIViewController+Navigation.swift in Sources */,
 				7346DB7724A1D58900AF75BB /* MainViewController.swift in Sources */,
 				7352494B24C28C5D0028D089 /* BaseView.swift in Sources */,
 				73D4531524C686AC00B9CBDE /* UIViewController+Children.swift in Sources */,

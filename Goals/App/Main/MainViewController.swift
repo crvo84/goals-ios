@@ -52,6 +52,7 @@ class MainViewController: BaseViewController {
 
     private func setupSubscriptions() {
         viewModel.viewState.distinctUntilChanged()
+            .debug("MainViewController viewModel.viewState.distinctUntilChanged")
             .subscribe(onNext: { [weak self] state in
                 self?.updateState(state)
             })
@@ -65,7 +66,12 @@ class MainViewController: BaseViewController {
         case .splash:
             presentSplashScreen()
         case .onboarding:
-            presentOnboardingScreen()
+            guard onboardingViewController?.presentingViewController == nil
+                else { return }
+
+            dismissPresentedViewControllerIfNeeded { [weak self] in
+                self?.presentOnboardingScreen()
+            }
         case .signedIn(let session):
             presentSignedInScreen(userSession: session)
         }
@@ -76,7 +82,13 @@ class MainViewController: BaseViewController {
     }
 
     private func presentOnboardingScreen() {
-
+        let onboardingViewController = makeOnboardingViewController()
+        onboardingViewController.modalPresentationStyle = .fullScreen
+        present(onboardingViewController, animated: true) { [weak self] in
+            self?.removeChildViewController(self?.splashViewController)
+            self?.removeChildViewController(self?.signedInViewController)
+        }
+        self.onboardingViewController = onboardingViewController
     }
 
     private func presentSignedInScreen(userSession: UserSession) {

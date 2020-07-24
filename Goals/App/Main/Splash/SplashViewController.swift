@@ -31,7 +31,6 @@ class SplashViewController: BaseViewController {
 
     private let viewModel: SplashViewModel
     private let logoAnimation: SplashLogoAnimation?
-    private var logoAnimationDidEndCycleDisposable: Disposable?
     private let bag =  DisposeBag()
 
     private let logoImageView: UIImageView = {
@@ -43,19 +42,7 @@ class SplashViewController: BaseViewController {
     init(splashViewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
         self.viewModel = splashViewModelFactory.makeSplashViewModel()
         self.logoAnimation = logoAnimation
-
         super.init()
-
-        initialSetup()
-    }
-
-    private func initialSetup() {
-        logoAnimation?.isAnimating
-            .subscribe(onNext: { [weak self] isAnimating in
-                self?.viewModel.setIsViewAnimationInProgress(isAnimating)
-            })
-            .disposed(by: bag)
-        viewModel.loadUserSession()
     }
 
     // MARK: - Lifecycle
@@ -64,12 +51,14 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
 
         setupUI()
+        setupSubscriptions()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         logoAnimation?.startAnimating(logo: logoImageView)
+        viewModel.viewIsReady()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -97,5 +86,13 @@ class SplashViewController: BaseViewController {
             logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Geometry.logoRelativeHeight),
             logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: Geometry.logoAspectRatio)
         ])
+    }
+
+    private func setupSubscriptions() {
+        logoAnimation?.isAnimating
+            .subscribe(onNext: { [weak self] isAnimating in
+                self?.viewModel.setIsViewAnimationInProgress(isAnimating)
+            })
+            .disposed(by: bag)
     }
 }

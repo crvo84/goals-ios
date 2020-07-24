@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol SplashViewModel {
-    func loadUserSession()
+    func viewIsReady()
     func setIsViewAnimationInProgress(_ inProgress: Bool)
 }
 
@@ -33,7 +33,7 @@ class GoalsSplashViewModel: SplashViewModel {
             return .just(true)
         }
 
-        return isViewAnimationInProgress.filter { $0 == false }
+        return isViewAnimationInProgress.filter { $0 == false }.map { _ in true }
     }
 
     // MARK: - Initialization
@@ -42,36 +42,42 @@ class GoalsSplashViewModel: SplashViewModel {
          userSessionStateResponder: UserSessionStateResponder) {
         self.userSessionRepository = userSessionRepository
         self.userSessionStateResponder = userSessionStateResponder
-        setupSubscriptions()
-    }
-
-    // MARK: - Setup
-
-    private func setupSubscriptions() {
-        let shouldRespondToNotSignedIn = shouldRespondToNotSignedInSubject.filter { $0 == true }
-        let callResponder = Observable.combineLatest(canRespondToNotSigned, shouldRespondToNotSignedIn).take(1)
-
-        callResponder
-            .subscribe(onNext: { [weak self] _ in
-                self?.userSessionStateResponder.respondToNotSignedIn()
-            })
-            .disposed(by: bag)
     }
 
     // MARK: - Internal methods
 
-    func loadUserSession() {
-        userSessionRepository.readUserSession()
-            .observeOn(MainScheduler.instance)
-            .subscribe(onSuccess: handleUserSession, onError: handleError)
-            .disposed(by: bag)
+    func viewIsReady() {
+        setupSubscriptions()
+        loadUserSession()
     }
 
     func setIsViewAnimationInProgress(_ inProgress: Bool) {
         isViewAnimationInProgress.onNext(inProgress)
     }
 
+    // MARK: - Setup
+
+    private func setupSubscriptions() {
+        let shouldCallNotSignedInResponder = shouldRespondToNotSignedInSubject.filter { $0 == true }
+        let canCallNotsignedInResponder = canRespondToNotSigned.filter { $0 == true }
+        let callNotSignedInResponder = Observable.combineLatest(canCallNotsignedInResponder, shouldCallNotSignedInResponder)
+            .take(1)
+
+        callNotSignedInResponder
+            .subscribe(onNext: { [weak self] _ in
+                self?.userSessionStateResponder.respondToNotSignedIn()
+            })
+            .disposed(by: bag)
+    }
+
     // MARK: - Helper methods
+
+    private func loadUserSession() {
+        userSessionRepository.readUserSession()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onSuccess: handleUserSession, onError: handleError)
+            .disposed(by: bag)
+    }
 
     private func handleUserSession(_ userSession: UserSession?) {
         switch userSession {

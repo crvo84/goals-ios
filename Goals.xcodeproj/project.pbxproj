@@ -64,6 +64,7 @@
 		73E9880924C941AA007386CA /* UserSessionApi-signUp-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 73E9880724C941AA007386CA /* UserSessionApi-signUp-mock.json */; };
 		73E9880A24C941AA007386CA /* UserSessionApi-signIn-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */; };
 		73E9880E24CA3067007386CA /* FloatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */; };
+		73E9881024CA6A2E007386CA /* SplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +163,7 @@
 		73E9880724C941AA007386CA /* UserSessionApi-signUp-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UserSessionApi-signUp-mock.json"; sourceTree = "<group>"; };
 		73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UserSessionApi-signIn-mock.json"; sourceTree = "<group>"; };
 		73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatSplashLogoAnimation.swift; sourceTree = "<group>"; };
+		73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLogoAnimation.swift; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,13 +193,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7329E9D424C929AB00A71E21 /* LogoAnimations */ = {
+		7329E9D424C929AB00A71E21 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
 				7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */,
 				73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */,
 			);
-			path = LogoAnimations;
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		7346DAD024A1C2F700AF75BB = {
@@ -352,12 +354,12 @@
 				735248D224C239A60028D089 /* UserSessionRepository.swift */,
 				735248D624C23CB30028D089 /* UserSessionRemoteService.swift */,
 				735248D824C23F220028D089 /* UserSessionDataStore.swift */,
-				735248D524C23A750028D089 /* Implementation */,
+				735248D524C23A750028D089 /* Implementations */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
 		};
-		735248D524C23A750028D089 /* Implementation */ = {
+		735248D524C23A750028D089 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
 				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */,
@@ -365,7 +367,7 @@
 				735248DA24C2437F0028D089 /* MockUserSessionDataStore.swift */,
 				735248DC24C244D90028D089 /* SecureUserSessionDataStore.swift */,
 			);
-			path = Implementation;
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		7352493124C2781D0028D089 /* Splash */ = {
@@ -373,7 +375,8 @@
 			children = (
 				7352493F24C282BF0028D089 /* SplashViewController.swift */,
 				7352493224C278C70028D089 /* SplashViewModel.swift */,
-				7329E9D424C929AB00A71E21 /* LogoAnimations */,
+				73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */,
+				7329E9D424C929AB00A71E21 /* Implementations */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 				7352494424C28B6D0028D089 /* WelcomeViewController.swift in Sources */,
 				7352493024C276700028D089 /* UserSessionStateResponder.swift in Sources */,
 				7352481224BE885E0028D089 /* Codable+Json.swift in Sources */,
+				73E9881024CA6A2E007386CA /* SplashLogoAnimation.swift in Sources */,
 				7352495324C28F4E0028D089 /* SignInViewController.swift in Sources */,
 				7352493624C27F840028D089 /* BaseViewController.swift in Sources */,
 				735248DB24C2437F0028D089 /* MockUserSessionDataStore.swift in Sources */,

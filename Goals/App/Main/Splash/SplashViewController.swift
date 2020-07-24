@@ -14,11 +14,6 @@ protocol SplashViewModelFactory {
     func makeSplashViewModel() -> SplashViewModel
 }
 
-protocol SplashLogoAnimation {
-    func startAnimating(logo: UIView)
-    func stopAnimating()
-}
-
 class SplashViewController: BaseViewController {
 
     private struct Geometry {
@@ -36,6 +31,7 @@ class SplashViewController: BaseViewController {
 
     private let viewModel: SplashViewModel
     private let logoAnimation: SplashLogoAnimation?
+    private var logoAnimationDidEndCycleDisposable: Disposable?
     private let bag =  DisposeBag()
 
     private let logoImageView: UIImageView = {
@@ -47,7 +43,19 @@ class SplashViewController: BaseViewController {
     init(splashViewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
         self.viewModel = splashViewModelFactory.makeSplashViewModel()
         self.logoAnimation = logoAnimation
+
         super.init()
+
+        initialSetup()
+    }
+
+    private func initialSetup() {
+        logoAnimation?.isAnimating
+            .subscribe(onNext: { [weak self] isAnimating in
+                self?.viewModel.setIsViewAnimationInProgress(isAnimating)
+            })
+            .disposed(by: bag)
+        viewModel.loadUserSession()
     }
 
     // MARK: - Lifecycle
@@ -56,7 +64,6 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
 
         setupUI()
-        viewModel.loadUserSession()
     }
 
     override func viewDidAppear(_ animated: Bool) {

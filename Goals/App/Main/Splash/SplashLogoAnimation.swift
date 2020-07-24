@@ -10,7 +10,7 @@ import RxSwift
 import UIKit
 
 protocol SplashLogoAnimation {
-    var isAnimating: Observable<Bool> { get }
+    var didCompleteAnimationCycle: Observable<Void> { get }
     func startAnimating(logo: UIView)
     func stopAnimating()
 }

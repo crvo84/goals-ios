@@ -18,9 +18,9 @@ class FloatSplashLogoAnimation: SplashLogoAnimation {
 
     private weak var logo: UIView?
 
-    private let isAnimatingSubject = BehaviorSubject<Bool>(value: false)
-    var isAnimating: Observable<Bool> {
-        isAnimatingSubject.asObservable()
+    private let didCompleteAnimationCycleSubject = PublishSubject<Void>()
+    var didCompleteAnimationCycle: Observable<Void> {
+        didCompleteAnimationCycleSubject.asObservable()
     }
 
     func startAnimating(logo: UIView) {
@@ -31,13 +31,11 @@ class FloatSplashLogoAnimation: SplashLogoAnimation {
     func stopAnimating() {
         self.logo?.layer.removeAllAnimations()
         self.logo = nil
-        isAnimatingSubject.onNext(false)
     }
 
     private func animateLogo() {
         guard let logo = logo else { return }
 
-        isAnimatingSubject.onNext(false)
         UIView.animateKeyframes(withDuration: Config.totalDuration, delay: 0.0, options: [], animations: {
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                 let scale = CGFloat(Config.maxScale)
@@ -47,7 +45,7 @@ class FloatSplashLogoAnimation: SplashLogoAnimation {
                 logo.transform = .identity
             }
         }) { [weak self] _ in
-            self?.isAnimatingSubject.onNext(false)
+            self?.didCompleteAnimationCycleSubject.onNext(())
             self?.animateLogo()
         }
     }

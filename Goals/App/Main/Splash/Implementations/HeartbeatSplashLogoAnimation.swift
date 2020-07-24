@@ -18,9 +18,9 @@ class HeartbeatSplashLogoAnimation: SplashLogoAnimation {
 
     private weak var logo: UIView?
 
-    private let isAnimatingSubject = BehaviorSubject<Bool>(value: false)
-    var isAnimating: Observable<Bool> {
-        isAnimatingSubject.asObservable()
+    private let didCompleteAnimationCycleSubject = PublishSubject<Void>()
+    var didCompleteAnimationCycle: Observable<Void> {
+        didCompleteAnimationCycleSubject.asObservable()
     }
 
     func startAnimating(logo: UIView) {
@@ -31,19 +31,17 @@ class HeartbeatSplashLogoAnimation: SplashLogoAnimation {
     func stopAnimating() {
         self.logo?.layer.removeAllAnimations()
         self.logo = nil
-        isAnimatingSubject.onNext(false)
     }
 
     private func animateLogo() {
         guard let logo = logo else { return }
 
-        isAnimatingSubject.onNext(true)
         UIView.animateKeyframes(withDuration: Config.totalDuration, delay: 0.0, options: [], animations: {
             self.addBeatKeyFrames(on: logo, relativeStart: 0.0, relativeDuration: 0.25)
             self.addBeatKeyFrames(on: logo, relativeStart: 0.5, relativeDuration: 0.25)
             self.addBeatKeyFrames(on: logo, relativeStart: 0.75, relativeDuration: 0.25)
         }) { [weak self] _ in
-            self?.isAnimatingSubject.onNext(false)
+            self?.didCompleteAnimationCycleSubject.onNext(())
             self?.animateLogo()
         }
     }

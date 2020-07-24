@@ -9,14 +9,15 @@
 import RxSwift
 
 protocol SplashViewModel {
-    func viewIsReady()
-    func setIsViewAnimationInProgress(_ inProgress: Bool)
+    func loadUserSession()
+    func didCompleteAnimation()
+    func didCompleteAnimationCycle()
 }
 
 class GoalsSplashViewModel: SplashViewModel {
 
     private struct Config {
-        static let shouldWaitForAnimationBeforeRespondingToNotSigned = true
+        static let routeToSignUpOnlyWhenAnimationCompletes = true
     }
 
     // MARK: - Properties
@@ -24,17 +25,11 @@ class GoalsSplashViewModel: SplashViewModel {
     private let userSessionRepository: UserSessionRepository
     private let userSessionStateResponder: UserSessionStateResponder
 
-    private let isViewAnimationInProgress = PublishSubject<Bool>()
-    private let shouldRespondToNotSignedInSubject = PublishSubject<Bool>()
+    private let animationCompletedSubject = BehaviorSubject<Bool>(value: false)
+    private let animationCycleCompletedSubject = PublishSubject<Void>()
+    private let notSignedInConfirmedSubject = BehaviorSubject<Bool?>(value: nil)
+
     private let bag = DisposeBag()
-
-    private var canRespondToNotSigned: Observable<Bool> {
-        guard Config.shouldWaitForAnimationBeforeRespondingToNotSigned else {
-            return .just(true)
-        }
-
-        return isViewAnimationInProgress.filter { $0 == false }.map { _ in true }
-    }
 
     // MARK: - Initialization
 
@@ -42,54 +37,62 @@ class GoalsSplashViewModel: SplashViewModel {
          userSessionStateResponder: UserSessionStateResponder) {
         self.userSessionRepository = userSessionRepository
         self.userSessionStateResponder = userSessionStateResponder
-    }
 
-    // MARK: - Internal methods
-
-    func viewIsReady() {
         setupSubscriptions()
-        loadUserSession()
-    }
-
-    func setIsViewAnimationInProgress(_ inProgress: Bool) {
-        isViewAnimationInProgress.onNext(inProgress)
     }
 
     // MARK: - Setup
 
     private func setupSubscriptions() {
-        let shouldCallNotSignedInResponder = shouldRespondToNotSignedInSubject.filter { $0 == true }
-        let canCallNotsignedInResponder = canRespondToNotSigned.filter { $0 == true }
-        let callNotSignedInResponder = Observable.combineLatest(canCallNotsignedInResponder, shouldCallNotSignedInResponder)
-            .take(1)
+        let canCallNotSignedInResponder = Observable.of(
+            animationCompletedSubject.filter { $0 == true },
+            animationCycleCompletedSubject.map { true }
+        ).merge()
 
-        callNotSignedInResponder
-            .subscribe(onNext: { [weak self] _ in
+        canCallNotSignedInResponder.withLatestFrom(notSignedInConfirmedSubject)
+            .subscribe(onNext: { [weak self] notSignedInConfirmed in
+                guard let confirmed = notSignedInConfirmed, confirmed else { return }
+
                 self?.userSessionStateResponder.respondToNotSignedIn()
             })
             .disposed(by: bag)
     }
 
-    // MARK: - Helper methods
+    // MARK: - Internal methods
 
-    private func loadUserSession() {
+    func loadUserSession() {
         userSessionRepository.readUserSession()
             .observeOn(MainScheduler.instance)
             .subscribe(onSuccess: handleUserSession, onError: handleError)
             .disposed(by: bag)
     }
 
+    func didCompleteAnimation() {
+        animationCompletedSubject.onNext(true)
+    }
+
+    func didCompleteAnimationCycle() {
+        animationCycleCompletedSubject.onNext(())
+    }
+
+    // MARK: - Helper methods
+
     private func handleUserSession(_ userSession: UserSession?) {
         switch userSession {
         case .some(let session):
             userSessionStateResponder.respondToSignedIn(with: session)
         case .none:
-            shouldRespondToNotSignedInSubject.onNext(true)
+            let animationCompleted = (try? animationCompletedSubject.value()) ?? false
+            if animationCompleted || Config.routeToSignUpOnlyWhenAnimationCompletes == false {
+                userSessionStateResponder.respondToNotSignedIn()
+            } else {
+                notSignedInConfirmedSubject.onNext(true)
+            }
         }
     }
 
     private func handleError(_ error: Error) {
         // TODO: display error message? (e.g. no internet connection)
-        shouldRespondToNotSignedInSubject.onNext(true)
+        handleUserSession(nil)
     }
 }

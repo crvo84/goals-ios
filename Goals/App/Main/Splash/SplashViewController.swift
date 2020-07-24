@@ -58,7 +58,7 @@ class SplashViewController: BaseViewController {
         super.viewDidAppear(animated)
 
         logoAnimation?.startAnimating(logo: logoImageView)
-        viewModel.viewIsReady()
+        viewModel.loadUserSession()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -89,10 +89,16 @@ class SplashViewController: BaseViewController {
     }
 
     private func setupSubscriptions() {
-        logoAnimation?.isAnimating
-            .subscribe(onNext: { [weak self] isAnimating in
-                self?.viewModel.setIsViewAnimationInProgress(isAnimating)
+        // no animation
+        if logoAnimation == nil {
+            viewModel.didCompleteAnimation()
+        }
+
+        // animation cycle completed
+        logoAnimation?.didCompleteAnimationCycle
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.didCompleteAnimationCycle()
             })
-            .disposed(by: bag)
+        .disposed(by: bag)
     }
 }

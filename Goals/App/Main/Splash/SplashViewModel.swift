@@ -17,7 +17,7 @@ protocol SplashViewModel {
 class GoalsSplashViewModel: SplashViewModel {
 
     private struct Config {
-        static let routeToSignUpOnlyWhenAnimationCompletes = true
+        static let goToOnboardingOnlyWhenAnimationCompletes = true
     }
 
     // MARK: - Properties
@@ -83,7 +83,7 @@ class GoalsSplashViewModel: SplashViewModel {
             userSessionStateResponder.respondToSignedIn(with: session)
         case .none:
             let animationCompleted = (try? animationCompletedSubject.value()) ?? false
-            if animationCompleted || Config.routeToSignUpOnlyWhenAnimationCompletes == false {
+            if animationCompleted || Config.goToOnboardingOnlyWhenAnimationCompletes == false {
                 userSessionStateResponder.respondToNotSignedIn()
             } else {
                 notSignedInConfirmedSubject.onNext(true)

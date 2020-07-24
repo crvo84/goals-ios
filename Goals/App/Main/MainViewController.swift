@@ -84,6 +84,7 @@ class MainViewController: BaseViewController {
     private func presentOnboardingScreen() {
         let onboardingViewController = makeOnboardingViewController()
         onboardingViewController.modalPresentationStyle = .fullScreen
+        onboardingViewController.modalTransitionStyle = .crossDissolve
         present(onboardingViewController, animated: true) { [weak self] in
             self?.removeChildViewController(self?.splashViewController)
             self?.removeChildViewController(self?.signedInViewController)

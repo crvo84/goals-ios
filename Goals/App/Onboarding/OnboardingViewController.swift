@@ -12,9 +12,6 @@ class OnboardingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // TODO: Remove
-        view.backgroundColor = .green
     }
 
 }

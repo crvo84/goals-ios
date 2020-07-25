@@ -1,5 +1,5 @@
 //
-//  ThemeColor.swift
+//  Theme+Color.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 21/07/20.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-enum ThemeColor {
-    case main
-    case background
-    case error
+extension Theme {
+    enum Color {
+        case main
+        case background
+        case error
+    }
 }
 
-extension ThemeColor {
+extension Theme.Color {
 
     private var isDark: Bool {
         UITraitCollection.current.userInterfaceStyle == .dark
@@ -36,7 +38,7 @@ extension ThemeColor {
 
 extension UIView {
 
-    func setBackground(color: ThemeColor) {
+    func setBackground(color: Theme.Color) {
         self.backgroundColor = color.value
     }
 }

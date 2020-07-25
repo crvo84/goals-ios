@@ -15,10 +15,10 @@ protocol WelcomeViewModelFactory {
 class WelcomeViewController: BaseViewController {
 
     private struct Geometry {
-        static let logoAspectRatio = ThemeLogo.Geometry.aspectRatio
-        static let logoRelativeHeight = ThemeLogo.Geometry.welcomeRelativeHeight
-        static let logoInitialRelativeCenterY = ThemeLogo.Geometry.splashRelativeCenterY
-        static let logoFinalRelativeCenterY = ThemeLogo.Geometry.welcomeRelativeCenterY
+        static let logoAspectRatio = Theme.Logo.Geometry.aspectRatio
+        static let logoRelativeHeight = Theme.Logo.Geometry.welcomeRelativeHeight
+        static let logoInitialRelativeCenterY = Theme.Logo.Geometry.splashRelativeCenterY
+        static let logoFinalRelativeCenterY = Theme.Logo.Geometry.welcomeRelativeCenterY
     }
 
     private struct Animation {

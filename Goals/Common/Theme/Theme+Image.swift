@@ -1,5 +1,5 @@
 //
-//  ThemeImage.swift
+//  Theme+Image.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 21/07/20.
@@ -8,20 +8,22 @@
 
 import UIKit
 
-enum ThemeImage: String {
-    case logo
+extension Theme {
+    enum Image: String {
+        case logo
+    }
 }
 
 // MARK: - Helper extensions
 
 extension UIImage {
-    convenience init(themeImage: ThemeImage) {
+    convenience init(themeImage: Theme.Image) {
         self.init(named: themeImage.rawValue)!
     }
 }
 
 extension UIImageView {
-    convenience init(with themeImage: ThemeImage, tint: ThemeColor? = nil) {
+    convenience init(with themeImage: Theme.Image, tint: Theme.Color? = nil) {
         var image = UIImage(themeImage: themeImage)
         if tint != nil, image.renderingMode != .alwaysTemplate {
             image = image.withRenderingMode(.alwaysTemplate)

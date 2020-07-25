@@ -17,9 +17,9 @@ protocol SplashViewModelFactory {
 class SplashViewController: BaseViewController {
 
     private struct Geometry {
-        static let logoAspectRatio = ThemeLogo.Geometry.aspectRatio
-        static let logoRelativeHeight = ThemeLogo.Geometry.splashRelativeHeight
-        static let logoRelativeCenterY = ThemeLogo.Geometry.splashRelativeCenterY
+        static let logoAspectRatio = Theme.Logo.Geometry.aspectRatio
+        static let logoRelativeHeight = Theme.Logo.Geometry.splashRelativeHeight
+        static let logoRelativeCenterY = Theme.Logo.Geometry.splashRelativeCenterY
     }
 
     // MARK: - Properties

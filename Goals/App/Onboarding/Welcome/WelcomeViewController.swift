@@ -29,13 +29,14 @@ class WelcomeViewController: BaseViewController {
     private let welcomeViewModelFactory: WelcomeViewModelFactory
     private var logoInitialCenterYConstraint: NSLayoutConstraint?
     private var logoFinalCenterYConstraint: NSLayoutConstraint?
+    private var initialAnimationCompleted = false
 
     private let logoImageView: UIImageView = {
         UIImageView.init(with: .logo, tint: .main)
     }()
 
     private let welcomeLabel: UILabel = {
-        let label = UILabel()
+        UILabel.with(font: ., color: <#T##ThemeColor#>)
     }()
 
     // MARK: - Initialization
@@ -54,19 +55,21 @@ class WelcomeViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        animateLogo {
-            // TODO: unhide buttons
-        }
+        startInitialAnimation()
     }
 
-    // MARK: - Setup
+    // MARK: - Setup UI
     private func setupUI() {
         view.setBackground(color: .background)
-        setupLogo()
+        setupHierarchy()
+        setupConstraintsLogo()
     }
 
-    private func setupLogo() {
+    private func setupHierarchy() {
         view.addSubview(logoImageView)
+    }
+
+    private func setupConstraintsLogo() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         let initialCenterYConstraint = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
                                                           relatedBy: .equal, toItem: view, attribute: .bottom,
@@ -95,9 +98,17 @@ class WelcomeViewController: BaseViewController {
 
     }
 
-    // MARK: - Update
+    // MARK: - Initial Animation
 
-    private func animateLogo(completion: @escaping () -> Void) {
+    private func startInitialAnimation() {
+        guard !initialAnimationCompleted else { return }
+
+        animateLogoToFinalPosition { [weak self] in
+            self?.animateUIToFinalState()
+        }
+    }
+
+    private func animateLogoToFinalPosition(completion: @escaping () -> Void) {
         UIView.animate(withDuration: Animation.duration, animations: {
             self.logoInitialCenterYConstraint?.isActive = false
             self.logoFinalCenterYConstraint?.isActive = true
@@ -106,5 +117,9 @@ class WelcomeViewController: BaseViewController {
         }, completion: { _ in
             completion()
         })
+    }
+
+    private func animateUIToFinalState() {
+        // TODO: Unhide UI elements
     }
 }

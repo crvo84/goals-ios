@@ -15,14 +15,14 @@ enum ThemeImage: String {
 // MARK: - Helper extensions
 
 extension UIImage {
-    static func with(_ themeImage: ThemeImage) -> UIImage {
-        UIImage(named: themeImage.rawValue)!
+    convenience init(themeImage: ThemeImage) {
+        self.init(named: themeImage.rawValue)!
     }
 }
 
 extension UIImageView {
     convenience init(with themeImage: ThemeImage, tint: ThemeColor? = nil) {
-        var image = UIImage.with(themeImage)
+        var image = UIImage(themeImage: themeImage)
         if tint != nil, image.renderingMode != .alwaysTemplate {
             image = image.withRenderingMode(.alwaysTemplate)
         }
@@ -30,7 +30,7 @@ extension UIImageView {
         self.init(image: image)
 
         if let tint = tint {
-            self.tintColor = tint.color
+            self.tintColor = tint.value
         }
     }
 }

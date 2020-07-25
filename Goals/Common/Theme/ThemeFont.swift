@@ -53,7 +53,7 @@ struct ThemeFont {
         self.weight = weight
     }
 
-    var font: UIFont {
+    var value: UIFont {
         switch name {
         case .system:
             return .systemFont(ofSize: size.value, weight: weight.value)
@@ -107,10 +107,13 @@ extension ThemeFont.Weight {
 // MARK: - Helper extensions
 extension UILabel {
 
-    static func with(font: ThemeFont, color: ThemeColor) {
-        let label = UILabel()
-        label.font = font.font
-        label.textColor = color.color
+    func set(font: ThemeFont, color: ThemeColor) {
+        self.font = font.value
+        self.textColor = color.value
+    }
+
+    func setFont(name: ThemeFont.Name = .system, size: ThemeFont.Size, weight: ThemeFont.Weight = .regular, color: ThemeColor) {
+        let themeFont = ThemeFont(name: name, size: size, weight: weight)
+        set(font: themeFont, color: color)
     }
 }
-

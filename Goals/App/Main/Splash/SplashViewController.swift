@@ -59,14 +59,18 @@ class SplashViewController: BaseViewController {
         logoAnimation?.stopAnimating()
     }
 
-    // MARK: - Setup
+    // MARK: - Setup UI
     private func setupUI() {
         view.setBackground(color: .background)
-        setupLogo()
+        setupHierarchy()
+        setupConstraintsLogo()
     }
 
-    private func setupLogo() {
+    private func setupHierarchy() {
         view.addSubview(logoImageView)
+    }
+
+    private func setupConstraintsLogo() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         let relativeCenterY = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
                                                  relatedBy: .equal, toItem: view, attribute: .bottom,
@@ -79,6 +83,7 @@ class SplashViewController: BaseViewController {
         ])
     }
 
+    // MARK: - Setup Subscriptions
     private func setupSubscriptions() {
         // no animation
         if logoAnimation == nil {

@@ -8,12 +8,25 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+protocol WelcomeViewModelFactory {
+    func makeWelcomeViewModel() -> WelcomeViewModel
+}
 
+class WelcomeViewController: BaseViewController {
+
+    // MARK: - Properties
+    let welcomeViewModelFactory: WelcomeViewModelFactory
+
+    // MARK: - Initialization
+    init(welcomeViewModelFactory: WelcomeViewModelFactory) {
+        self.welcomeViewModelFactory = welcomeViewModelFactory
+        super.init()
+    }
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
 }

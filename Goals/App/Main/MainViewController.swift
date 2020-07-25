@@ -12,7 +12,6 @@ import UIKit
 class MainViewController: BaseViewController {
 
     // MARK: - Properties
-
     private let viewModel: MainViewModel
     private let bag = DisposeBag()
 
@@ -26,7 +25,6 @@ class MainViewController: BaseViewController {
     private let makeSignedInViewController: (UserSession) -> SignedInViewController
 
     // MARK: - Initialization
-
     init(viewModel: MainViewModel,
          splashViewController: SplashViewController,
          onboardingViewControllerFactory: @escaping () -> OnboardingViewController,
@@ -40,29 +38,26 @@ class MainViewController: BaseViewController {
     }
 
     // MARK: - Lifecycle
-    
     override func viewDidLoad()  {
         super.viewDidLoad()
 
         setupSubscriptions()
-        updateState(.splash)
+        update(viewType: .splash)
     }
 
     // MARK: - Setup
-
     private func setupSubscriptions() {
-        viewModel.viewState.distinctUntilChanged()
-            .debug("MainViewController viewModel.viewState.distinctUntilChanged")
-            .subscribe(onNext: { [weak self] state in
-                self?.updateState(state)
+        viewModel.viewType.distinctUntilChanged()
+            .debug("MainViewController viewModel.viewType.distinctUntilChanged")
+            .subscribe(onNext: { [weak self] viewType in
+                self?.update(viewType: viewType)
             })
             .disposed(by: bag)
     }
 
     // MARK: - Update
-
-    private func updateState(_ state: MainViewState) {
-        switch state {
+    private func update(viewType: MainViewType) {
+        switch viewType {
         case .splash:
             presentSplashScreen()
         case .onboarding:

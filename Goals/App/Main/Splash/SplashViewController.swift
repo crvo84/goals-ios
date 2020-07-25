@@ -28,7 +28,6 @@ class SplashViewController: BaseViewController {
     }
 
     // MARK: - Properties
-
     private let viewModel: SplashViewModel
     private let logoAnimation: SplashLogoAnimation?
     private let bag =  DisposeBag()
@@ -38,7 +37,6 @@ class SplashViewController: BaseViewController {
     }()
 
     // MARK: - Initialization
-
     init(splashViewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
         self.viewModel = splashViewModelFactory.makeSplashViewModel()
         self.logoAnimation = logoAnimation
@@ -46,7 +44,6 @@ class SplashViewController: BaseViewController {
     }
 
     // MARK: - Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,7 +65,6 @@ class SplashViewController: BaseViewController {
     }
 
     // MARK: - Setup
-
     private func setupUI() {
         view.setBackground(color: .background)
         setupLogo()

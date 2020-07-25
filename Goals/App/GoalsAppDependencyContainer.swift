@@ -14,13 +14,11 @@ import VillouSecurity
 class GoalsAppDependencyContainer {
 
     // MARK: - Long lived dependencies
-
     let sharedUserSessionRepository: UserSessionRepository
     let sharedNetworkingManager: NetworkingManager
     let sharedMainViewModel: MainViewModel
 
     // MARK: - Initialization
-
     init() {
         let networkingManager = GoalsAppDependencyContainer.makeNetworkingManager()
         self.sharedNetworkingManager = networkingManager
@@ -29,7 +27,6 @@ class GoalsAppDependencyContainer {
     }
 
     // UserSession
-
     private static func makeUserSessionRepository(with networkingManager: NetworkingManager) -> UserSessionRepository {
         let dataStore = makeUserSessionDataStore()
         let remoteService = makeUserSessionRemoteService(with: networkingManager)
@@ -52,7 +49,6 @@ class GoalsAppDependencyContainer {
     }
 
     // Networking
-
     private static func makeNetworkingManager() -> NetworkingManager {
 //        VillouNetworkingManager()
         MockNetworkingManager()
@@ -70,7 +66,6 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     }
 
     // Splash
-
     func makeSplashViewController() -> SplashViewController {
 //        let logoAnimation = HeartbeatSplashLogoAnimation()
         let logoAnimation = FloatSplashLogoAnimation()
@@ -82,15 +77,13 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
                              userSessionStateResponder: sharedMainViewModel)
     }
 
-    // Onboarding
-
+    // Onboarding (Signed Out)
     func makeOnboardingViewController() -> OnboardingViewController {
-        // TODO: create from onboarding dependency container
-        OnboardingViewController()
+        let dependencyContainer = GoalsOnboardingDependencyContainer(appDependencyContainer: self)
+        return dependencyContainer.makeOnboardingViewController()
     }
 
     // Signed In
-
     func makeSignedInViewController(userSession: UserSession) -> SignedInViewController {
         // TODO: create from signed in dependency container
         SignedInViewController()

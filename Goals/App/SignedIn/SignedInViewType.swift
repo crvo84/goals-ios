@@ -1,5 +1,5 @@
 //
-//  SignedInViewState.swift
+//  SignedInViewType.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 17/07/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum SignedInViewState {
+enum SignedInViewType {
     case home
 }

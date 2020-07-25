@@ -13,5 +13,15 @@ protocol SignUpViewModel {
 }
 
 class GoalsSignUpViewModel: SignUpViewModel {
-    
+
+    // MARK: - Properties
+    private let userSessionRepository: UserSessionRepository
+    private let userSessionStateResponder: UserSessionStateResponder
+
+    // MARK: - Initialization
+    init(userSessionRepository: UserSessionRepository,
+         userSessionStateResponder: UserSessionStateResponder) {
+        self.userSessionRepository = userSessionRepository
+        self.userSessionStateResponder = userSessionStateResponder
+    }
 }

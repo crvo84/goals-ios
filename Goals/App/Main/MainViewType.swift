@@ -1,5 +1,5 @@
 //
-//  MainViewState.swift
+//  MainViewType.swift
 //  Goals
 //
 //  Created by Carlos Villanueva Ousset on 23/06/20.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-enum MainViewState: Equatable {
+enum MainViewType: Equatable {
     case splash
     case onboarding
     case signedIn(userSession: UserSession)
 }
 
-extension MainViewState {
+extension MainViewType {
 
-    static func ==(lhs: MainViewState, rhs: MainViewState) -> Bool {
+    static func ==(lhs: MainViewType, rhs: MainViewType) -> Bool {
         switch (lhs, rhs) {
         case (.splash, .splash):
             return true

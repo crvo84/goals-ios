@@ -21,7 +21,6 @@ class GoalsSplashViewModel: SplashViewModel {
     }
 
     // MARK: - Properties
-
     private let userSessionRepository: UserSessionRepository
     private let userSessionStateResponder: UserSessionStateResponder
 
@@ -32,7 +31,6 @@ class GoalsSplashViewModel: SplashViewModel {
     private let bag = DisposeBag()
 
     // MARK: - Initialization
-
     init(userSessionRepository: UserSessionRepository,
          userSessionStateResponder: UserSessionStateResponder) {
         self.userSessionRepository = userSessionRepository
@@ -42,7 +40,6 @@ class GoalsSplashViewModel: SplashViewModel {
     }
 
     // MARK: - Setup
-
     private func setupSubscriptions() {
         let canCallNotSignedInResponder = Observable.of(
             animationCompletedSubject.filter { $0 == true },
@@ -59,7 +56,6 @@ class GoalsSplashViewModel: SplashViewModel {
     }
 
     // MARK: - Internal methods
-
     func loadUserSession() {
         userSessionRepository.readUserSession()
             .observeOn(MainScheduler.instance)
@@ -76,7 +72,6 @@ class GoalsSplashViewModel: SplashViewModel {
     }
 
     // MARK: - Helper methods
-
     private func handleUserSession(_ userSession: UserSession?) {
         switch userSession {
         case .some(let session):

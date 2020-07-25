@@ -70,6 +70,8 @@
 		73E9881624CAB9A3007386CA /* OnboardingViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881524CAB9A3007386CA /* OnboardingViewType.swift */; };
 		73E9881924CB9473007386CA /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881824CB9473007386CA /* NavigationAction.swift */; };
 		73E9881B24CB95A8007386CA /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881A24CB95A8007386CA /* OnboardingNavigator.swift */; };
+		73E9881D24CBD46E007386CA /* ThemeLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881C24CBD46E007386CA /* ThemeLogo.swift */; };
+		73E9881F24CBDC3E007386CA /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881E24CBDC3E007386CA /* ThemeFont.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +176,8 @@
 		73E9881524CAB9A3007386CA /* OnboardingViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewType.swift; sourceTree = "<group>"; };
 		73E9881824CB9473007386CA /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
 		73E9881A24CB95A8007386CA /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
+		73E9881C24CBD46E007386CA /* ThemeLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLogo.swift; sourceTree = "<group>"; };
+		73E9881E24CBDC3E007386CA /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -485,6 +489,8 @@
 			children = (
 				73D4532024C7DCF600B9CBDE /* ThemeImage.swift */,
 				73D4532224C7E25800B9CBDE /* ThemeColor.swift */,
+				73E9881C24CBD46E007386CA /* ThemeLogo.swift */,
+				73E9881E24CBDC3E007386CA /* ThemeFont.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -769,7 +775,9 @@
 				73D4532524C7EA6B00B9CBDE /* UIColor+Utils.swift in Sources */,
 				7352495524C28F560028D089 /* SignInViewModel.swift in Sources */,
 				7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */,
+				73E9881D24CBD46E007386CA /* ThemeLogo.swift in Sources */,
 				7352494824C28BF80028D089 /* WelcomeViewModel.swift in Sources */,
+				73E9881F24CBDC3E007386CA /* ThemeFont.swift in Sources */,
 				7352493324C278C70028D089 /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

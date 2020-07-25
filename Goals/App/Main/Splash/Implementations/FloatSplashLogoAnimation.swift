@@ -12,7 +12,7 @@ import UIKit
 class FloatSplashLogoAnimation: SplashLogoAnimation {
 
     private struct Config {
-        static let totalDuration = 2.0
+        static let totalDuration = 1.6
         static let maxScale = 1.2
     }
 

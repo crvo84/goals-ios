@@ -22,11 +22,6 @@ class SplashViewController: BaseViewController {
         static let logoRelativeCenterY: CGFloat = 0.45
     }
 
-    private struct Animation {
-        static let totalDuration = 1.8
-        static let beatScale = 1.12
-    }
-
     // MARK: - Properties
     private let viewModel: SplashViewModel
     private let logoAnimation: SplashLogoAnimation?

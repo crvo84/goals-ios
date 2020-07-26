@@ -8,28 +8,84 @@
 
 import UIKit
 
+// NOTE: based on https://developer.apple.com/documentation/uikit/uicolor/ui_element_colors
+// When in need for a new color, check link for system colors use as base.
 extension Theme {
     enum Color {
-        case main
+        // MARK: Tint Colors
+        /// Main tint color.
+        case mainTint
+        /// Secondary tint color.
+        case secondaryTint
+        /// Error tint color.
+        case errorTint
+
+        // MARK: Labels
+        /// Color for text layered on top of the main tint color.
+        case textOverMainTint
+        /// Color for text layered on top of the secondary tint color.
+        case textOverSecondaryTint
+        /// Color for text labels that contain primary content.
+        case label
+        /// Color for text labels that contain secondary content.
+        case secondaryLabel
+        /// Color for text labels that contain tertiary content.
+        case tertiaryLabel
+        /// Color for placeholder text in controls or text views.
+        case placeholderText
+
+        // MARK: Backgrounds
+        /// Color for the main background.
         case background
-        case error
+        /// Color for content layered on top of the main background.
+        case secondaryBackground
+        /// Color for content layered on top of secondary background.
+        case tertiaryBackground
+
+        // MARK: Separators
+        /// Color for thin borders or divider lines that allows some underlying content to be visible.
+        case separator
+        /// Color for borders or divider lines that hides any underlying content.
+        case opaqueSeparator
     }
 }
 
+// MARK: - UIColor
 extension Theme.Color {
-
     private var isDark: Bool {
         UITraitCollection.current.userInterfaceStyle == .dark
     }
 
-    var value: UIColor {
+    var uiColor: UIColor {
         switch self {
-        case .main:
+        case .mainTint:
             return UIColor(named: "main-color")!
+        case .secondaryTint:
+            return .systemGray2 // .systemGray3
+        case .errorTint:
+            return .systemRed
+        case .textOverMainTint:
+            return .white
+        case .textOverSecondaryTint:
+            return isDark ? .white : .label
+        case .label:
+            return .label
+        case .secondaryLabel:
+            return .secondaryLabel
+        case .tertiaryLabel:
+            return .tertiaryLabel
+        case .placeholderText:
+            return .placeholderText
         case .background:
-            return UIColor.systemBackground
-        case .error:
-            return UIColor.systemRed
+            return .systemBackground
+        case .secondaryBackground:
+            return .secondarySystemBackground
+        case .tertiaryBackground:
+            return .tertiarySystemBackground
+        case .separator:
+            return .separator
+        case .opaqueSeparator:
+            return .opaqueSeparator
         }
     }
 }
@@ -37,8 +93,7 @@ extension Theme.Color {
 // MARK: - Helper extensions
 
 extension UIView {
-
-    func setBackground(color: Theme.Color) {
-        self.backgroundColor = color.value
+    func applyBackground(color: Theme.Color) {
+        self.backgroundColor = color.uiColor
     }
 }

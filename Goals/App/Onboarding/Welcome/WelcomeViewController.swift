@@ -32,11 +32,13 @@ class WelcomeViewController: BaseViewController {
     private var initialAnimationCompleted = false
 
     private let logoImageView: UIImageView = {
-        UIImageView.init(with: .logo, tint: .main)
+        UIImageView.init(with: .logo, tint: .mainTint)
     }()
 
     private let welcomeLabel: UILabel = {
-        UILabel.with(font: ., color: <#T##ThemeColor#>)
+        let label = UILabel()
+        label.apply(font: .init(size: .largeTitle), color: .label)
+        return label
     }()
 
     // MARK: - Initialization
@@ -60,7 +62,7 @@ class WelcomeViewController: BaseViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
-        view.setBackground(color: .background)
+        view.applyBackground(color: .background)
         setupHierarchy()
         setupConstraintsLogo()
     }

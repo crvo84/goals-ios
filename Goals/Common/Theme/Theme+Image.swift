@@ -32,7 +32,7 @@ extension UIImageView {
         self.init(image: image)
 
         if let tint = tint {
-            self.tintColor = tint.value
+            self.tintColor = tint.uiColor
         }
     }
 }

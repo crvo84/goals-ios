@@ -48,16 +48,16 @@ extension Theme {
         let size: Size
         let weight: Weight
 
-        init(name: Name = .system, size: Size, weight: Weight = .regular) {
+        init(name: Font.Name = .system, size: Font.Size, weight: Font.Weight = .regular) {
             self.name = name
             self.size = size
             self.weight = weight
         }
 
-        var value: UIFont {
+        var uiFont: UIFont {
             switch name {
             case .system:
-                return .systemFont(ofSize: size.value, weight: weight.value)
+                return .systemFont(ofSize: size.value, weight: weight.uiFontWeight)
             }
         }
     }
@@ -65,7 +65,6 @@ extension Theme {
 
 // MARK: - Font Sizes
 extension Theme.Font.Size {
-
     var value: CGFloat {
         switch self {
         case .largeTitle:
@@ -96,7 +95,7 @@ extension Theme.Font.Size {
 
 // MARK: - Font Weights
 extension Theme.Font.Weight {
-    var value: UIFont.Weight {
+    var uiFontWeight: UIFont.Weight {
         switch self {
         case .regular:
             return UIFont.Weight.regular
@@ -108,14 +107,13 @@ extension Theme.Font.Weight {
 
 // MARK: - Helper extensions
 extension UILabel {
-
-    func set(font: Theme.Font, color: Theme.Color) {
-        self.font = font.value
-        self.textColor = color.value
+    func apply(font: Theme.Font, color: Theme.Color) {
+        self.font = font.uiFont
+        self.textColor = color.uiColor
     }
 
-    func setFont(name: Theme.Font.Name = .system, size: Theme.Font.Size, weight: Theme.Font.Weight = .regular, color: Theme.Color) {
+    func applyFont(name: Theme.Font.Name = .system, size: Theme.Font.Size, weight: Theme.Font.Weight = .regular, color: Theme.Color) {
         let themeFont = Theme.Font(name: name, size: size, weight: weight)
-        set(font: themeFont, color: color)
+        apply(font: themeFont, color: color)
     }
 }

@@ -8,20 +8,52 @@
 
 import UIKit
 
-//enum ThemeButton {
-//    case primary
-//    case secondary
-//
-//    var cornerRadiusRelativeToHeight: CGFloat = 0.25
-//}
-//
-//// MARK: - Helper extensions
-//extension UIButton {
-//
-//    convenience init(themeButton: ThemeButton) {
-//        self.init()
-//
-//        layer.cornerRadius =
-//    }
-//}
-//
+extension Theme {
+    /// // Common button configurations
+    enum Button {
+        case primary
+        case secondary
+
+        var titleFont: Theme.Font {
+            switch self {
+            case .primary, .secondary:
+                return Font(size: .title)
+            }
+        }
+
+        var titleColor: Theme.Color {
+            switch self {
+            case .primary:
+                return .textOverMainTint
+            case .secondary:
+                return .textOverSecondaryTint
+            }
+        }
+
+        var backgroundColor: Theme.Color? {
+            switch self {
+            case .primary:
+                return .mainTint
+            case .secondary:
+                return .textOverSecondaryTint
+            }
+        }
+
+        var cornerRadius: Theme.CornerRadius {
+            switch self {
+            case .primary, .secondary:
+                return .standard
+            }
+        }
+    }
+}
+
+// MARK: - Helper extensions
+extension UIButton {
+    func apply(button: Theme.Button) {
+        self.apply(cornerRadius: button.cornerRadius)
+        self.setTitleColor(button.titleColor.uiColor, for: .normal)
+        self.backgroundColor = button.backgroundColor?.uiColor ?? .clear
+        self.titleLabel?.font = button.titleFont.uiFont
+    }
+}

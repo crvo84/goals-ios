@@ -39,8 +39,9 @@ extension Theme.Font {
     var uiFont: UIFont {
         var uiFont: UIFont
         switch self {
-        case .largeTitle, .title, .title2, .title3, .headline, .subheadline,
-             .body, .callout, .caption, .caption2, .footnote:
+        case .largeTitle, .title, .title2, .title3, .headline, .subheadline:
+            uiFont = .boldSystemFont(ofSize: self.size)
+        case .body, .callout, .caption, .caption2, .footnote:
             uiFont = .systemFont(ofSize: self.size)
         }
 

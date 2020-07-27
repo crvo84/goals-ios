@@ -19,7 +19,7 @@ extension Theme {
             case .none:
                 return 0.0
             case .standard:
-                return 5.0
+                return 8.0
             case let .custom(value):
                 return value
             }

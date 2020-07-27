@@ -19,7 +19,7 @@ extension Theme {
         var titleFont: Theme.Font {
             switch self {
             case .primary, .secondary, .invertedPrimary, .invertedSecondary:
-                return Font.title
+                return Font.headline
             }
         }
 

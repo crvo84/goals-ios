@@ -20,7 +20,15 @@ extension Theme.Size {
     var value: CGSize {
         switch self {
         case .largeButton:
-            return .init(width: 200.0, height: 40.0)
+            return .init(width: 250.0, height: 40.0)
         }
+    }
+
+    var width: CGFloat {
+        value.width
+    }
+
+    var height: CGFloat {
+        value.height
     }
 }

@@ -48,7 +48,6 @@ class MainViewController: BaseViewController {
     // MARK: - Setup
     private func setupSubscriptions() {
         viewModel.viewType.distinctUntilChanged()
-            .debug("MainViewController viewModel.viewType.distinctUntilChanged")
             .subscribe(onNext: { [weak self] viewType in
                 self?.update(viewType: viewType)
             })

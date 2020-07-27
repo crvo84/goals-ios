@@ -23,8 +23,8 @@ extension String {
         self.init(NSLocalizedString(localized.rawValue, comment: ""))
     }
 
-    init(localized: LocalizedKey, arguments: CVarArg...) {
-        let localizedStr = String(localized: localized)
-        self.init(format: localizedStr, arguments)
+    init(localized key: LocalizedKey, arguments: CVarArg...) {
+        let localizedStr = String(localized: key)
+        self.init(format: localizedStr, arguments: arguments.map { "\($0)" })
     }
 }

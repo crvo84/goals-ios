@@ -11,5 +11,5 @@
 
 // MARK: - Buttons
 "Button.SignUp" = "Sign up";
-"Button.SignIn" = "Sign in";
+"Button.SignIn" = "Log in";
 "Button.Cancel" = "Cancel";

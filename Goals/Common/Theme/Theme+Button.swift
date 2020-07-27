@@ -13,11 +13,13 @@ extension Theme {
     enum Button {
         case primary
         case secondary
+        case invertedPrimary
+        case invertedSecondary
 
         var titleFont: Theme.Font {
             switch self {
-            case .primary, .secondary:
-                return Font(size: .title)
+            case .primary, .secondary, .invertedPrimary, .invertedSecondary:
+                return Font.title
             }
         }
 
@@ -27,6 +29,10 @@ extension Theme {
                 return .textOverMainTint
             case .secondary:
                 return .textOverSecondaryTint
+            case .invertedPrimary:
+                return .mainTint
+            case .invertedSecondary:
+                return .secondaryTint
             }
         }
 
@@ -36,6 +42,8 @@ extension Theme {
                 return .mainTint
             case .secondary:
                 return .textOverSecondaryTint
+            case .invertedPrimary, .invertedSecondary:
+                return nil
             }
         }
 
@@ -43,6 +51,8 @@ extension Theme {
             switch self {
             case .primary, .secondary:
                 return .standard
+            case .invertedPrimary, .invertedSecondary:
+                return .none
             }
         }
     }
@@ -50,10 +60,16 @@ extension Theme {
 
 // MARK: - Helper extensions
 extension UIButton {
-    func apply(button: Theme.Button) {
-        self.apply(cornerRadius: button.cornerRadius)
+
+    convenience init(themeButton: Theme.Button) {
+        self.init()
+        self.applyTheme(button: themeButton)
+    }
+
+    func applyTheme(button: Theme.Button) {
+        self.applyTheme(cornerRadius: button.cornerRadius)
         self.setTitleColor(button.titleColor.uiColor, for: .normal)
-        self.backgroundColor = button.backgroundColor?.uiColor ?? .clear
+        self.backgroundColor = button.backgroundColor?.uiColor
         self.titleLabel?.font = button.titleFont.uiFont
     }
 }

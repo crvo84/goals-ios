@@ -15,10 +15,16 @@ protocol WelcomeViewModelFactory {
 class WelcomeViewController: BaseViewController {
 
     private struct Geometry {
-        static let logoAspectRatio = Theme.Logo.Geometry.aspectRatio
-        static let logoRelativeHeight = Theme.Logo.Geometry.welcomeRelativeHeight
-        static let logoInitialRelativeCenterY = Theme.Logo.Geometry.splashRelativeCenterY
-        static let logoFinalRelativeCenterY = Theme.Logo.Geometry.welcomeRelativeCenterY
+        struct Logo {
+            static let aspectRatio = Theme.Logo.Geometry.aspectRatio
+            static let relativeHeight = Theme.Logo.Geometry.welcomeRelativeHeight
+            static let initialRelativeCenterY = Theme.Logo.Geometry.splashRelativeCenterY
+            static let finalRelativeCenterY = Theme.Logo.Geometry.welcomeRelativeCenterY
+        }
+        struct WelcomeLabel {
+            static let relativeTopOffset: CGFloat = 0.25 // relative to logo height
+            static let horizontalInset = SharedGeometry.horizontalInset
+        }
     }
 
     private struct Animation {
@@ -32,13 +38,35 @@ class WelcomeViewController: BaseViewController {
     private var initialAnimationCompleted = false
 
     private let logoImageView: UIImageView = {
-        UIImageView.init(with: .logo, tint: .mainTint)
+        UIImageView(themeImage: .logo, tint: .mainTint)
+    }()
+
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        return stackView
     }()
 
     private let welcomeLabel: UILabel = {
         let label = UILabel()
-        label.apply(font: .init(size: .largeTitle), color: .label)
+        label.applyTheme(font: .largeTitle, color: .primaryLabel)
+        label.text = String(localized: .welcomeMessage, arguments: Constants.App.name)
         return label
+    }()
+
+    private let signUpButton: UIButton = {
+        let button = UIButton()
+        button.applyTheme(button: .primary)
+        button.setTitle(String(localized: .signUpButton), for: .normal)
+        return button
+    }()
+
+    private let signInButton: UIButton = {
+        let button = UIButton()
+        button.applyTheme(button: .invertedPrimary)
+        button.setTitle(String(localized: .signInButton), for: .normal)
+        return button
     }()
 
     // MARK: - Initialization
@@ -62,66 +90,83 @@ class WelcomeViewController: BaseViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
-        view.applyBackground(color: .background)
+        view.applyTheme(backgroundColor: .mainBackground)
         setupHierarchy()
         setupConstraintsLogo()
+        setupConstraintsSignUpButton()
+        setupConstraintsSignInButton()
+        setupInitialAnimation()
     }
 
     private func setupHierarchy() {
         view.addSubview(logoImageView)
+        view.addSubview(welcomeLabel)
+        view.addSubview(signUpButton)
+        view.addSubview(signInButton)
     }
 
     private func setupConstraintsLogo() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         let initialCenterYConstraint = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
                                                           relatedBy: .equal, toItem: view, attribute: .bottom,
-                                                          multiplier: Geometry.logoInitialRelativeCenterY,
+                                                          multiplier: Geometry.Logo.initialRelativeCenterY,
                                                           constant: 1.0)
         let finalCenterYConstraint = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
                                                         relatedBy: .equal, toItem: view, attribute: .bottom,
-                                                        multiplier: Geometry.logoFinalRelativeCenterY,
+                                                        multiplier: Geometry.Logo.finalRelativeCenterY,
                                                         constant: 1.0)
         NSLayoutConstraint.activate([
             initialCenterYConstraint,
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Geometry.logoRelativeHeight),
-            logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: Geometry.logoAspectRatio)
+            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Geometry.Logo.relativeHeight),
+            logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: Geometry.Logo.aspectRatio)
         ])
 
         self.logoInitialCenterYConstraint = initialCenterYConstraint
         self.logoFinalCenterYConstraint = finalCenterYConstraint
     }
 
-    private func setupSignUpButton() {
+    private func setupConstraintsWelcomeLabel() {
+        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            NSLayoutConstraint(item: welcomeLabel, attribute: .top, relatedBy: .equal, toItem: , attribute: <#T##NSLayoutConstraint.Attribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+        ])
+    }
+
+    private func setupConstraintsSignUpButton() {
 
     }
 
-    private func setupSignInButton() {
+    private func setupConstraintsSignInButton() {
 
     }
 
     // MARK: - Initial Animation
 
+    private func setupInitialAnimation() {
+        [welcomeLabel, signUpButton, signInButton].forEach { $0.alpha = 0.0 }
+    }
+
     private func startInitialAnimation() {
         guard !initialAnimationCompleted else { return }
 
         animateLogoToFinalPosition { [weak self] in
-            self?.animateUIToFinalState()
+            self?.animateRemainingUIToFinalState()
         }
     }
 
     private func animateLogoToFinalPosition(completion: @escaping () -> Void) {
-        UIView.animate(withDuration: Animation.duration, animations: {
+        UIView.animate(withDuration: Animation.duration, delay: 0.0, options: [.curveEaseOut], animations: {
             self.logoInitialCenterYConstraint?.isActive = false
             self.logoFinalCenterYConstraint?.isActive = true
             self.view.layoutIfNeeded()
-
-        }, completion: { _ in
+        }) { _ in
             completion()
-        })
+        }
     }
 
-    private func animateUIToFinalState() {
+    private func animateRemainingUIToFinalState() {
         // TODO: Unhide UI elements
     }
 }

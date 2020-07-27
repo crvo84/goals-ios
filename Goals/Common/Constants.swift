@@ -10,6 +10,10 @@ import Foundation
 
 struct Constants {
 
+    struct App {
+        static let name = "Goals"
+    }
+
     struct GoalsApi {
         static let host = "villou.com"
         static let basePath = "/api"

@@ -23,7 +23,7 @@ extension UIImage {
 }
 
 extension UIImageView {
-    convenience init(with themeImage: Theme.Image, tint: Theme.Color? = nil) {
+    convenience init(themeImage: Theme.Image, tint: Theme.Color? = nil) {
         var image = UIImage(themeImage: themeImage)
         if tint != nil, image.renderingMode != .alwaysTemplate {
             image = image.withRenderingMode(.alwaysTemplate)

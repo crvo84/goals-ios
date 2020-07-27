@@ -26,7 +26,7 @@ extension Theme {
         /// Color for text layered on top of the secondary tint color.
         case textOverSecondaryTint
         /// Color for text labels that contain primary content.
-        case label
+        case primaryLabel
         /// Color for text labels that contain secondary content.
         case secondaryLabel
         /// Color for text labels that contain tertiary content.
@@ -36,7 +36,7 @@ extension Theme {
 
         // MARK: Backgrounds
         /// Color for the main background.
-        case background
+        case mainBackground
         /// Color for content layered on top of the main background.
         case secondaryBackground
         /// Color for content layered on top of secondary background.
@@ -68,7 +68,7 @@ extension Theme.Color {
             return .white
         case .textOverSecondaryTint:
             return isDark ? .white : .label
-        case .label:
+        case .primaryLabel:
             return .label
         case .secondaryLabel:
             return .secondaryLabel
@@ -76,7 +76,7 @@ extension Theme.Color {
             return .tertiaryLabel
         case .placeholderText:
             return .placeholderText
-        case .background:
+        case .mainBackground:
             return .systemBackground
         case .secondaryBackground:
             return .secondarySystemBackground
@@ -93,7 +93,7 @@ extension Theme.Color {
 // MARK: - Helper extensions
 
 extension UIView {
-    func applyBackground(color: Theme.Color) {
+    func applyTheme(backgroundColor color: Theme.Color) {
         self.backgroundColor = color.uiColor
     }
 }

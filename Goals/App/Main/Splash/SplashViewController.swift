@@ -28,7 +28,7 @@ class SplashViewController: BaseViewController {
     private let bag =  DisposeBag()
 
     private let logoImageView: UIImageView = {
-        UIImageView(with: .logo, tint: .mainTint)
+        UIImageView(themeImage: .logo, tint: .mainTint)
     }()
 
     // MARK: - Initialization
@@ -61,7 +61,7 @@ class SplashViewController: BaseViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
-        view.applyBackground(color: .background)
+        view.applyTheme(backgroundColor: .mainBackground)
         setupHierarchy()
         setupConstraintsLogo()
     }

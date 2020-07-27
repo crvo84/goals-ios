@@ -9,63 +9,50 @@
 import UIKit
 
 extension Theme {
-    struct Font {
-        enum Name {
-            case system
+    enum Font {
+        /// A font with the large title text style.
+        case largeTitle
+        /// A font with the title text style.
+        case title
+        /// Create a font for second level hierarchical headings.
+        case title2
+        /// Create a font for third level hierarchical headings.
+        case title3
+        /// A font with the headline text style.
+        case headline
+        /// A font with the subheadline text style.
+        case subheadline
+        /// A font with the body text style.
+        case body
+        /// A font with the callout text style.
+        case callout
+        /// A font with the caption text style.
+        case caption
+        /// Create a font with the alternate caption text style.
+        case caption2
+        /// A font with the footnote text style.
+        case footnote
+    }
+}
+
+extension Theme.Font {
+    var uiFont: UIFont {
+        var uiFont: UIFont
+        switch self {
+        case .largeTitle, .title, .title2, .title3, .headline, .subheadline,
+             .body, .callout, .caption, .caption2, .footnote:
+            uiFont = .systemFont(ofSize: self.size)
         }
 
-        enum Size {
-            /// A font with the large title text style.
-            case largeTitle
-            /// A font with the title text style.
-            case title
-            /// Create a font for second level hierarchical headings.
-            case title2
-            /// Create a font for third level hierarchical headings.
-            case title3
-            /// A font with the headline text style.
-            case headline
-            /// A font with the subheadline text style.
-            case subheadline
-            /// A font with the body text style.
-            case body
-            /// A font with the callout text style.
-            case callout
-            /// A font with the caption text style.
-            case caption
-            /// Create a font with the alternate caption text style.
-            case caption2
-            /// A font with the footnote text style.
-            case footnote
-        }
-
-        enum Weight {
-            case regular
-            case bold
-        }
-
-        let name: Name
-        let size: Size
-        let weight: Weight
-
-        init(name: Font.Name = .system, size: Font.Size, weight: Font.Weight = .regular) {
-            self.name = name
-            self.size = size
-            self.weight = weight
-        }
-
-        var uiFont: UIFont {
-            switch name {
-            case .system:
-                return .systemFont(ofSize: size.value, weight: weight.uiFontWeight)
-            }
-        }
+        return uiFont
     }
 }
 
 // MARK: - Font Sizes
-extension Theme.Font.Size {
-    var value: CGFloat {
+extension Theme.Font {
+    // if app is universal, update this values depending on device
+    // (e.g. return isPad ? 60 : 34)
+    var size: CGFloat {
         switch self {
         case .largeTitle:
             return 34
@@ -93,27 +80,10 @@ extension Theme.Font.Size {
     }
 }
 
-// MARK: - Font Weights
-extension Theme.Font.Weight {
-    var uiFontWeight: UIFont.Weight {
-        switch self {
-        case .regular:
-            return UIFont.Weight.regular
-        case .bold:
-            return UIFont.Weight.bold
-        }
-    }
-}
-
 // MARK: - Helper extensions
 extension UILabel {
-    func apply(font: Theme.Font, color: Theme.Color) {
+    func applyTheme(font: Theme.Font, color: Theme.Color) {
         self.font = font.uiFont
         self.textColor = color.uiColor
-    }
-
-    func applyFont(name: Theme.Font.Name = .system, size: Theme.Font.Size, weight: Theme.Font.Weight = .regular, color: Theme.Color) {
-        let themeFont = Theme.Font(name: name, size: size, weight: weight)
-        apply(font: themeFont, color: color)
     }
 }

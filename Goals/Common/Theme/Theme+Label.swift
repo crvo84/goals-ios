@@ -11,7 +11,7 @@ import UIKit
 extension Theme {
     /// Common label configurations
     enum Label {
-        case error(size: Theme.Font.Size)
+        case error
 
         var color: Theme.Color {
             switch self {
@@ -22,8 +22,8 @@ extension Theme {
 
         var font: Theme.Font {
             switch self {
-            case let .error(size):
-                return Theme.Font(size: size, weight: .bold)
+            case .error:
+                return .callout
             }
         }
     }
@@ -31,8 +31,12 @@ extension Theme {
 
 // MARK: - Helper extensions
 extension UILabel {
-    convenience init(with label: Theme.Label) {
+    convenience init(themeLabel: Theme.Label) {
         self.init()
-        self.apply(font: label.font, color: label.color)
+        self.applyTheme(label: themeLabel)
+    }
+
+    func applyTheme(label: Theme.Label) {
+        self.applyTheme(font: label.font, color: label.color)
     }
 }

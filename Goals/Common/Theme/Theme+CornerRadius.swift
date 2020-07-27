@@ -28,7 +28,7 @@ extension Theme {
 }
 
 extension UIView {
-    func apply(cornerRadius: Theme.CornerRadius) {
+    func applyTheme(cornerRadius: Theme.CornerRadius) {
         layer.cornerRadius = cornerRadius.value
         layer.masksToBounds = cornerRadius.value > 0
     }

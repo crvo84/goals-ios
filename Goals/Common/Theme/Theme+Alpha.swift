@@ -23,7 +23,7 @@ extension Theme {
 
 // MARK: - Helper extensions
 extension UIView {
-    func apply(alpha: Theme.Alpha) {
+    func applyTheme(alpha: Theme.Alpha) {
         self.alpha = alpha.value
     }
 }

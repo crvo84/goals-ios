@@ -11,15 +11,20 @@ import Foundation
 extension String {
 
     enum LocalizedKey: String {
-        case cancelButton = "Cancel.Button"
+        // MARK: Welcome screen
+        case welcomeMessage = "Welcome.Message"
+        // MARK: Buttons
+        case signUpButton = "Button.SignUp"
+        case signInButton = "Button.SignIn"
+        case cancelButton = "Button.Cancel"
     }
 
-    init(localizedKey: LocalizedKey) {
-        self.init(NSLocalizedString(localizedKey.rawValue, comment: ""))
+    init(localized: LocalizedKey) {
+        self.init(NSLocalizedString(localized.rawValue, comment: ""))
     }
 
-    init(localizedKey: LocalizedKey, arguments: CVarArg...) {
-        let localizedStr = String(localizedKey: localizedKey)
+    init(localized: LocalizedKey, arguments: CVarArg...) {
+        let localizedStr = String(localized: localized)
         self.init(format: localizedStr, arguments)
     }
 }

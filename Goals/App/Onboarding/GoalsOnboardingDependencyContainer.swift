@@ -41,7 +41,7 @@ class GoalsOnboardingDependencyContainer {
 
     // Welcome
     private func makeWelcomeViewController() -> WelcomeViewController {
-        WelcomeViewController(welcomeViewModelFactory: self)
+        WelcomeViewController(viewModelFactory: self)
     }
 
     func makeWelcomeViewModel() -> WelcomeViewModel {

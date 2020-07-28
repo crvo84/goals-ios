@@ -114,7 +114,7 @@ class WelcomeViewController: BaseViewController {
 
     private func setupBindings() {
 //        signUpButton.addTarget(viewModel, action: #selector(Welc), for: .touchUpInside)
-        signUpButton.rx.tap.bin
+//        signUpButton.rx.tap.bin
     }
 
     private func setupHierarchy() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4977B132037665716F778C28 /* Pods_Goals_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */; };
+		73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DA524D0D78100EF3891 /* SceneDelegate.swift */; };
 		7329E9D324C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */; };
 		7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DADC24A1C2F700AF75BB /* AppDelegate.swift */; };
 		7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE524A1C2F800AF75BB /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		6129D4E44643C509FF6A5019 /* Pods-Goals-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-Goals-GoalsTests/Pods-Goals-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_GoalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF2FEC4F09380FDA399798B /* Pods-GoalsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.release.xcconfig"; path = "Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		73157DA524D0D78100EF3891 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatSplashLogoAnimation.swift; sourceTree = "<group>"; };
 		7346DAD924A1C2F700AF75BB /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7346DADC24A1C2F700AF75BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DADC24A1C2F700AF75BB /* AppDelegate.swift */,
+				73157DA524D0D78100EF3891 /* SceneDelegate.swift */,
 				7346DB7424A1D52200AF75BB /* Common */,
 				7346DB7324A1D4C300AF75BB /* App */,
 				7346DB7024A1D0BF00AF75BB /* Other resources */,
@@ -779,6 +782,7 @@
 				7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */,
 				73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */,
 				735248CD24C22D450028D089 /* GoalsUserSessionRepository.swift in Sources */,
+				73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */,
 				73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */,
 				7352480A24BE80430028D089 /* RemoteSession.swift in Sources */,
 				7352495124C28F450028D089 /* SignUpViewModel.swift in Sources */,

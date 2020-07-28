@@ -32,8 +32,8 @@ class SplashViewController: BaseViewController {
     }()
 
     // MARK: - Initialization
-    init(splashViewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
-        self.viewModel = splashViewModelFactory.makeSplashViewModel()
+    init(viewModelFactory: SplashViewModelFactory, logoAnimation: SplashLogoAnimation?) {
+        self.viewModel = viewModelFactory.makeSplashViewModel()
         self.logoAnimation = logoAnimation
         super.init()
     }

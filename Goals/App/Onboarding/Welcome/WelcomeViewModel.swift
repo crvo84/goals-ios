@@ -9,7 +9,8 @@
 import Foundation
 
 protocol WelcomeViewModel {
-    
+    @objc func navigateToSignUp()
+    @objc func navigateToSignIn()
 }
 
 class GoalsWelcomeViewModel: WelcomeViewModel {

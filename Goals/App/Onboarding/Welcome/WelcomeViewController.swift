@@ -6,6 +6,7 @@
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
+import RxCocoa
 import UIKit
 
 protocol WelcomeViewModelFactory {
@@ -39,7 +40,7 @@ class WelcomeViewController: BaseViewController {
     }
 
     // MARK: - Properties
-    private let welcomeViewModelFactory: WelcomeViewModelFactory
+    private let viewModel: WelcomeViewModel
     private var logoInitialCenterYConstraint: NSLayoutConstraint?
     private var logoFinalCenterYConstraint: NSLayoutConstraint?
     private var initialAnimationCompleted = false
@@ -82,8 +83,8 @@ class WelcomeViewController: BaseViewController {
     }
 
     // MARK: - Initialization
-    init(welcomeViewModelFactory: WelcomeViewModelFactory) {
-        self.welcomeViewModelFactory = welcomeViewModelFactory
+    init(viewModelFactory: WelcomeViewModelFactory) {
+        self.viewModel = viewModelFactory.makeWelcomeViewModel()
         super.init()
     }
 
@@ -111,6 +112,11 @@ class WelcomeViewController: BaseViewController {
         setupInitialAnimation()
     }
 
+    private func setupBindings() {
+//        signUpButton.addTarget(viewModel, action: #selector(Welc), for: .touchUpInside)
+        signUpButton.rx.tap.bin
+    }
+
     private func setupHierarchy() {
         view.addSubview(logoImageView)
         view.addSubview(welcomeLabel)
@@ -120,23 +126,23 @@ class WelcomeViewController: BaseViewController {
 
     private func setupConstraintsLogo() {
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        let initialCenterYConstraint = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
-                                                          relatedBy: .equal, toItem: view, attribute: .bottom,
-                                                          multiplier: Geometry.Logo.initialRelativeCenterY,
-                                                          constant: 1.0)
-        let finalCenterYConstraint = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
-                                                        relatedBy: .equal, toItem: view, attribute: .bottom,
-                                                        multiplier: Geometry.Logo.finalRelativeCenterY,
-                                                        constant: 1.0)
+        let initialCenterY = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
+                                                relatedBy: .equal, toItem: view, attribute: .bottom,
+                                                multiplier: Geometry.Logo.initialRelativeCenterY,
+                                                constant: 1.0)
+        let finalCenterY = NSLayoutConstraint(item: logoImageView, attribute: .centerY,
+                                              relatedBy: .equal, toItem: view, attribute: .bottom,
+                                              multiplier: Geometry.Logo.finalRelativeCenterY,
+                                              constant: 1.0)
         NSLayoutConstraint.activate([
-            initialCenterYConstraint,
+            initialCenterY,
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: Geometry.Logo.relativeHeight),
             logoImageView.widthAnchor.constraint(equalTo: logoImageView.heightAnchor, multiplier: Geometry.Logo.aspectRatio)
         ])
 
-        self.logoInitialCenterYConstraint = initialCenterYConstraint
-        self.logoFinalCenterYConstraint = finalCenterYConstraint
+        self.logoInitialCenterYConstraint = initialCenterY
+        self.logoFinalCenterYConstraint = finalCenterY
     }
 
     private func setupConstraintsWelcomeLabel() {

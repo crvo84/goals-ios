@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import VillouImage
 
 class GoalsSignedInDependencyContainer {
 
@@ -16,9 +17,26 @@ class GoalsSignedInDependencyContainer {
     private let userSessionRepository: UserSessionRepository
     private let mainViewModel: MainViewModel
     private let signedInViewModel: SignedInViewModel
-    private let imageCache: ImageRepository
+    private let imageCache: ImageCache
 
     // context
     private let userSession: UserSession
+
+    // MARK: - Initialization
+    init(userSession: UserSession, appDependencyContainer: GoalsAppDependencyContainer) {
+        self.userSessionRepository = appDependencyContainer.userSessionRepository
+        self.mainViewModel = appDependencyContainer.mainViewModel
+        self.userSession = userSession
+        self.signedInViewModel = GoalsSignedInDependencyContainer.makeSignedInViewModel()
+        self.imageCache = GoalsSignedInDependencyContainer.makeImageCache()
+    }
+
+    private static func makeSignedInViewModel() -> SignedInViewModel {
+        GoalsSignedInViewModel()
+    }
+
+    private static func makeImageCache() -> ImageCache {
+        VillouImageCache()
+    }
 
 }

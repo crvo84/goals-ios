@@ -10,6 +10,8 @@
 		4977B132037665716F778C28 /* Pods_Goals_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */; };
 		73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DA524D0D78100EF3891 /* SceneDelegate.swift */; };
 		73157DAB24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */; };
+		73157DDA24D27D0F00EF3891 /* VillouImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73157DD924D27D0F00EF3891 /* VillouImage.framework */; };
+		73157DDB24D27D0F00EF3891 /* VillouImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73157DD924D27D0F00EF3891 /* VillouImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7329E9D324C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */; };
 		7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DADC24A1C2F700AF75BB /* AppDelegate.swift */; };
 		7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE524A1C2F800AF75BB /* Assets.xcassets */; };
@@ -103,6 +105,7 @@
 			files = (
 				7363C25824A5620900D3DEA6 /* VillouNetworking.framework in Embed Frameworks */,
 				7352492A24C268FC0028D089 /* VillouSecurity.framework in Embed Frameworks */,
+				73157DDB24D27D0F00EF3891 /* VillouImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +122,7 @@
 		6BF2FEC4F09380FDA399798B /* Pods-GoalsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.release.xcconfig"; path = "Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		73157DA524D0D78100EF3891 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSignedInDependencyContainer.swift; sourceTree = "<group>"; };
+		73157DD924D27D0F00EF3891 /* VillouImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatSplashLogoAnimation.swift; sourceTree = "<group>"; };
 		7346DAD924A1C2F700AF75BB /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7346DADC24A1C2F700AF75BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				7352492924C268FC0028D089 /* VillouSecurity.framework in Frameworks */,
 				99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */,
 				7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */,
+				73157DDA24D27D0F00EF3891 /* VillouImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +538,7 @@
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73157DD924D27D0F00EF3891 /* VillouImage.framework */,
 				7352492824C268FC0028D089 /* VillouSecurity.framework */,
 				7352484C24C023DE0028D089 /* VillouSecureStore.framework */,
 				7352480424BE7E9B0028D089 /* VillouSecureStore.framework */,

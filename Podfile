@@ -35,6 +35,13 @@ target 'VillouNetworking' do
   end
 end
 
+#VillouSecurity
+target 'VillouSecurity' do
+  project 'Shared/VillouSecurity/VillouSecurity'
+  target 'VillouSecurityTests' do
+  end
+end
+
 # VillouImage
 target 'VillouImage' do
     project 'Shared/VillouImage/VillouImage'

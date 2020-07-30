@@ -10,10 +10,10 @@
 import UIKit
 
 public protocol ImageCache {
-    func getImage(with url: URL, completion: (UIImage?) -> Void)
+    func getImage(with url: URL?, completion: @escaping (UIImage?) -> Void)
 }
 
-extension ImageCache {
+public extension ImageCache {
 
     func setImage(with url: URL?, to imageView: UIImageView, placeholder: UIImage? = nil) {
         if let placeholder = placeholder {

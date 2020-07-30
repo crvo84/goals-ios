@@ -12,7 +12,7 @@ protocol SignedInViewModel {
     var viewType: Observable<SignedInViewType> { get }
 }
 
-class GoalsSignedInViewModel {
+class GoalsSignedInViewModel: SignedInViewModel {
 
     var viewType: Observable<SignedInViewType> { viewTypeSubject.asObservable() }
     private let viewTypeSubject = BehaviorSubject<SignedInViewType>(value: .home)

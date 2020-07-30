@@ -13,17 +13,19 @@ import VillouSecurity
 
 class GoalsAppDependencyContainer {
 
-    // MARK: - Long lived dependencies
-    let sharedUserSessionRepository: UserSessionRepository
-    let sharedNetworkingManager: NetworkingManager
-    let sharedMainViewModel: MainViewModel
+    // MARK: - Properties
+
+    // Long-lived dependencies
+    let userSessionRepository: UserSessionRepository
+    let networkingManager: NetworkingManager
+    let mainViewModel: MainViewModel
 
     // MARK: - Initialization
     init() {
         let networkingManager = GoalsAppDependencyContainer.makeNetworkingManager()
-        self.sharedNetworkingManager = networkingManager
-        self.sharedUserSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: sharedNetworkingManager)
-        self.sharedMainViewModel = GoalsMainViewModel()
+        self.networkingManager = networkingManager
+        self.userSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: networkingManager)
+        self.mainViewModel = GoalsMainViewModel()
     }
 
     // UserSession
@@ -59,7 +61,7 @@ class GoalsAppDependencyContainer {
 extension GoalsAppDependencyContainer: SplashViewModelFactory {
     func makeMainViewController() -> MainViewController {
 
-        MainViewController(viewModel: sharedMainViewModel,
+        MainViewController(viewModel: mainViewModel,
                            splashViewController: makeSplashViewController(),
                            onboardingViewControllerFactory: makeOnboardingViewController,
                            signedInViewControllerFactory: makeSignedInViewController)
@@ -73,8 +75,8 @@ extension GoalsAppDependencyContainer: SplashViewModelFactory {
     }
 
     func makeSplashViewModel() -> SplashViewModel {
-        GoalsSplashViewModel(userSessionRepository: sharedUserSessionRepository,
-                             userSessionStateResponder: sharedMainViewModel)
+        GoalsSplashViewModel(userSessionRepository: userSessionRepository,
+                             userSessionStateResponder: mainViewModel)
     }
 
     // Onboarding (Signed Out)

@@ -7,19 +7,24 @@
 //
 
 import Foundation
+import VillouNetworking
 
 class GoalsOnboardingDependencyContainer {
 
-    // MARK: - Long lived dependencies
-    private let sharedUserSessionRepository: UserSessionRepository
-    private let sharedMainViewModel: MainViewModel
-    private let sharedOnboardingViewModel: OnboardingViewModel
+    // MARK: - Properties
+
+    // Long-lived dependencies
+    private let userSessionRepository: UserSessionRepository
+    private let mainViewModel: MainViewModel
+    private let networkingManager: NetworkingManager
+    private let onboardingViewModel: OnboardingViewModel
 
     // MARK: - Initialization
     init(appDependencyContainer: GoalsAppDependencyContainer) {
-        self.sharedUserSessionRepository = appDependencyContainer.sharedUserSessionRepository
-        self.sharedMainViewModel = appDependencyContainer.sharedMainViewModel
-        self.sharedOnboardingViewModel = GoalsOnboardingDependencyContainer.makeOnboardingViewModel()
+        self.userSessionRepository = appDependencyContainer.userSessionRepository
+        self.mainViewModel = appDependencyContainer.mainViewModel
+        self.networkingManager = appDependencyContainer.networkingManager
+        self.onboardingViewModel = GoalsOnboardingDependencyContainer.makeOnboardingViewModel()
     }
 
     private static func makeOnboardingViewModel() -> OnboardingViewModel {
@@ -33,7 +38,7 @@ class GoalsOnboardingDependencyContainer {
         let signUpViewController = makeSignUpViewController()
         let signInViewController = makeSignInViewController()
 
-        return OnboardingViewController(viewModel: sharedOnboardingViewModel,
+        return OnboardingViewController(viewModel: onboardingViewModel,
                                         welcomeViewController: welcomeViewController,
                                         signUpViewController: signUpViewController,
                                         signInViewController: signInViewController)
@@ -45,7 +50,7 @@ class GoalsOnboardingDependencyContainer {
     }
 
     func makeWelcomeViewModel() -> WelcomeViewModel {
-        GoalsWelcomeViewModel(onboardingNavigator: sharedOnboardingViewModel)
+        GoalsWelcomeViewModel(onboardingNavigator: onboardingViewModel)
     }
 
     // Sign Up
@@ -54,8 +59,8 @@ class GoalsOnboardingDependencyContainer {
     }
 
     func makeSignUpViewModel() -> SignUpViewModel {
-        GoalsSignUpViewModel(userSessionRepository: sharedUserSessionRepository,
-                             userSessionStateResponder: sharedMainViewModel)
+        GoalsSignUpViewModel(userSessionRepository: userSessionRepository,
+                             userSessionStateResponder: mainViewModel)
     }
 
     // Sign In
@@ -64,8 +69,8 @@ class GoalsOnboardingDependencyContainer {
     }
 
     func makeSignInViewModel() -> SignInViewModel {
-        GoalsSignInViewModel(userSessionRepository: sharedUserSessionRepository,
-                             userSessionStateResponder: sharedMainViewModel)
+        GoalsSignInViewModel(userSessionRepository: userSessionRepository,
+                             userSessionStateResponder: mainViewModel)
     }
 }
 

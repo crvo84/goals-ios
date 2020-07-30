@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4977B132037665716F778C28 /* Pods_Goals_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */; };
 		73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DA524D0D78100EF3891 /* SceneDelegate.swift */; };
+		73157DAB24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */; };
 		7329E9D324C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */; };
 		7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DADC24A1C2F700AF75BB /* AppDelegate.swift */; };
 		7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE524A1C2F800AF75BB /* Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_GoalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF2FEC4F09380FDA399798B /* Pods-GoalsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.release.xcconfig"; path = "Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		73157DA524D0D78100EF3891 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSignedInDependencyContainer.swift; sourceTree = "<group>"; };
 		7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatSplashLogoAnimation.swift; sourceTree = "<group>"; };
 		7346DAD924A1C2F700AF75BB /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7346DADC24A1C2F700AF75BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 		7352493724C280350028D089 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */,
 				7352493A24C280630028D089 /* SignedInViewController.swift */,
 				7352493824C280530028D089 /* SignedInViewModel.swift */,
 				7352493C24C2817F0028D089 /* SignedInViewType.swift */,
@@ -790,6 +793,7 @@
 				7352493B24C280630028D089 /* SignedInViewController.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,
 				73E9882924CCF7CA007386CA /* Theme+CornerRadius.swift in Sources */,
+				73157DAB24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift in Sources */,
 				7352495924C28FDB0028D089 /* OnboardingViewController.swift in Sources */,
 				735248DD24C244D90028D089 /* SecureUserSessionDataStore.swift in Sources */,
 				7352493D24C2817F0028D089 /* SignedInViewType.swift in Sources */,

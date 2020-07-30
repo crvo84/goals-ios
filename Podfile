@@ -13,7 +13,9 @@ def rxTestPods
   pod 'RxTest', '~> 5'
 end
 
-# App project
+# ---------------
+#   App project
+# ---------------
 target 'Goals' do
   rxPods
   target 'GoalsTests' do
@@ -21,7 +23,10 @@ target 'Goals' do
   end
 end
 
+# ---------------
 # Shared projects
+# ---------------
+# Projects with shared pods only
 sharedProjects = [
   'VillouNetworking',
   'VillouSecurity',
@@ -29,9 +34,23 @@ sharedProjects = [
 sharedProjects.each do |proj|
   target "#{proj}" do
     project "Shared/#{proj}/#{proj}"
+
     rxPods
+
     target "#{proj}Tests" do
       rxTestPods
     end
   end
+end
+
+# Projects with specific pods
+target 'VillouImage' do
+    project "Shared/VillouImage/VillouImage"
+
+    rxPods
+    pod 'Kingfisher', '~> 5.0'
+
+    target 'VillouImageTests' do
+      rxTestPods
+    end
 end

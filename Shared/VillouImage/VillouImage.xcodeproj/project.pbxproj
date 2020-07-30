@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046285396BF61208B578E57A /* Pods_VillouImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCC58E0D5A0A8985F4B0CB /* Pods_VillouImage.framework */; };
+		5C9D49B3798933DBFBABA85F /* Pods_VillouImage_VillouImageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BACBDD7278A1C553D6FEBD /* Pods_VillouImage_VillouImageTests.framework */; };
 		73157DC024D267DE00EF3891 /* VillouImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73157DB624D267DD00EF3891 /* VillouImage.framework */; };
 		73157DC524D267DE00EF3891 /* VillouImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DC424D267DE00EF3891 /* VillouImageTests.swift */; };
 		73157DC724D267DE00EF3891 /* VillouImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 73157DB924D267DD00EF3891 /* VillouImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E6E3E69ABE2E009743A9354 /* Pods-VillouImage-VillouImageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouImage-VillouImageTests.release.xcconfig"; path = "Target Support Files/Pods-VillouImage-VillouImageTests/Pods-VillouImage-VillouImageTests.release.xcconfig"; sourceTree = "<group>"; };
 		73157DB624D267DD00EF3891 /* VillouImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VillouImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73157DB924D267DD00EF3891 /* VillouImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VillouImage.h; sourceTree = "<group>"; };
 		73157DBA24D267DD00EF3891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +34,11 @@
 		73157DC424D267DE00EF3891 /* VillouImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillouImageTests.swift; sourceTree = "<group>"; };
 		73157DC624D267DE00EF3891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73157DD124D2688C00EF3891 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		9712C48D9C5A95A2D05B7B67 /* Pods-VillouImage-VillouImageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouImage-VillouImageTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouImage-VillouImageTests/Pods-VillouImage-VillouImageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5DCC58E0D5A0A8985F4B0CB /* Pods_VillouImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C7DACF269C54BD2D1391E8 /* Pods-VillouImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouImage.debug.xcconfig"; path = "Target Support Files/Pods-VillouImage/Pods-VillouImage.debug.xcconfig"; sourceTree = "<group>"; };
+		E597195581A50C5FF03588BA /* Pods-VillouImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouImage.release.xcconfig"; path = "Target Support Files/Pods-VillouImage/Pods-VillouImage.release.xcconfig"; sourceTree = "<group>"; };
+		F2BACBDD7278A1C553D6FEBD /* Pods_VillouImage_VillouImageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouImage_VillouImageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046285396BF61208B578E57A /* Pods_VillouImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,18 +55,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				73157DC024D267DE00EF3891 /* VillouImage.framework in Frameworks */,
+				5C9D49B3798933DBFBABA85F /* Pods_VillouImage_VillouImageTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55A8E8D0502193BA8BCEBD5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7C7DACF269C54BD2D1391E8 /* Pods-VillouImage.debug.xcconfig */,
+				E597195581A50C5FF03588BA /* Pods-VillouImage.release.xcconfig */,
+				9712C48D9C5A95A2D05B7B67 /* Pods-VillouImage-VillouImageTests.debug.xcconfig */,
+				6E6E3E69ABE2E009743A9354 /* Pods-VillouImage-VillouImageTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
+			sourceTree = "<group>";
+		};
 		73157DAC24D267DD00EF3891 = {
 			isa = PBXGroup;
 			children = (
 				73157DB824D267DD00EF3891 /* VillouImage */,
 				73157DC324D267DE00EF3891 /* VillouImageTests */,
 				73157DB724D267DD00EF3891 /* Products */,
+				55A8E8D0502193BA8BCEBD5F /* Pods */,
+				CF7DF3F316548107B56B64D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +124,8 @@
 		73157DD324D2689700EF3891 /* ImageRepository */ = {
 			isa = PBXGroup;
 			children = (
-				73157DD424D268A500EF3891 /* Implementations */,
 				73157DD124D2688C00EF3891 /* ImageRepository.swift */,
+				73157DD424D268A500EF3891 /* Implementations */,
 			);
 			path = ImageRepository;
 			sourceTree = "<group>";
@@ -111,6 +135,15 @@
 			children = (
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		CF7DF3F316548107B56B64D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5DCC58E0D5A0A8985F4B0CB /* Pods_VillouImage.framework */,
+				F2BACBDD7278A1C553D6FEBD /* Pods_VillouImage_VillouImageTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73157DCA24D267DE00EF3891 /* Build configuration list for PBXNativeTarget "VillouImage" */;
 			buildPhases = (
+				40BE22F728DA07DE7A0D4475 /* [CP] Check Pods Manifest.lock */,
 				73157DB124D267DD00EF3891 /* Headers */,
 				73157DB224D267DD00EF3891 /* Sources */,
 				73157DB324D267DD00EF3891 /* Frameworks */,
@@ -149,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73157DCD24D267DE00EF3891 /* Build configuration list for PBXNativeTarget "VillouImageTests" */;
 			buildPhases = (
+				020FB2D26872F0D7B277CD55 /* [CP] Check Pods Manifest.lock */,
 				73157DBB24D267DE00EF3891 /* Sources */,
 				73157DBC24D267DE00EF3891 /* Frameworks */,
 				73157DBD24D267DE00EF3891 /* Resources */,
+				3090B11AEDD25F9EE74059A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +253,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		020FB2D26872F0D7B277CD55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VillouImage-VillouImageTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3090B11AEDD25F9EE74059A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VillouImage-VillouImageTests/Pods-VillouImage-VillouImageTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VillouImage-VillouImageTests/Pods-VillouImage-VillouImageTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VillouImage-VillouImageTests/Pods-VillouImage-VillouImageTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40BE22F728DA07DE7A0D4475 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VillouImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		73157DB224D267DD00EF3891 /* Sources */ = {
@@ -368,6 +468,7 @@
 		};
 		73157DCB24D267DE00EF3891 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C7DACF269C54BD2D1391E8 /* Pods-VillouImage.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +495,7 @@
 		};
 		73157DCC24D267DE00EF3891 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E597195581A50C5FF03588BA /* Pods-VillouImage.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,8 +521,8 @@
 		};
 		73157DCE24D267DE00EF3891 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9712C48D9C5A95A2D05B7B67 /* Pods-VillouImage-VillouImageTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouImageTests/Info.plist;
@@ -438,8 +540,8 @@
 		};
 		73157DCF24D267DE00EF3891 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6E3E69ABE2E009743A9354 /* Pods-VillouImage-VillouImageTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = VillouImageTests/Info.plist;

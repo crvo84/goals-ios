@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08BB6BB36D4181EB59C40F25 /* Pods_VillouSecurity_VillouSecurityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CEFAA1A7C1481ED243593A0 /* Pods_VillouSecurity_VillouSecurityTests.framework */; };
 		735248F224C261C80028D089 /* VillouSecurity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 735248E824C261C80028D089 /* VillouSecurity.framework */; };
 		735248F924C261C80028D089 /* VillouSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 735248EB24C261C80028D089 /* VillouSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7352490524C261FC0028D089 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352490324C261FC0028D089 /* SecureStore.swift */; };
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		1A793B128E94EEC218D0AE16 /* Pods_VillouSecurity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouSecurity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CEFAA1A7C1481ED243593A0 /* Pods_VillouSecurity_VillouSecurityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VillouSecurity_VillouSecurityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46E2881E1B0CF44181BBDEAD /* Pods-VillouSecurity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouSecurity.debug.xcconfig"; path = "Target Support Files/Pods-VillouSecurity/Pods-VillouSecurity.debug.xcconfig"; sourceTree = "<group>"; };
 		735248E824C261C80028D089 /* VillouSecurity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VillouSecurity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735248EB24C261C80028D089 /* VillouSecurity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VillouSecurity.h; sourceTree = "<group>"; };
@@ -60,9 +58,7 @@
 		7352491F24C262AB0028D089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7352492124C262AB0028D089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7352492524C262DC0028D089 /* VillouSecurityTestingHost.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VillouSecurityTestingHost.entitlements; sourceTree = "<group>"; };
-		8DDD6C1D365F4EA344E50E26 /* Pods-VillouSecurity-VillouSecurityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouSecurity-VillouSecurityTests.release.xcconfig"; path = "Target Support Files/Pods-VillouSecurity-VillouSecurityTests/Pods-VillouSecurity-VillouSecurityTests.release.xcconfig"; sourceTree = "<group>"; };
 		B63F6ECAF37C21535ADDF426 /* Pods-VillouSecurity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouSecurity.release.xcconfig"; path = "Target Support Files/Pods-VillouSecurity/Pods-VillouSecurity.release.xcconfig"; sourceTree = "<group>"; };
-		C98E69C734C96AB69BB977CB /* Pods-VillouSecurity-VillouSecurityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VillouSecurity-VillouSecurityTests.debug.xcconfig"; path = "Target Support Files/Pods-VillouSecurity-VillouSecurityTests/Pods-VillouSecurity-VillouSecurityTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				735248F224C261C80028D089 /* VillouSecurity.framework in Frameworks */,
-				08BB6BB36D4181EB59C40F25 /* Pods_VillouSecurity_VillouSecurityTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +93,6 @@
 			children = (
 				46E2881E1B0CF44181BBDEAD /* Pods-VillouSecurity.debug.xcconfig */,
 				B63F6ECAF37C21535ADDF426 /* Pods-VillouSecurity.release.xcconfig */,
-				C98E69C734C96AB69BB977CB /* Pods-VillouSecurity-VillouSecurityTests.debug.xcconfig */,
-				8DDD6C1D365F4EA344E50E26 /* Pods-VillouSecurity-VillouSecurityTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../../Pods;
@@ -190,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				1A793B128E94EEC218D0AE16 /* Pods_VillouSecurity.framework */,
-				3CEFAA1A7C1481ED243593A0 /* Pods_VillouSecurity_VillouSecurityTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,11 +224,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 735248FF24C261C80028D089 /* Build configuration list for PBXNativeTarget "VillouSecurityTests" */;
 			buildPhases = (
-				E722DC7911426265583BC594 /* [CP] Check Pods Manifest.lock */,
 				735248ED24C261C80028D089 /* Sources */,
 				735248EE24C261C80028D089 /* Frameworks */,
 				735248EF24C261C80028D089 /* Resources */,
-				8A2DE81554F2249D1ABBB068 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,45 +342,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-VillouSecurity-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A2DE81554F2249D1ABBB068 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VillouSecurity-VillouSecurityTests/Pods-VillouSecurity-VillouSecurityTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VillouSecurity-VillouSecurityTests/Pods-VillouSecurity-VillouSecurityTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VillouSecurity-VillouSecurityTests/Pods-VillouSecurity-VillouSecurityTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E722DC7911426265583BC594 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VillouSecurity-VillouSecurityTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -636,7 +587,6 @@
 		};
 		7352490024C261C80028D089 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C98E69C734C96AB69BB977CB /* Pods-VillouSecurity-VillouSecurityTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
@@ -656,7 +606,6 @@
 		};
 		7352490124C261C80028D089 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DDD6C1D365F4EA344E50E26 /* Pods-VillouSecurity-VillouSecurityTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;

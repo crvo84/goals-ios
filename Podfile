@@ -26,31 +26,19 @@ end
 # ---------------
 # Shared projects
 # ---------------
-# Projects with shared pods only
-sharedProjects = [
-  'VillouNetworking',
-  'VillouSecurity',
-]
-sharedProjects.each do |proj|
-  target "#{proj}" do
-    project "Shared/#{proj}/#{proj}"
-
-    rxPods
-
-    target "#{proj}Tests" do
-      rxTestPods
-    end
+# VillouNetworking
+target 'VillouNetworking' do
+  project 'Shared/VillouNetworking/VillouNetworking'
+  rxPods
+  target 'VillouNetworkingTests' do
+    rxTestPods
   end
 end
 
-# Projects with specific pods
+# VillouImage
 target 'VillouImage' do
-    project "Shared/VillouImage/VillouImage"
-
-    rxPods
+    project 'Shared/VillouImage/VillouImage'
     pod 'Kingfisher', '~> 5.0'
-
     target 'VillouImageTests' do
-      rxTestPods
     end
 end

@@ -8,6 +8,9 @@
       location = "container:"
       name = "Shared">
       <FileRef
+         location = "group:Shared/VillouImage/VillouImage.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Shared/VillouSecurity/VillouSecurity.xcodeproj">
       </FileRef>
       <FileRef

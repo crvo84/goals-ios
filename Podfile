@@ -18,6 +18,7 @@ end
 # ---------------
 target 'Goals' do
   rxPods
+  pod 'Kingfisher', '~> 5.0'
   target 'GoalsTests' do
     rxTestPods
   end

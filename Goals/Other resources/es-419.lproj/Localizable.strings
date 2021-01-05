@@ -6,3 +6,10 @@
   Copyright © 2020 Villou. All rights reserved.
 */
 
+// MARK: - Welcome screen
+"Welcome.Message" = "Bienvenido a %@";
+
+// MARK: - Buttons
+"Button.SignUp" = "Registrarse";
+"Button.SignIn" = "Iniciar sesión";
+"Button.Cancel" = "Cancelar";

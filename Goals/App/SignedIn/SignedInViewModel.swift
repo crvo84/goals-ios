@@ -9,11 +9,11 @@
 import RxSwift
 
 protocol SignedInViewModel {
-    var viewState: Observable<SignedInViewState> { get }
+    var viewType: Observable<SignedInViewType> { get }
 }
 
-class GoalsSignedInViewModel {
+class GoalsSignedInViewModel: SignedInViewModel {
 
-    var viewState: Observable<SignedInViewState> { viewTypeSubject.asObservable() }
-    private let viewTypeSubject = BehaviorSubject<SignedInViewState>(value: .home)
+    var viewType: Observable<SignedInViewType> { viewTypeSubject.asObservable() }
+    private let viewTypeSubject = BehaviorSubject<SignedInViewType>(value: .home)
 }

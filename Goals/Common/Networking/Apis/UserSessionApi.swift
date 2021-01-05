@@ -40,7 +40,14 @@ extension UserSessionApi: ApiRequest {
     }
 
     var mockResponse: HTTPMockResponse? {
-        return nil
+        var key: String?
+        switch self {
+        case .signUp: key = "signUp"
+        case .signIn: key = "signIn"
+        }
+        guard let endpointKey = key else { return nil }
+
+        return .success(jsonFilename: "UserSessionApi-\(endpointKey)-mock")
     }
 
     // MARK: Constant values

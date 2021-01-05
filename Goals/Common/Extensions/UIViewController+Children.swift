@@ -43,4 +43,22 @@ extension UIViewController {
 
         child.didMove(toParent: self)
     }
+
+    /// Removes the given view controller from its parent.
+    /// - Parameters:
+    ///   - child: The view controller to be added as child of the receiver.
+    ///   If `nil`, the method will have no effect.
+    ///
+    /// If the given child has no parent, this method will have no effect.
+    ///
+    /// The child's view is also removed from its parent.
+    func removeChildViewController(_ child: UIViewController?) {
+        guard let child = child else { return }
+
+        guard child.parent != nil else { return }
+
+        child.willMove(toParent: nil)
+        child.view.removeFromSuperview()
+        child.removeFromParent()
+    }
 }

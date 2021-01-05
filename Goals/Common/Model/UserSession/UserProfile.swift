@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserProfile: DataModel, Equatable {
+struct UserProfile: Codable, Equatable {
     let email: String
     let firstName: String
     let lastName: String

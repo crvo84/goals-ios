@@ -6,25 +6,29 @@
 //  Copyright © 2020 Villou. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
-class SignUpViewController: UIViewController {
+protocol SignUpViewModelFactory {
+    func makeSignUpViewModel() -> SignUpViewModel
+}
+
+class SignUpViewController: BaseViewController {
+
+    // MARK: - Properties
+    private let viewModel: SignUpViewModel
+    private let bag = DisposeBag()
+
+    // MARK: - Initialization
+    init(viewModelFactory: SignUpViewModelFactory) {
+        self.viewModel = viewModelFactory.makeSignUpViewModel()
+        super.init()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

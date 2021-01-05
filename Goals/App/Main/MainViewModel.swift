@@ -9,13 +9,13 @@
 import RxSwift
 
 protocol MainViewModel: UserSessionStateResponder {
-    var viewState: Observable<MainViewState> { get }
+    var viewType: Observable<MainViewType> { get }
 }
 
 class GoalsMainViewModel: MainViewModel {
 
-    var viewState: Observable<MainViewState> { viewTypeSubject.asObservable() }
-    private let viewTypeSubject = BehaviorSubject<MainViewState>(value: .splash)
+    var viewType: Observable<MainViewType> { viewTypeSubject.asObservable() }
+    private let viewTypeSubject = PublishSubject<MainViewType>()
 }
 
 extension GoalsMainViewModel {

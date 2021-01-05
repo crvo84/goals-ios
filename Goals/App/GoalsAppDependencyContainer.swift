@@ -13,23 +13,22 @@ import VillouSecurity
 
 class GoalsAppDependencyContainer {
 
-    // MARK: - Long lived dependencies
+    // MARK: - Properties
 
-    let sharedUserSessionRepository: UserSessionRepository
-    let sharedNetworkingManager: NetworkingManager
-    let sharedMainViewModel: MainViewModel
+    // Long-lived dependencies
+    let userSessionRepository: UserSessionRepository
+    let networkingManager: NetworkingManager
+    let mainViewModel: MainViewModel
 
     // MARK: - Initialization
-
     init() {
         let networkingManager = GoalsAppDependencyContainer.makeNetworkingManager()
-        self.sharedNetworkingManager = networkingManager
-        self.sharedUserSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: sharedNetworkingManager)
-        self.sharedMainViewModel = GoalsMainViewModel()
+        self.networkingManager = networkingManager
+        self.userSessionRepository = GoalsAppDependencyContainer.makeUserSessionRepository(with: networkingManager)
+        self.mainViewModel = GoalsMainViewModel()
     }
 
     // UserSession
-
     private static func makeUserSessionRepository(with networkingManager: NetworkingManager) -> UserSessionRepository {
         let dataStore = makeUserSessionDataStore()
         let remoteService = makeUserSessionRemoteService(with: networkingManager)
@@ -42,8 +41,9 @@ class GoalsAppDependencyContainer {
     }
 
     private static func makeUserSessionDataStore() -> UserSessionDataStore {
-        let secureStore = makeSecureStore()
-        return SecureUserSessionDataStore(secureStore: secureStore)
+//        let secureStore = makeSecureStore()
+//        return SecureUserSessionDataStore(secureStore: secureStore)
+        return MockUserSessionDataStore(userSession: nil)
     }
 
     private static func makeSecureStore() -> SecureStore {
@@ -51,7 +51,6 @@ class GoalsAppDependencyContainer {
     }
 
     // Networking
-
     private static func makeNetworkingManager() -> NetworkingManager {
 //        VillouNetworkingManager()
         MockNetworkingManager()
@@ -62,32 +61,31 @@ class GoalsAppDependencyContainer {
 extension GoalsAppDependencyContainer: SplashViewModelFactory {
     func makeMainViewController() -> MainViewController {
 
-        MainViewController(viewModel: sharedMainViewModel,
+        MainViewController(viewModel: mainViewModel,
                            splashViewController: makeSplashViewController(),
                            onboardingViewControllerFactory: makeOnboardingViewController,
                            signedInViewControllerFactory: makeSignedInViewController)
     }
 
     // Splash
-
     func makeSplashViewController() -> SplashViewController {
-        SplashViewController(splashViewModelFactory: self)
+//        let logoAnimation = HeartbeatSplashLogoAnimation()
+        let logoAnimation = FloatSplashLogoAnimation()
+        return SplashViewController(viewModelFactory: self, logoAnimation: logoAnimation)
     }
 
     func makeSplashViewModel() -> SplashViewModel {
-        GoalsSplashViewModel(userSessionRepository: sharedUserSessionRepository,
-                             userSessionStateResponder: sharedMainViewModel)
+        GoalsSplashViewModel(userSessionRepository: userSessionRepository,
+                             userSessionStateResponder: mainViewModel)
     }
 
-    // Onboarding
-
+    // Onboarding (Signed Out)
     func makeOnboardingViewController() -> OnboardingViewController {
-        // TODO: create from onboarding dependency container
-        OnboardingViewController()
+        let dependencyContainer = GoalsOnboardingDependencyContainer(appDependencyContainer: self)
+        return dependencyContainer.makeOnboardingViewController()
     }
 
     // Signed In
-
     func makeSignedInViewController(userSession: UserSession) -> SignedInViewController {
         // TODO: create from signed in dependency container
         SignedInViewController()

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4977B132037665716F778C28 /* Pods_Goals_GoalsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */; };
+		73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DA524D0D78100EF3891 /* SceneDelegate.swift */; };
+		73157DAB24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */; };
+		73157DDA24D27D0F00EF3891 /* VillouImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73157DD924D27D0F00EF3891 /* VillouImage.framework */; };
+		73157DDB24D27D0F00EF3891 /* VillouImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73157DD924D27D0F00EF3891 /* VillouImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7329E9D324C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */; };
 		7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DADC24A1C2F700AF75BB /* AppDelegate.swift */; };
 		7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE524A1C2F800AF75BB /* Assets.xcassets */; };
 		7346DAE924A1C2F800AF75BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7346DAE724A1C2F800AF75BB /* LaunchScreen.storyboard */; };
@@ -15,7 +20,7 @@
 		7346DB7724A1D58900AF75BB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB7624A1D58900AF75BB /* MainViewController.swift */; };
 		7346DB7A24A1D60A00AF75BB /* GoalsAppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB7924A1D60A00AF75BB /* GoalsAppDependencyContainer.swift */; };
 		7346DB7C24A1D78900AF75BB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB7B24A1D78900AF75BB /* MainViewModel.swift */; };
-		7346DB7F24A1D81700AF75BB /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB7E24A1D81700AF75BB /* MainViewState.swift */; };
+		7346DB7F24A1D81700AF75BB /* MainViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB7E24A1D81700AF75BB /* MainViewType.swift */; };
 		7346DB8424A1D8BC00AF75BB /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB8324A1D8BC00AF75BB /* UserProfile.swift */; };
 		7346DB8C24A31F0D00AF75BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7346DB8E24A31F0D00AF75BB /* Localizable.strings */; };
 		7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346DB9124A321AB00AF75BB /* String+Localized.swift */; };
@@ -25,7 +30,6 @@
 		7352481224BE885E0028D089 /* Codable+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481124BE885E0028D089 /* Codable+Json.swift */; };
 		7352481424BEB44F0028D089 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352481324BEB44F0028D089 /* UserSession.swift */; };
 		735248CD24C22D450028D089 /* GoalsUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248CC24C22D450028D089 /* GoalsUserSessionRepository.swift */; };
-		735248CF24C236D00028D089 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248CE24C236D00028D089 /* DataModel.swift */; };
 		735248D324C239A60028D089 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D224C239A60028D089 /* UserSessionRepository.swift */; };
 		735248D724C23CB30028D089 /* UserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D624C23CB30028D089 /* UserSessionRemoteService.swift */; };
 		735248D924C23F220028D089 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735248D824C23F220028D089 /* UserSessionDataStore.swift */; };
@@ -38,7 +42,7 @@
 		7352493624C27F840028D089 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493524C27F840028D089 /* BaseViewController.swift */; };
 		7352493924C280530028D089 /* SignedInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493824C280530028D089 /* SignedInViewModel.swift */; };
 		7352493B24C280630028D089 /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493A24C280630028D089 /* SignedInViewController.swift */; };
-		7352493D24C2817F0028D089 /* SignedInViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493C24C2817F0028D089 /* SignedInViewState.swift */; };
+		7352493D24C2817F0028D089 /* SignedInViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493C24C2817F0028D089 /* SignedInViewType.swift */; };
 		7352494024C282BF0028D089 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352493F24C282BF0028D089 /* SplashViewController.swift */; };
 		7352494424C28B6D0028D089 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352494324C28B6D0028D089 /* WelcomeViewController.swift */; };
 		7352494824C28BF80028D089 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7352494724C28BF80028D089 /* WelcomeViewModel.swift */; };
@@ -57,6 +61,28 @@
 		73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */; };
 		73D4531524C686AC00B9CBDE /* UIViewController+Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */; };
 		73D4531724C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */; };
+		73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */; };
+		73D4532124C7DCF600B9CBDE /* Theme+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532024C7DCF600B9CBDE /* Theme+Image.swift */; };
+		73D4532324C7E25800B9CBDE /* Theme+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532224C7E25800B9CBDE /* Theme+Color.swift */; };
+		73D4532524C7EA6B00B9CBDE /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */; };
+		73E9880924C941AA007386CA /* UserSessionApi-signUp-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 73E9880724C941AA007386CA /* UserSessionApi-signUp-mock.json */; };
+		73E9880A24C941AA007386CA /* UserSessionApi-signIn-mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */; };
+		73E9880E24CA3067007386CA /* FloatSplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */; };
+		73E9881024CA6A2E007386CA /* SplashLogoAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */; };
+		73E9881224CA6CB6007386CA /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */; };
+		73E9881424CAB885007386CA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881324CAB885007386CA /* BaseNavigationController.swift */; };
+		73E9881624CAB9A3007386CA /* OnboardingViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881524CAB9A3007386CA /* OnboardingViewType.swift */; };
+		73E9881924CB9473007386CA /* NavigationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881824CB9473007386CA /* NavigationAction.swift */; };
+		73E9881B24CB95A8007386CA /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881A24CB95A8007386CA /* OnboardingNavigator.swift */; };
+		73E9881D24CBD46E007386CA /* Theme+Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881C24CBD46E007386CA /* Theme+Logo.swift */; };
+		73E9881F24CBDC3E007386CA /* Theme+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9881E24CBDC3E007386CA /* Theme+Font.swift */; };
+		73E9882124CBEB3D007386CA /* Theme+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882024CBEB3D007386CA /* Theme+Label.swift */; };
+		73E9882324CBF031007386CA /* Theme+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882224CBF031007386CA /* Theme+Button.swift */; };
+		73E9882524CCF4C3007386CA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882424CCF4C3007386CA /* Theme.swift */; };
+		73E9882724CCF7C2007386CA /* Theme+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882624CCF7C2007386CA /* Theme+Alpha.swift */; };
+		73E9882924CCF7CA007386CA /* Theme+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882824CCF7CA007386CA /* Theme+CornerRadius.swift */; };
+		73E9882E24CF613D007386CA /* Theme+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882D24CF613D007386CA /* Theme+Spacing.swift */; };
+		73E9883024CF6311007386CA /* Theme+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E9882F24CF6311007386CA /* Theme+Size.swift */; };
 		99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB0656A53A0C5C909C6E199 /* Pods_Goals.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +105,7 @@
 			files = (
 				7363C25824A5620900D3DEA6 /* VillouNetworking.framework in Embed Frameworks */,
 				7352492A24C268FC0028D089 /* VillouSecurity.framework in Embed Frameworks */,
+				73157DDB24D27D0F00EF3891 /* VillouImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +120,10 @@
 		6129D4E44643C509FF6A5019 /* Pods-Goals-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goals-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-Goals-GoalsTests/Pods-Goals-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		62185BD6669967BDDEBAC4D8 /* Pods_Goals_GoalsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goals_GoalsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BF2FEC4F09380FDA399798B /* Pods-GoalsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsAppTests.release.xcconfig"; path = "Target Support Files/Pods-GoalsAppTests/Pods-GoalsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		73157DA524D0D78100EF3891 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsSignedInDependencyContainer.swift; sourceTree = "<group>"; };
+		73157DD924D27D0F00EF3891 /* VillouImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatSplashLogoAnimation.swift; sourceTree = "<group>"; };
 		7346DAD924A1C2F700AF75BB /* Goals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7346DADC24A1C2F700AF75BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7346DAE524A1C2F800AF75BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,7 +135,7 @@
 		7346DB7624A1D58900AF75BB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7346DB7924A1D60A00AF75BB /* GoalsAppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsAppDependencyContainer.swift; sourceTree = "<group>"; };
 		7346DB7B24A1D78900AF75BB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		7346DB7E24A1D81700AF75BB /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
+		7346DB7E24A1D81700AF75BB /* MainViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewType.swift; sourceTree = "<group>"; };
 		7346DB8324A1D8BC00AF75BB /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		7346DB8D24A31F0D00AF75BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7346DB8F24A31F6600AF75BB /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -118,7 +149,6 @@
 		7352481324BEB44F0028D089 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		7352484C24C023DE0028D089 /* VillouSecureStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VillouSecureStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735248CC24C22D450028D089 /* GoalsUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRepository.swift; sourceTree = "<group>"; };
-		735248CE24C236D00028D089 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		735248D224C239A60028D089 /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
 		735248D624C23CB30028D089 /* UserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRemoteService.swift; sourceTree = "<group>"; };
 		735248D824C23F220028D089 /* UserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -130,7 +160,7 @@
 		7352493524C27F840028D089 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7352493824C280530028D089 /* SignedInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewModel.swift; sourceTree = "<group>"; };
 		7352493A24C280630028D089 /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
-		7352493C24C2817F0028D089 /* SignedInViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewState.swift; sourceTree = "<group>"; };
+		7352493C24C2817F0028D089 /* SignedInViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewType.swift; sourceTree = "<group>"; };
 		7352493F24C282BF0028D089 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7352494324C28B6D0028D089 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		7352494724C28BF80028D089 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +178,28 @@
 		73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsUserSessionRemoteService.swift; sourceTree = "<group>"; };
 		73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Children.swift"; sourceTree = "<group>"; };
 		73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsOnboardingDependencyContainer.swift; sourceTree = "<group>"; };
+		73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionResponseContents.swift; sourceTree = "<group>"; };
+		73D4532024C7DCF600B9CBDE /* Theme+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Image.swift"; sourceTree = "<group>"; };
+		73D4532224C7E25800B9CBDE /* Theme+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Color.swift"; sourceTree = "<group>"; };
+		73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
+		73E9880724C941AA007386CA /* UserSessionApi-signUp-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UserSessionApi-signUp-mock.json"; sourceTree = "<group>"; };
+		73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "UserSessionApi-signIn-mock.json"; sourceTree = "<group>"; };
+		73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatSplashLogoAnimation.swift; sourceTree = "<group>"; };
+		73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLogoAnimation.swift; sourceTree = "<group>"; };
+		73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		73E9881324CAB885007386CA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		73E9881524CAB9A3007386CA /* OnboardingViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewType.swift; sourceTree = "<group>"; };
+		73E9881824CB9473007386CA /* NavigationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationAction.swift; sourceTree = "<group>"; };
+		73E9881A24CB95A8007386CA /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
+		73E9881C24CBD46E007386CA /* Theme+Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Logo.swift"; sourceTree = "<group>"; };
+		73E9881E24CBDC3E007386CA /* Theme+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Font.swift"; sourceTree = "<group>"; };
+		73E9882024CBEB3D007386CA /* Theme+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Label.swift"; sourceTree = "<group>"; };
+		73E9882224CBF031007386CA /* Theme+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Button.swift"; sourceTree = "<group>"; };
+		73E9882424CCF4C3007386CA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		73E9882624CCF7C2007386CA /* Theme+Alpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Alpha.swift"; sourceTree = "<group>"; };
+		73E9882824CCF7CA007386CA /* Theme+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+CornerRadius.swift"; sourceTree = "<group>"; };
+		73E9882D24CF613D007386CA /* Theme+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Spacing.swift"; sourceTree = "<group>"; };
+		73E9882F24CF6311007386CA /* Theme+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Size.swift"; sourceTree = "<group>"; };
 		A66F299CAE715C7991C36D52 /* Pods-GoalsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsTests.debug.xcconfig"; path = "Target Support Files/Pods-GoalsTests/Pods-GoalsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FA98737F22A3FDCA5AA52D /* Pods-GoalsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.release.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.release.xcconfig"; sourceTree = "<group>"; };
 		E367ABBBF463727C409F4CD7 /* Pods-GoalsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoalsApp.debug.xcconfig"; path = "Target Support Files/Pods-GoalsApp/Pods-GoalsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +215,7 @@
 				7352492924C268FC0028D089 /* VillouSecurity.framework in Frameworks */,
 				99B753D4ACDCB36CA17E436F /* Pods_Goals.framework in Frameworks */,
 				7363C25724A5620900D3DEA6 /* VillouNetworking.framework in Frameworks */,
+				73157DDA24D27D0F00EF3891 /* VillouImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +230,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7329E9D424C929AB00A71E21 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				7329E9D224C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift */,
+				73E9880D24CA3067007386CA /* FloatSplashLogoAnimation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
 		7346DAD024A1C2F700AF75BB = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				7346DADC24A1C2F700AF75BB /* AppDelegate.swift */,
+				73157DA524D0D78100EF3891 /* SceneDelegate.swift */,
 				7346DB7424A1D52200AF75BB /* Common */,
 				7346DB7324A1D4C300AF75BB /* App */,
 				7346DB7024A1D0BF00AF75BB /* Other resources */,
@@ -243,7 +306,9 @@
 			isa = PBXGroup;
 			children = (
 				7363C1D724A4673C00D3DEA6 /* Constants.swift */,
+				73D4531F24C7DCE000B9CBDE /* Theme */,
 				7352493424C27E5A0028D089 /* Base */,
+				73E9881724CB945E007386CA /* Navigation */,
 				7346DBA424A3D6F400AF75BB /* Networking */,
 				7346DBA124A3D4D800AF75BB /* Extensions */,
 				7346DB9524A3D24100AF75BB /* Model */,
@@ -258,7 +323,7 @@
 				7352492F24C276700028D089 /* UserSessionStateResponder.swift */,
 				7346DB7624A1D58900AF75BB /* MainViewController.swift */,
 				7346DB7B24A1D78900AF75BB /* MainViewModel.swift */,
-				7346DB7E24A1D81700AF75BB /* MainViewState.swift */,
+				7346DB7E24A1D81700AF75BB /* MainViewType.swift */,
 				7352493124C2781D0028D089 /* Splash */,
 			);
 			path = Main;
@@ -275,7 +340,6 @@
 		7346DB9524A3D24100AF75BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				735248CE24C236D00028D089 /* DataModel.swift */,
 				7352495A24C2AADD0028D089 /* Errors */,
 				7346DB9624A3D26200AF75BB /* UserSession */,
 			);
@@ -300,6 +364,8 @@
 				7346DB9124A321AB00AF75BB /* String+Localized.swift */,
 				7352481124BE885E0028D089 /* Codable+Json.swift */,
 				73D4531424C686AC00B9CBDE /* UIViewController+Children.swift */,
+				73E9881124CA6CB6007386CA /* UIViewController+Navigation.swift */,
+				73D4532424C7EA6B00B9CBDE /* UIColor+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -307,7 +373,9 @@
 		7346DBA424A3D6F400AF75BB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				73D4531924C6ACC300B9CBDE /* DTOs */,
 				7346DBA724A3D8B400AF75BB /* Apis */,
+				73D4531824C6AA7C00B9CBDE /* Mocks */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -326,12 +394,12 @@
 				735248D224C239A60028D089 /* UserSessionRepository.swift */,
 				735248D624C23CB30028D089 /* UserSessionRemoteService.swift */,
 				735248D824C23F220028D089 /* UserSessionDataStore.swift */,
-				735248D524C23A750028D089 /* Implementation */,
+				735248D524C23A750028D089 /* Implementations */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
 		};
-		735248D524C23A750028D089 /* Implementation */ = {
+		735248D524C23A750028D089 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
 				73A89D7F24A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift */,
@@ -339,7 +407,7 @@
 				735248DA24C2437F0028D089 /* MockUserSessionDataStore.swift */,
 				735248DC24C244D90028D089 /* SecureUserSessionDataStore.swift */,
 			);
-			path = Implementation;
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		7352493124C2781D0028D089 /* Splash */ = {
@@ -347,6 +415,8 @@
 			children = (
 				7352493F24C282BF0028D089 /* SplashViewController.swift */,
 				7352493224C278C70028D089 /* SplashViewModel.swift */,
+				73E9880F24CA6A2E007386CA /* SplashLogoAnimation.swift */,
+				7329E9D424C929AB00A71E21 /* Implementations */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -354,8 +424,9 @@
 		7352493424C27E5A0028D089 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				7352493524C27F840028D089 /* BaseViewController.swift */,
 				7352494A24C28C5D0028D089 /* BaseView.swift */,
+				7352493524C27F840028D089 /* BaseViewController.swift */,
+				73E9881324CAB885007386CA /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -363,9 +434,10 @@
 		7352493724C280350028D089 /* SignedIn */ = {
 			isa = PBXGroup;
 			children = (
+				73157DAA24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift */,
 				7352493A24C280630028D089 /* SignedInViewController.swift */,
 				7352493824C280530028D089 /* SignedInViewModel.swift */,
-				7352493C24C2817F0028D089 /* SignedInViewState.swift */,
+				7352493C24C2817F0028D089 /* SignedInViewType.swift */,
 			);
 			path = SignedIn;
 			sourceTree = "<group>";
@@ -376,6 +448,8 @@
 				73D4531624C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift */,
 				7352495824C28FDB0028D089 /* OnboardingViewController.swift */,
 				7352495624C28FBD0028D089 /* OnboardingViewModel.swift */,
+				73E9881524CAB9A3007386CA /* OnboardingViewType.swift */,
+				73E9881A24CB95A8007386CA /* OnboardingNavigator.swift */,
 				7352494224C283AA0028D089 /* Welcome */,
 				7352494624C28B8D0028D089 /* SignUp */,
 				7352494524C28B830028D089 /* SignIn */,
@@ -418,9 +492,53 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		73D4531824C6AA7C00B9CBDE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				73E9880824C941AA007386CA /* UserSessionApi-signIn-mock.json */,
+				73E9880724C941AA007386CA /* UserSessionApi-signUp-mock.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		73D4531924C6ACC300B9CBDE /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				73D4531C24C6AE1D00B9CBDE /* UserSessionResponseContents.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		73D4531F24C7DCE000B9CBDE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				73E9882424CCF4C3007386CA /* Theme.swift */,
+				73D4532024C7DCF600B9CBDE /* Theme+Image.swift */,
+				73D4532224C7E25800B9CBDE /* Theme+Color.swift */,
+				73E9881C24CBD46E007386CA /* Theme+Logo.swift */,
+				73E9881E24CBDC3E007386CA /* Theme+Font.swift */,
+				73E9882024CBEB3D007386CA /* Theme+Label.swift */,
+				73E9882224CBF031007386CA /* Theme+Button.swift */,
+				73E9882624CCF7C2007386CA /* Theme+Alpha.swift */,
+				73E9882824CCF7CA007386CA /* Theme+CornerRadius.swift */,
+				73E9882D24CF613D007386CA /* Theme+Spacing.swift */,
+				73E9882F24CF6311007386CA /* Theme+Size.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		73E9881724CB945E007386CA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				73E9881824CB9473007386CA /* NavigationAction.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		83DA38899BEADCF020BDC82E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73157DD924D27D0F00EF3891 /* VillouImage.framework */,
 				7352492824C268FC0028D089 /* VillouSecurity.framework */,
 				7352484C24C023DE0028D089 /* VillouSecureStore.framework */,
 				7352480424BE7E9B0028D089 /* VillouSecureStore.framework */,
@@ -499,7 +617,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Villou;
 				TargetAttributes = {
 					7346DAD824A1C2F700AF75BB = {
@@ -539,7 +657,9 @@
 			files = (
 				7346DAE924A1C2F800AF75BB /* LaunchScreen.storyboard in Resources */,
 				7346DB8C24A31F0D00AF75BB /* Localizable.strings in Resources */,
+				73E9880924C941AA007386CA /* UserSessionApi-signUp-mock.json in Resources */,
 				7346DAE624A1C2F800AF75BB /* Assets.xcassets in Resources */,
+				73E9880A24C941AA007386CA /* UserSessionApi-signIn-mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,46 +758,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73E9882124CBEB3D007386CA /* Theme+Label.swift in Sources */,
+				73D4532124C7DCF600B9CBDE /* Theme+Image.swift in Sources */,
 				7352494F24C28F3C0028D089 /* SignUpViewController.swift in Sources */,
+				73D4532324C7E25800B9CBDE /* Theme+Color.swift in Sources */,
 				7352494024C282BF0028D089 /* SplashViewController.swift in Sources */,
 				735248D724C23CB30028D089 /* UserSessionRemoteService.swift in Sources */,
-				7346DB7F24A1D81700AF75BB /* MainViewState.swift in Sources */,
+				7346DB7F24A1D81700AF75BB /* MainViewType.swift in Sources */,
 				7346DADD24A1C2F700AF75BB /* AppDelegate.swift in Sources */,
+				73E9881624CAB9A3007386CA /* OnboardingViewType.swift in Sources */,
+				73E9880E24CA3067007386CA /* FloatSplashLogoAnimation.swift in Sources */,
 				735248D924C23F220028D089 /* UserSessionDataStore.swift in Sources */,
 				7352495C24C2AB920028D089 /* ErrorMessage.swift in Sources */,
 				7352495724C28FBD0028D089 /* OnboardingViewModel.swift in Sources */,
 				7346DB7A24A1D60A00AF75BB /* GoalsAppDependencyContainer.swift in Sources */,
+				73E9883024CF6311007386CA /* Theme+Size.swift in Sources */,
+				73E9881224CA6CB6007386CA /* UIViewController+Navigation.swift in Sources */,
 				7346DB7724A1D58900AF75BB /* MainViewController.swift in Sources */,
+				73E9881924CB9473007386CA /* NavigationAction.swift in Sources */,
 				7352494B24C28C5D0028D089 /* BaseView.swift in Sources */,
+				73E9882724CCF7C2007386CA /* Theme+Alpha.swift in Sources */,
+				73E9881424CAB885007386CA /* BaseNavigationController.swift in Sources */,
+				73E9882324CBF031007386CA /* Theme+Button.swift in Sources */,
 				73D4531524C686AC00B9CBDE /* UIViewController+Children.swift in Sources */,
 				7363C1D324A4575300D3DEA6 /* SignInDTO.swift in Sources */,
 				7352493924C280530028D089 /* SignedInViewModel.swift in Sources */,
 				7346DB8424A1D8BC00AF75BB /* UserProfile.swift in Sources */,
+				7329E9D324C929A200A71E21 /* HeartbeatSplashLogoAnimation.swift in Sources */,
 				7346DB7C24A1D78900AF75BB /* MainViewModel.swift in Sources */,
 				735248D324C239A60028D089 /* UserSessionRepository.swift in Sources */,
 				73D4531724C6994D00B9CBDE /* GoalsOnboardingDependencyContainer.swift in Sources */,
 				7363C1D824A4673C00D3DEA6 /* Constants.swift in Sources */,
+				73D4531D24C6AE1D00B9CBDE /* UserSessionResponseContents.swift in Sources */,
 				735248CD24C22D450028D089 /* GoalsUserSessionRepository.swift in Sources */,
+				73157DA624D0D78100EF3891 /* SceneDelegate.swift in Sources */,
 				73A89D8024A41E8B00D12A40 /* GoalsUserSessionRemoteService.swift in Sources */,
 				7352480A24BE80430028D089 /* RemoteSession.swift in Sources */,
 				7352495124C28F450028D089 /* SignUpViewModel.swift in Sources */,
 				7352481424BEB44F0028D089 /* UserSession.swift in Sources */,
 				7352493B24C280630028D089 /* SignedInViewController.swift in Sources */,
 				7346DBA624A3D8AD00AF75BB /* UserSessionApi.swift in Sources */,
+				73E9882924CCF7CA007386CA /* Theme+CornerRadius.swift in Sources */,
+				73157DAB24D2202E00EF3891 /* GoalsSignedInDependencyContainer.swift in Sources */,
 				7352495924C28FDB0028D089 /* OnboardingViewController.swift in Sources */,
 				735248DD24C244D90028D089 /* SecureUserSessionDataStore.swift in Sources */,
-				7352493D24C2817F0028D089 /* SignedInViewState.swift in Sources */,
+				7352493D24C2817F0028D089 /* SignedInViewType.swift in Sources */,
+				73E9881B24CB95A8007386CA /* OnboardingNavigator.swift in Sources */,
 				7352494424C28B6D0028D089 /* WelcomeViewController.swift in Sources */,
+				73E9882E24CF613D007386CA /* Theme+Spacing.swift in Sources */,
 				7352493024C276700028D089 /* UserSessionStateResponder.swift in Sources */,
 				7352481224BE885E0028D089 /* Codable+Json.swift in Sources */,
-				735248CF24C236D00028D089 /* DataModel.swift in Sources */,
+				73E9881024CA6A2E007386CA /* SplashLogoAnimation.swift in Sources */,
 				7352495324C28F4E0028D089 /* SignInViewController.swift in Sources */,
 				7352493624C27F840028D089 /* BaseViewController.swift in Sources */,
 				735248DB24C2437F0028D089 /* MockUserSessionDataStore.swift in Sources */,
 				7346DB9224A321AB00AF75BB /* String+Localized.swift in Sources */,
+				73D4532524C7EA6B00B9CBDE /* UIColor+Utils.swift in Sources */,
 				7352495524C28F560028D089 /* SignInViewModel.swift in Sources */,
 				7346DB9824A3D2A400AF75BB /* SignUpDTO.swift in Sources */,
+				73E9881D24CBD46E007386CA /* Theme+Logo.swift in Sources */,
 				7352494824C28BF80028D089 /* WelcomeViewModel.swift in Sources */,
+				73E9881F24CBDC3E007386CA /* Theme+Font.swift in Sources */,
+				73E9882524CCF4C3007386CA /* Theme.swift in Sources */,
 				7352493324C278C70028D089 /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +890,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -809,6 +952,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -845,6 +989,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = "$(SRCROOT)/Goals/Other resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -865,6 +1010,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9F26XL4W94;
 				INFOPLIST_FILE = "$(SRCROOT)/Goals/Other resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

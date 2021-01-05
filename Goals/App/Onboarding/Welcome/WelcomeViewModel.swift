@@ -9,9 +9,25 @@
 import Foundation
 
 protocol WelcomeViewModel {
-    
+    func navigateToSignUp()
+    func navigateToSignIn()
 }
 
 class GoalsWelcomeViewModel: WelcomeViewModel {
-    
+
+    // MARK: - Properties
+    private let onboardingNavigator: OnboardingNavigator
+
+    // MARK: - Initialization
+    init(onboardingNavigator: OnboardingNavigator) {
+        self.onboardingNavigator = onboardingNavigator
+    }
+
+    @objc func navigateToSignUp() {
+        onboardingNavigator.navigateToSignUp()
+    }
+
+    @objc func navigateToSignIn() {
+        onboardingNavigator.navigateToSignIn()
+    }
 }
